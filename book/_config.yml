@@ -2,7 +2,7 @@
 
 # This config includes an opinionated list of configuration options of TeachBooks, Jupyterbook v1, Sphinx and other extensions part of TeachBooks-Favourites.
 
-author: Author from Delft University of Technology, built with <a href="https://teachbooks.io">TeachBooks</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a>
+author: The DSAIE Teaching Team, built with <a href="https://teachbooks.io">TeachBooks</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a>
                                                      # Replace TeachBooks Teams with your own name in the line above, configuratin part of JupyterBook: https://jupyterbook.org/en/stable/customize/config.html
 execute:
   execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
@@ -26,26 +26,51 @@ sphinx:                                              # Options passed on to the 
     thebe_config:
       use_thebe_lite: true                           # Required for live code, part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"] #exclude files which should not be accessible for live code, configuration part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
-    #html_favicon:                                   # Default value not shown (line can be removed), allows to add your own favicon (disabling of TU Delft favicon is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-    html_baseurl: "https://oit.tudelft.nl>/<repo>"   # Replace this with your own URL, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+    html_favicon: "figures/DSAIE_icon.ico"           # Default value not shown (line can be removed), allows to add your own favicon (disabling of TU Delft favicon is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+    html_baseurl: "https://oit.tudelft.nl>/dsaie"   # Replace this with your own URL, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_theme_options:
       home_page_in_toc: true                         # Replace with false it you don't want the landing page to be shown in the table of contents.
       logo:
-        text: TU Delft GitHub OILM Template          # Replace this with your own open interactive learning material title, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-        # image_light:                               # Default value not shown (line can be removed), adds your logo for the light mode here (can be the same as image_dark) (disabling of TU Delft logo is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-        # image_dark:                                # Default value not shown (line can be removed), adds your logo for the dark mode here (can be the same as image_light) (disabling of TU Delft logo is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+        text: Data Science and AI for Engineers      # Replace this with your own open interactive learning material title, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+        image_light: "figures/DSAIE_logo.png"        # Default value not shown (line can be removed), adds your logo for the light mode here (can be the same as image_dark) (disabling of TU Delft logo is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+        image_dark: "figures/DSAIE_logo.png"         # Default value not shown (line can be removed), adds your logo for the dark mode here (can be the same as image_light) (disabling of TU Delft logo is required), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       repository_url: "https://github.com/TUDelft-books/repo" # Add your own repo URL here, configuration part of JupyterBook v1 (https://jupyterbook.org/en/stable/customize/config.html)
       path_to_docs:          "book"                  # Required for edit_page_button, should be book if you're using TeachBooks package (https://github.com/TeachBooks/TeachBooks) or the TeachBooks deploy book workflow (https://teachbooks.io/manual/external/deploy-book-workflow/README.html), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
       repository_branch:     "main"                  # Replace when you change the name of your published branch (required for edit_page_button), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-      use_edit_page_button:  true                    # Replace with false if you don't want the edit page button (i.e. if you don't user to propose changes themselves or have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-      use_repository_button: true                    # Replace with false if you don't want the repository button (i.e. if you have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-      use_issues_button :    true                    # Replace with false if you don't want the issues button (i.e. if you don't want to use GitHub issues or have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+      use_edit_page_button:  false                   # Replace with false if you don't want the edit page button (i.e. if you don't user to propose changes themselves or have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+      use_repository_button: false                   # Replace with false if you don't want the repository button (i.e. if you have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+      use_issues_button :    false                   # Replace with false if you don't want the issues button (i.e. if you don't want to use GitHub issues or have a private repo), configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
       launch_buttons:
-        thebe: true                                  # Required for live code, part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
+        thebe: false                                 # Required for live code, part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
       announcement: ""                               # Default value (line can be removed), sets a banner announcement at the top of the site, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
     html_show_copyright:   false                     # As the copyright is included in the author field, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_last_updated_fmt: ''                        # Adds the date of the last update to the footer, if '' based on value of language, configuration part of sphinx-last-updated-by-git (https://github.com/TeachBooks/sphinx-last-updated-by-git)
     mathjax3_config:
+      tex:
+        macros:
+          "mrm": "\\mathrm"
+          "mbf": "\\mathbf"
+          "bs": ["\\boldsymbol{#1}",1]
+          "class": "\\mathcal{C}"
+          "T": "\\mathrm{T}"
+          "dataset": "\\mathcal{D}"
+          "bx": "\\mathbf{x}"
+          "bw": "\\mathbf{w}"
+          "bz": "\\mathbf{z}"
+          "basis": "\\boldsymbol{\\phi}"
+          "Basis": "\\boldsymbol{\\Phi}"
+          "gauss": "\\mathcal{N}"
+          "cA": ["\\textcolor[RGB]{0,118,194}{#1}",1]
+          "cB": ["\\textcolor[RGB]{236,104,66}{#1}",1]
+          "cC": ["\\textcolor[RGB]{165,0,52}{#1}",1]
+          "cD": ["\\textcolor[RGB]{0,155,119}{#1}",1]
+          "cE": ["\\textcolor[RGB]{255,184,28}{#1}",1]
+          "cF": ["\\textcolor[RGB]{224,60,49}{#1}",1]
+          "cG": ["\\textcolor[RGB]{108,194,74}{#1}",1]
+          "cH": ["\\textcolor[RGB]{239,96,163}{#1}",1]
+          "cI": ["\\textcolor[RGB]{12,35,64}{#1}",1]
+          "cJ": ["\\textcolor[RGB]{0,184,200}{#1}",1]
+          "cK": ["\\textcolor[RGB]{111,29,119}{#1}",1]
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
@@ -71,8 +96,6 @@ sphinx:                                              # Options passed on to the 
     tippy_enable_doitips:         true               # Default value (line can be removed), enables tooltips for DOI links, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     #tippy_custom_tips                               # Default value not shown (line can be removed), creates custom tips, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     tippy_enable_mathjax: true                       # Default value (line can be removed), enables tooltips for math equations, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
-    tud_change_logo: true                            # Default value (line can be removed), changes the logo in the top left corner to the TU Delft logo, configuration part of Sphinx-TUDelft-theme (https://teachbooks.io/manual/external/Sphinx-TUDelft-theme/README.html)
-    tud_change_favicon: true                         # Default value (line can be removed), changes the favicon in the browser tab to the TU Delft logo, configuration part of Sphinx-TUDelft-theme (https://teachbooks.io/manual/external/Sphinx-TUDelft-theme/README.html)
     tud_change_fonts: true                           # Default value (line can be removed), changes the fonts to the TU Delft fonts, configuration part of Sphinx-TUDelft-theme (https://teachbooks.io/manual/external/Sphinx-TUDelft-theme/README.html)
     tud_change_mtext: true                           # Default value (line can be removed), renders text inside MathJax should not be the same as the surrounding html, configuration part of Sphinx-TUDelft-theme (https://teachbooks.io/manual/external/Sphinx-TUDelft-theme/README.html)
     tud_sticky_logo: true                            # Default value (line can be removed), makes the logo in the top left corner sticky when scrolling, configuration part of Sphinx-TUDelft-theme (https://teachbooks.io/manual/external/Sphinx-TUDelft-theme/README.html)
