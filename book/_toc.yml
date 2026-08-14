@@ -18,9 +18,9 @@ parts:
     - file: coding/pytorch.md
       sections:
       - file: coding/exercises-clean/intro
-      - file: coding/exercises/intro
+      #- file: coding/exercises/intro
       - file: coding/exercises-clean/application
-      - file: coding/exercises/application
+      #- file: coding/exercises/application
   - caption: Probabilistic Machine Learning
     chapters:
     - file: preliminaries/overview.md
@@ -37,3 +37,12 @@ parts:
       - file: frequentist/linear_models
       - file: frequentist/ridge_sgd
       - file: frequentist/nn
+    - file: bayesian/overview.md
+      sections:
+      - file: bayesian/linear_models
+      - file: bayesian/exercises-clean/bayes_vs_bootstrap
+      #- file: bayesian/exercises/bayes_vs_bootstrap
+      - file: bayesian/active_learning
+      - file: bayesian/model_selection
+      - file: bayesian/exercises-clean/bayesnn
+      #- file: bayesian/exercises/bayesnn
