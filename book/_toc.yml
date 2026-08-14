@@ -21,3 +21,12 @@ parts:
       - file: coding/exercises/intro
       - file: coding/exercises-clean/application
       - file: coding/exercises/application
+  - caption: Probabilistic Machine Learning
+    chapters:
+    - file: preliminaries/overview.md
+      sections:
+      - file: preliminaries/probability_theory
+      - file: preliminaries/graph_models
+      - file: preliminaries/bayes_theorem
+      - file: preliminaries/probability_distributions
+      - file: preliminaries/review

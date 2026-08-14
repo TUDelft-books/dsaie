@@ -1,0 +1,151 @@
+# Bayes' Theorem
+
+Starting from the two expressions for the product rule of {doc}`probability_theory`:
+
+$$
+p(X,Y) = p(Y\vert X)p(X)
+$$(prelim_bayes1)
+
+$$
+p(X,Y) = p(X\vert Y)p(Y)
+$$(prelim_bayes2)
+
+We see that there are two ways to express the joint distribution with different conditionals. From the discussion in {doc}`graph_models`, you can see that each expression corresponds to a different graph. Try to draw the graphs in this case and see how the link relating $X$ and $Y$ is inverted when we change between the two expressions above.
+
+Substituting one of the expressions above into the other we get:
+
+$$
+p(Y\vert X) = \frac{p(X\vert Y)p(Y)}{p(X)}
+$$(prelim_bayes3)
+
+which is known as **Bayes' Theorem**. This is a very important relation at the core of what makes machine learning tools work. In the context or probabilistic graph models, it can be seen as a way to *invert* links in a graph. The motivation for doing that will become clear in the following.
+
+## Probabilities as a measure of belief
+
+In {doc}`probability_theory` we used probabilities to express the frequency with which an event occurs: in our case how often we would take a random ball from a bag and it would turn out to be for instance a blue metal ball. This is what we define as a **frequentist perspective** of probabilities.
+
+In the **Bayesian perspective** we use probabilities to express belief and common sense, and to consistently update them in the face of convincing evidence. In the Bayesian context, it is useful to interpret probabilities as:
+
+- **High probability**: Based on my current knowledge and expectations, this event is likely to happen even if I never observed it directly before;
+- **Low probability**: My current knowledge suggests this event to be unlikely. There is not enough evidence of the contrary at this point in time.
+
+Going back to the theorem, we can read it as:
+
+$$
+\mathrm{posterior}\displaystyle\propto\mathrm{likelihood}\times\mathrm{prior}
+$$
+
+which from the example above can be thought as:
+
+````{card}
+**Interpretation of Bayes' Theorem**
+^^^
+$p(Y\vert X) = \frac{p(X\vert Y)p(Y)}{p(X)}$
+
+How much should I adjust my prior belief over $p(Y)$ into a posterior one $p(Y\vert X)$ given that I just observed $X$? It must be a balance between this prior and what it would take for it to explain what I see ($p(X\vert Y)$), tempered by how $X$ would be explained anyway without $Y$, $p(X)$.
+````
+
+```{admonition} Further Reading    
+:class: tip    
+Read Section 1.2.3 for an extended discussion on this.  
++++                         
+{bdg-danger}`bishop-prml`     
+```
+
+## Example: A two-variable graph
+
+Let us start with an intuitive example. Consider a probabilistic model to predict if a student passes an exam or not, depending only on whether he/she has studied or not:
+
+```{figure} ../figures/studygraph1.svg
+:scale: 60%
+:name: studygraph1
+
+A pass/fail model -- Prior
+```
+
+Recall that the joint distribution for this graph reads
+
+$$
+p(S,P) = p(S)p(P\vert S)
+$$(prelim_bayesjoint)
+
+where we use single letters for the variables for convenience. Read {doc}`graph_models` again in case this is unclear to you.
+
+Let us make a common-sense assumption that about 60% of the students will study properly. This leads to a **prior** distribution for $S$:
+
+$$
+p(S=1) = 0.6 \quad p(S=0) = 0.4
+$$(prelim_studyprior)
+
+This means that for a given student, **before we obtain more information**, our best guess is to assume a chance of about 60% that they studied.
+
+Let us further assume that if a person studies we are 90% confident they will pass the exam, while even without studying there is a fair chance of 30% they will still pass due to luck/intuition. This leads to the conditional distributions:
+
+$$
+p(P=1\vert S=1) = 0.9 \quad p(P=1\vert S=0) = 0.3
+$$(prelim_studyconditionals)
+
+Because probability distributions need to sum up to one, it necessarily means that:
+
+$$
+p(P=0\vert S=1) = 0.1 \quad p(P=0\vert S=0) = 0.7
+$$(prelim_studynormalizations)
+
+Now imagine a student just took the exam and after grading it we **observe** that they got a passing grade. Our graph then changes to:
+
+```{figure} ../figures/studygraph2.svg
+:scale: 60%
+:name: studygraph2
+
+A pass/fail model -- Observation
+```
+
+We now have more information to work with. From our prior we were about 60% confident they studied, but now that can be updated with this new piece of information. This is where Bayes' Theorem comes in:
+
+$$
+p(S=1\vert P=1) = \frac{p(P=1\vert S=1)p(S=1)}{p(P=1)}
+$$(prelim_studybayes)
+
+where we are now looking at a **posterior** opinion about the student that should reflect our new observation. This effectively changes our graph to:
+
+```{figure} ../figures/studygraph3.svg
+:scale: 60%
+:name: studygraph3
+
+A pass/fail model -- Posterior
+```
+
+To compute the posterior we first need the **marginal** $p(P=1)$. Using the Sum Rule ({doc}`probability_theory`), we get:
+
+$$
+p(P=1) = p(P=1\vert S=1)p(S=1) +
+                   p(P=1\vert S=0)p(S=0) = 0.9\cdot 0.6 + 0.3\cdot 0.4 = 0.66
+$$(prelim_studymarginal)
+
+And from the fact that $p(P=1)$ must be a valid distribution, the marginal distribution for failing the exam is:
+
+$$
+p(P=0) = 1 - p(P=1) = 0.34
+$$(prelim_studymarginalnorm)
+
+Finally, we use Bayes' Theorem to obtain:
+
+$$
+p(S=1\vert P=1) = \frac{p(P=1\vert S=1)p(S=1)}{p(P=1)} = \frac{0.9\cdot 0.6}{0.66} = 0.818
+$$(prelim_studybayesfinal)
+
+So our confidence that he/she studied went **from 60% to about 82%**! That makes sense, we should update our beliefs in the face of new evidence (a pass in the exam) while still taking into account the possibility that they could have passed anyway.
+
+```{admonition} Further Reading    
+:class: tip    
+Section 8.2.1 has another insightful example of Bayes' Theorem in action, this time for a graph with three nodes. Start from the last paragraph of Page 376 and read until just before 8.2.2. For extra context and more details on conditional independence, start reading from the beginning of 8.2.
++++                         
+{bdg-danger}`bishop-prml`     
+```
+
+```{admonition} Exam questions    
+:class: danger    
+In the exam you might be asked to apply Bayes' Theorem to simple graph models. Conceptual questions about the interpretation of each of the terms in the theorem might also be in the exam. You should be familiar with the basic mathematical expression of the theorem and on how to obtain each term from either given data or with (recursive) application of the sum/product rules.
++++    
+{bdg-primary}`written-exam`    
+``` 
