@@ -31,7 +31,7 @@ We are going to use Anaconda to create an environment for DSAIE, so the first st
 
 ### Creating an environment from a .yml file
 
-The second step is to create an environment in Anaconda containing all the required packages. For this purpose, we have created an environment file {download}`dsaie.yml<./environment/dsaie.yml>`, which you have to download.
+The second step is to create an environment in Anaconda containing all the required packages. For this purpose, we have created an environment file {download}`dsaie.yml<../_static/dsaie.yml>`, which you have to download.
 This file tells Anaconda which versions of which python libraries to install.
 
 You can create your DSAIE environment by opening your Anaconda prompt or terminal, and entering
