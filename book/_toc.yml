@@ -30,3 +30,10 @@ parts:
       - file: preliminaries/bayes_theorem
       - file: preliminaries/probability_distributions
       - file: preliminaries/review
+    - file: frequentist/overview.md
+      sections:
+      - file: frequentist/knn
+      - file: frequentist/decision_theory
+      - file: frequentist/linear_models
+      - file: frequentist/ridge_sgd
+      - file: frequentist/nn
