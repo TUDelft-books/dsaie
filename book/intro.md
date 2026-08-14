@@ -36,7 +36,7 @@ Assistant Professor, Computational Mechanics
 :::
 
 :::{grid-item-card} Riccardo Taormina
-Assistant Professor, Water Management
+Associate Professor, Water Management
 ```{image} figures/riccardo.webp
 :alt: riccardo
 :height: 150px
