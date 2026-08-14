@@ -10,11 +10,14 @@ parts:
     restart_numbering: false        # Default value (line can be removed), whether to restart numbering for this part, configuration part of TeachBooks' version of sphinx-external-toc (https://github.com/TeachBooks/sphinx-external-toc?tab=readme-ov-file#toc-tree-options)
     chapters:
     - file: logistics/schedule.md
-    - file: logistics/coding.md
     - file: logistics/projects.md
     - file: logistics/exams.md
-  - caption: Exercises
+  - caption: Coding
     chapters:
-    - file: exercises.md
+    - file: coding/environment.md
+    - file: coding/pytorch.md
       sections:
-      - file: exercises/001.md
+      - file: coding/exercises-clean/intro
+      - file: coding/exercises/intro
+      - file: coding/exercises-clean/application
+      - file: coding/exercises/application
