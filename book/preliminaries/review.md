@@ -15,7 +15,7 @@ Draw the graph associated with this joint distribution.
 
 Example answer:
 ```{toggle} Answer:
-```{figure} ../../../images/graph_quiz.svg
+```{figure} ../figures/prelimquiz.svg
 :scale: 50%
 :name: graph_quiz
 ```
