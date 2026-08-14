@@ -104,10 +104,6 @@ PhD Candidate, Aidrolab
 :::
 ::::
 
-## Schedule
-
-A detailed schedule for every week of the course can be found in {doc}`schedule`.
-
 ## Assessment
 
 ::::{grid}
