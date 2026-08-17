@@ -68,3 +68,10 @@ parts:
       - file: gp/exercises-clean/gpr
       #- file: gp/exercises/gpr
       - file: gp/bayesopt
+    - file: gen_discrete/overview.md
+      sections:
+      - file: gen_discrete/unsupervised_learning
+      - file: gen_discrete/kmeans
+      - file: gen_discrete/gaussian_mixtures
+      - file: gen_discrete/exercises-clean/kmeans_versus_gaussmix
+      #- file: gen_discrete/exercises/kmeans_versus_gaussmix
