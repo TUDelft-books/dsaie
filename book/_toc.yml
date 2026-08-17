@@ -57,3 +57,14 @@ parts:
       - file: classification/exercises-clean/application
       #- file: classification/exercises/application
       - file: classification/review
+    - file: gp/overview.md
+      sections:
+      - file: gp/equivalent_kernels
+      - file: gp/gp
+      - file: gp/exercises-clean/gp
+      #- file: gp/exercises/gp
+      - file: gp/gp_regression
+      - file: gp/gp_learning
+      - file: gp/exercises-clean/gpr
+      #- file: gp/exercises/gpr
+      - file: gp/bayesopt
