@@ -34,7 +34,7 @@ p(\class_1\vert\mbf{x}) =
 \sigma(a)
 $$(bayestwoclassessigmoid)
 
-The function $\sigma(a)$ above is known as the **logistic sigmoid function**. You may remember it from {doc}`frequentist regression<../../1-regression/nn_interactive>`, where it was used as activation function for neural networks, and from {doc}`bayesian linear models<../../2-bayesregression/lectures/linear_models>` where it was used as basis function. The crucial point here is that $\sigma(a)$ is bounded to the interval $[0,1]$ since it represents a valid measure of probability.
+The function $\sigma(a)$ above is known as the **logistic sigmoid function**. You may remember it from {doc}`frequentist regression<../frequentist/nn>`, where it was used as activation function for neural networks, and from {doc}`bayesian linear models<../bayesian/linear_models>` where it was used as basis function. The crucial point here is that $\sigma(a)$ is bounded to the interval $[0,1]$ since it represents a valid measure of probability.
 
 ## Towards a linear model
 
@@ -128,7 +128,7 @@ Another way to interpret these results is by considering that $\basis$ is *"movi
 
 ## Model selection
 
-Even though logistic regression has sound probabilistic foundations, it is still an MLE model and can therefore suffer from severe overfitting. A Bayesian treatment similar to what we saw for {doc}`regression<../../2-bayesregression/lectures/linear_models>` is not easy to achieve here because $y(\bx,\bw)$ is not linear in $\bw$ anymore. 
+Even though logistic regression has sound probabilistic foundations, it is still an MLE model and can therefore suffer from severe overfitting. A Bayesian treatment similar to what we saw for {doc}`regression<../bayesian/linear_models>` is not easy to achieve here because $y(\bx,\bw)$ is not linear in $\bw$ anymore. 
 
 The MLE approach is therefore quite popular in practice, but care must be taken to avoid overfitting the training data. Fortunately, we can adopt the same strategies from before in this case, for instance by adding an $L_2$ regularization term to the cross-entropy error function:
 

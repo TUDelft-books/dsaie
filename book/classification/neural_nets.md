@@ -1,6 +1,6 @@
 # Neural Networks
 
-We wrap up our brief treatment of classification with a final jump from logistic regression with basis functions to neural networks. The idea is the same as what we did for {doc}`regression<../../1-regression/nn_interactive>`: instead of having **fixed** basis functions $\basis$ we make them **adaptive** by using one or more fully-connected neuron layers. As before, we can see the second-to-last layer of the network as a new adaptive basis $\bar{\basis}(\bx)$, and the last layer represents the familiar linear combination $\bw^\T\bar{\basis}$.
+We wrap up our brief treatment of classification with a final jump from logistic regression with basis functions to neural networks. The idea is the same as what we did for {doc}`regression<../frequentist/nn>`: instead of having **fixed** basis functions $\basis$ we make them **adaptive** by using one or more fully-connected neuron layers. As before, we can see the second-to-last layer of the network as a new adaptive basis $\bar{\basis}(\bx)$, and the last layer represents the familiar linear combination $\bw^\T\bar{\basis}$.
 
 ## Two classes
 

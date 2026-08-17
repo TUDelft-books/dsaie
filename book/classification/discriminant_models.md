@@ -13,7 +13,7 @@ Bishop covers two other types of linear discriminant. This includes the algorith
 
 ## A least-squares two-class discriminant
 
-We start straight from what we learned in {doc}`regression problems<../../2-bayesregression/lectures/linear_models>`. There we have seen that maximizing the likelihood of a Gaussian observation model leads exactly to a least squares problem. We do the same here but for classification: given an input $\mathbf{x}$, we would like to know if it corresponds to one of two classes $\mathcal{C}_1$ or $\mathcal{C}_2$.
+We start straight from what we learned in {doc}`regression problems<../bayesian/linear_models>`. There we have seen that maximizing the likelihood of a Gaussian observation model leads exactly to a least squares problem. We do the same here but for classification: given an input $\mathbf{x}$, we would like to know if it corresponds to one of two classes $\mathcal{C}_1$ or $\mathcal{C}_2$.
 
 To train a model we are going to need some targets. For regression this was clear (the observed value of some continuous variable). Here the targets are not so trivial, as we must assign a numerical value to represent class attribution. Let us be practical and use $t=+1$ to indicate class $\mathcal{C}_1$ and $t=-1$ for $\mathcal{C}_2$. This means our whole dataset $\mathcal{D}$ of size $N$ is composed of **exclusively** $+1$'s and $-1$'s.
 
@@ -67,7 +67,7 @@ The transition between the two regions is our decision boundary, and again corre
 
 A few important observations can be made from this figure:
 - In a $D$-dimensional problem, the decision boundary is always a $D-1$-dimensional entity. So it was a single point in 1D and a line in 2D;
-- Linear models result in linear decision boundaries. As you will see soon in an {doc}`exercise<../exercises-clean/discriminant>`, this observation will change when we use more complex basis functions $\boldsymbol{\phi}$;
+- Linear models result in linear decision boundaries;
 - We can say that this particular problem is **linearly separable**, since a linear decision boundary can already do a good job.
 
 On the figure below we see a case which is not linearly separable. Samples from $\mathcal{C}_1$ are spread out over $\mbf{x}$ in such a way that a straight decision boundary that perfectly splits the data is not possible anymore. 

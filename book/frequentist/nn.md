@@ -189,7 +189,7 @@ where care should be of course taken to properly normalize the datasets. The los
 
 ## Manual model selection
 
-In [](./linear_models.ipynb) we used L<sub>2</sub>-regularization to control the model complexity. The application of this technique to neural networks is straightforward, and will therefore not be demonstrated here. Instead, we will focus on the impact of the number of trainable parameters and the number of samples on overfitting. The ability to display our models at different stages of the training phase will help us to find and inspect particularly good or bad models.
+In {doc}`linear models<linear_models>` we used L<sub>2</sub>-regularization to control the model complexity. The application of this technique to neural networks is straightforward, and will therefore not be demonstrated here. Instead, we will focus on the impact of the number of trainable parameters and the number of samples on overfitting. The ability to display our models at different stages of the training phase will help us to find and inspect particularly good or bad models.
 
 <iframe src="../_static/neural-nets.html?mode=playground" width="100%" height="1070" frameborder="0"></iframe>
 

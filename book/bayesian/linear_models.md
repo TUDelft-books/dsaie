@@ -208,7 +208,7 @@ For the first one we note that Eq. {eq}`bayesreg-likelihood` is a multivariate G
 Given a likelihood function $p(\mathbf{t}\vert\mathbf{w})$, compute $\mathbf{w}$ that maximizes this likelihood. The prior over $\mathbf{w}$ is ignored and only a single point estimate $\mathbf{w}_\mathrm{MLE}$ remains.
 ````
 
-Taking the logarithm of Eq. {eq}`bayesreg-likelihood` turns the product into a sum and gets rid of the exponentials inside ({doc}`recall the form of a univariate Gaussian<../preliminaries/gaussian_distribution>`):
+Taking the logarithm of Eq. {eq}`bayesreg-likelihood` turns the product into a sum and gets rid of the exponentials inside ({doc}`recall the form of a univariate Gaussian<../preliminaries/probability_distributions>`):
 
 $$
 \ln p(\mathbf{t}\vert\mathbf{X},\mathbf{w},\beta)
