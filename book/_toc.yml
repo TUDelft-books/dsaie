@@ -46,3 +46,14 @@ parts:
       - file: bayesian/model_selection
       - file: bayesian/exercises-clean/bayesnn
       #- file: bayesian/exercises/bayesnn
+    - file: classification/overview.md
+      sections:
+      - file: classification/decision_theory
+      - file: classification/discriminant_models
+      - file: classification/logistic_regression
+      - file: classification/exercises-clean/logistic
+      #- file: classification/exercises/logistic
+      - file: classification/neural_nets
+      - file: classification/exercises-clean/application
+      #- file: classification/exercises/application
+      - file: classification/review
