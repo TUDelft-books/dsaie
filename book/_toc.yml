@@ -83,3 +83,33 @@ parts:
       - file: gen_continuous/exercises-clean/vae_microstructures
       #- file: gen_continuous/exercises/vae_microstructures
       - file: gen_continuous/review
+    - caption: Optional Topics
+      chapters:
+      - file: pair/overview.md
+        sections:
+        - file: pair/working_with_genAI
+        - file: pair/exercises-clean/PyTorch_Pair_Programming
+        - file: pair/exercises/PyTorch_Pair_Programming
+      - file: tree/overview.md
+        sections:
+        - file: tree/decision_trees
+        - file: tree/ensemble_methods
+        - file: tree/exercises-clean/tree-based-model
+        - file: tree/exercises/tree-based-model
+      - file: gnn/overview.md
+        sections:
+        - file: gnn/exercises-clean/EX1-graphs
+        - file: gnn/exercises/EX1-graphs
+        - file: gnn/exercises-clean/EX2-pytorch_geometric
+        - file: gnn/exercises/EX2-pytorch_geometric
+      - file: mlops/overview.md
+        sections:
+        - file: mlops/Before_development.md
+        - file: mlops/exercises-clean/EX1-Before_Development
+        - file: mlops/exercises/EX1-Before_Development
+        - file: mlops/Development.md
+        - file: mlops/exercises-clean/EX2-Development
+        - file: mlops/exercises/EX2-Development
+        - file: mlops/After_development.md
+        - file: mlops/exercises-clean/EX3-After_Development
+        - file: mlops/exercises/EX3-After_Development
