@@ -163,7 +163,7 @@ Below is an example of applying PPCA to a two-dimensional dataset with a clear l
 Fitting a PPCA model from 2D to 1D with the EM algorithm. Initial situation
 ```
 
-```../figures/ppca1.svg
+```{figure} ../figures/ppca1.svg
 :figwidth: 750px
 
 Fitting a PPCA model from 2D to 1D with the EM algorithm. Situation after convergence
@@ -181,19 +181,19 @@ Since we made the latents $\bz$ probabilistic, PPCA can be used as a generative 
 
 Note how the two last steps together correspond to sampling from $p(\bx\vert\bz)$. You can find some convincing generations below:
 
-```../figures/ppca2.svg
+```{figure} ../figures/ppca2.svg
 :figwidth: 750px
 
 Generating samples from a 2D to 1D PPCA.
 ```
 
-```../figures/ppca3.svg
+```{figure} ../figures/ppca3.svg
 :figwidth: 750px
 
 Generating samples from a 2D to 1D PPCA, one more example.
 ```
 
-```../figures/ppca4.svg
+```{figure} ../figures/ppca4.svg
 :figwidth: 750px
 
 Generating samples from a 2D to 1D PPCA, one last example.
