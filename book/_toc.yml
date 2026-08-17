@@ -75,3 +75,11 @@ parts:
       - file: gen_discrete/gaussian_mixtures
       - file: gen_discrete/exercises-clean/kmeans_versus_gaussmix
       #- file: gen_discrete/exercises/kmeans_versus_gaussmix
+      - file: gen_discrete/review
+    - file: gen_continuous/overview.md
+      sections:
+      - file: gen_continuous/ppca
+      - file: gen_continuous/vae
+      - file: gen_continuous/exercises-clean/vae_microstructures
+      #- file: gen_continuous/exercises/vae_microstructures
+      - file: gen_continuous/review
