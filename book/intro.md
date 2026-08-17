@@ -47,13 +47,13 @@ Associate Professor, Water Management
 
 ## Involved PhDs
 
-The following scientists have made major contributions in setting up this book and will be available during the workshops and exercise sessions to help you work with coding exercises.  
+This book would not have been possible without major contributions from the following former PhD candidates:
 
 ::::{grid}
 :gutter: 3
 
 :::{grid-item-card} Anne Poot
-PhD Candidate, SLIMM Lab
+SLIMM Lab
 ```{image} figures/anne.png
 :alt: anne
 :height: 150px
@@ -62,7 +62,7 @@ PhD Candidate, SLIMM Lab
 :::
 
 :::{grid-item-card} Leon Riccius
-PhD Candidate, SLIMM Lab
+SLIMM Lab
 ```{image} figures/leon.png
 :alt: leon
 :height: 150px
@@ -71,7 +71,7 @@ PhD Candidate, SLIMM Lab
 :::
 
 :::{grid-item-card} Joep Storm
-PhD Candidate, SLIMM Lab
+SLIMM Lab
 ```{image} figures/joep.png
 :alt: joep 
 :height: 150px
@@ -83,9 +83,9 @@ PhD Candidate, SLIMM Lab
 ::::{grid}
 :gutter: 3
 
-:::{grid-item-card} Roberto Bentivoglio
+:::{grid-item-card} Dr. Roberto Bentivoglio
 :columns: 4
-PhD Candidate, Aidrolab
+Aidrolab
 ```{image} figures/roberto.webp
 :alt: roberto
 :height: 150px
@@ -95,7 +95,7 @@ PhD Candidate, Aidrolab
 
 :::{grid-item-card} Alex Garzón Díaz
 :columns: 4
-PhD Candidate, Aidrolab
+Aidrolab
 ```{image} figures/alex.jpg
 :alt: alex
 :height: 150px
