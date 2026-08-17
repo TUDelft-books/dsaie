@@ -149,6 +149,9 @@ teachbooks:
   attribution_location: margin                       # Default value is top, sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
   attribution_color: attributiongrey                 # Uses custom grey colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
 
+bibtex_bibfiles: 
+  - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+
 # Parse and render settings
 parse:
   myst_enable_extensions:                            # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
