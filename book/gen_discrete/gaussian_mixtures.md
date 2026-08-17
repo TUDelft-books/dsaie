@@ -13,7 +13,7 @@ In contrast to $k$-means, here we want to make our discrete latent variable appe
 Graph model for a mixture of Gaussians, with a multinomial latent variable $\bz$.
 ```
 
-where $\bz$ is a {ref}`categorical variable<categoricaldist>` with a $1$-of-$K$ encoding (as we have seen before in {doc}`k-means<kmeans>` and {doc}`logistic regression<../../3-classification/lectures/logistic_regression>`) whose value indicates a component (i.e. cluster), and $\bx$ is a Gaussian distribution in the original data space. As usual, we can look at the graph and write its joint distribution:
+where $\bz$ is a {ref}`categorical variable<categoricaldist>` with a $1$-of-$K$ encoding (as we have seen before in {doc}`k-means<kmeans>` and {doc}`logistic regression<../classification/logistic_regression>`) whose value indicates a component (i.e. cluster), and $\bx$ is a Gaussian distribution in the original data space. As usual, we can look at the graph and write its joint distribution:
 
 $$
 p(\bx,\bz) = p(\bz)p(\bx\vert\bz)

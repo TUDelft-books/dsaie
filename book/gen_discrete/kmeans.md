@@ -10,7 +10,7 @@ The problem setting is the one from {ref}`before<clustering-unsupervised-cluster
 A set of unlabeled data points in two dimensions.
 ```
 
-There is a clear pattern in this data which we want to capture automatically with an algorithm. In $k$-means clustering, we assume *a priori* the existence of $K$ data clusters, with cluster means $\bs{\mu}_k$. Each cluster mean is considered a representative member of its cluster. We also assume the existence of a cluster assignment variable $r_{nk}\in\{0,1\}$, so if data point $n$ belongs to cluster 1, $r_{n1}=1$ and all other $r_{nk} = 0$. This is the same *1-of-K* coding scheme we used for {doc}`logistic regression<../../3-classification/lectures/logistic_regression>`.
+There is a clear pattern in this data which we want to capture automatically with an algorithm. In $k$-means clustering, we assume *a priori* the existence of $K$ data clusters, with cluster means $\bs{\mu}_k$. Each cluster mean is considered a representative member of its cluster. We also assume the existence of a cluster assignment variable $r_{nk}\in\{0,1\}$, so if data point $n$ belongs to cluster 1, $r_{n1}=1$ and all other $r_{nk} = 0$. This is the same *1-of-K* coding scheme we used for {doc}`logistic regression<../classification/logistic_regression>`.
 
 We then define a **distortion measure** we can minimize:
 
@@ -74,13 +74,6 @@ Progress of $k$-means clustering on the dataset. Situation after the third compl
 At the end, the algorithm clearly identified the two clusters we could already see intuitively, and the cluster means moved to representative positions within each cluster.
 
 The $k$-means algorithm can be easily customized by similarity measure from the simple Euclidian distance we use here to some other application-specific metric. 
-
-```{admonition} Further reading    
-:class: tip    
-If you are curious, you can check out different distance measures and their effect on the final clustering by rewatching the MUDE videos on the subject. These different algorithms are however out of the scope for this course.
-+++    
-{bdg-success}`MUDE`    
-``` 
 
 In any case, we can see that $k$-means assigns points to clusters in a **hard** way: each point is assigned to only one cluster with the same confidence regardless if the point is right next to its cluster mean or almost exactly midway between two different cluster means.
 
