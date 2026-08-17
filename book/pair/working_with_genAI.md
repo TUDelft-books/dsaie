@@ -23,19 +23,19 @@ If you are on Windows, after managing to install Docker successfully, launch you
 > 
 > **Note:** For Linux users you will need to prefix the command with `sudo`.
 
-![Docker terminal installation](../../../images/terminal.png)
+![Docker terminal installation](../figures/terminal.png)
 
 <p align="center">Successful installation of OpenWebUI image on Docker, via terminal (in Windows).</p>
 
 After everything is installed (this might take a while), you can view your image in docker desktop as shown below:
 
-![Docker OpenWebUI image view](../../../images/docker_image_view.png)
+![Docker OpenWebUI image view](../figures/docker_image_view.png)
 
 <p align="center">OpenWebUI image available in docker desktop.</p>
 
 Now, you can start accessing WebUI from the URL `localhost:3000`. You must first create an account and then you are ready to use the WebUI.
 
-![Accessing OpenWebUI](../../../images/webui_account.png)
+![Accessing OpenWebUI](../figures/webui_account.png)
 
 <p align="center">Creating an account to access OpenWebUI.</p>
 
@@ -75,11 +75,11 @@ With CoT prompting, the model is guided to list each step to reach the final ans
 
 This is what I obtained **without** CoT prompting:
 
-![Without CoT](../../../images/without_CoT.jpg)
+![Without CoT](../figures/without_CoT.jpg)
 
 ... and **with** CoT prompting:
 
-![With CoT](../../../images/with_CoT.JPG)
+![With CoT](../figures/with_CoT.JPG)
 
 
 [^1]: This problem is adapted from [this YouTube video](https://www.youtube.com/watch?v=Kar2qfLDQ2c&t=45s).
@@ -158,7 +158,7 @@ Once the files have been uploaded we can go back to the chat. Remember the toolt
 
 Start a new chat, type `#knowledge_name` (where knowledge is the name of the knowledge you created) and then press `ENTER`. Now you can ask anything about the course. Let's start with a simple prompt- `In maximum 3 words tell me what the course is about.`
 
-![Accessing book knowledge](../../../images/book_rag.JPG)
+![Accessing book knowledge](../figures/book_rag.JPG)
 
 <p align="center">Tagging the knowledge base in the chat.</p>
 
