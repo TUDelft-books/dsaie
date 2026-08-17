@@ -51,7 +51,7 @@ $$(multiclassbayes)
 We now define $a_k=\ln\left(p(\bx\vert\class_k)p(\class_k)\right)$ and substitute above. The posterior we are trying to approximate then becomes:
 
 $$
-p(\class_k\vert\bx) = \displaystylecomputations
+p(\class_k\vert\bx) = \displaystyle
 \frac{\exp(a_k)}{\sum_j\exp(a_j)} \equiv \mathrm{softmax}(\mbf{a},a_k)
 $$(softmax)
 
