@@ -115,6 +115,7 @@ parts:
       - file: pidl/pinn
       - file: pidl/exercises-clean/pinn
       #- file: pidl/exercises/pinn
+      - file: pidl/review
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md

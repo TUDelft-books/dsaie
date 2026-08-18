@@ -1,6 +1,6 @@
 # Physics-Informed Deep Learning
 
-## Theory
+## Lectures
 
 - {doc}`pinn`
 
