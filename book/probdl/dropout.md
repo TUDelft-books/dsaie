@@ -43,42 +43,6 @@ Instead, common approaches we already explored to prevent overfitting and improv
 2. **Data Augmentation:** Applies transformations to data, enhancing generalization by mimicking real-world input variability.
 3. **Batch Normalization:** Stabilizes training and acts as a regularizer by normalizing layer inputs, aiding in smoother optimization.
 
-## Regularization
-Regularization is any modification we make to a learning algorithm that is intended to reduce its generalization error but not its training error. The goal of regularization is to improve the generalization performance of our model. This is achieved by preventing overfitting by discouraging the model from learning complex patterns that are specific to the training data and may not generalize well to unseen data.
-
-Figure {numref}`overfitting_dropout_diagram` demonstrates how the generalization error rises as the model complexity increases due to the bias-variance tradeoff.
-
-```{figure} ../../../images/bias_variance_tradeoff.svg
-:name: overfitting_dropout_diagram
-:height: 300px
-:align: center
-
-Bias-Variance Trade-Off Error Graph
-```
-
-In traditional machine learning, the goal of regularization is often linked to the control of model complexity, where we try to find the appropriate number of parameters that allow it to capture complex patterns while not overfitting on specific training data points. There are two main types of regularization techniques: *L1 regularization* and *L2 regularization*.
-
-**L1 Regularization (LASSO):** 
-Adds the absolute values of the weights as a penalty term to the loss function, effectively performing feature selection by driving some weights to zero.
-
-$$\mathcal{L}_{\text{total}} = \mathcal{L} + \lambda \sum_{i=1}^n |w_i|$$
-
-**L2 Regularization (Ridge):** 
-Adds the squared values of the weights as a penalty term to the loss function, discouraging large weights uniformly across the model.
-
-$$\mathcal{L}_{\text{total}} = \mathcal{L} + \lambda \sum_{i=1}^n w_i^2$$
-
-L1 and L2 regularization may not be effective for Deep Learning methods, mainly for the following reasons:
-
-- **High Dimensionality:** Deep learning models often have millions of parameters, making L1 and L2 penalties less effective in controlling overfitting.
-
-- **Non-convex Optimization:** Deep networks capture complex, non-linear relationships, which L1 and L2 regularization, suited for linear models, cannot adequately manage.
-
-Instead, common approaches we already explored to prevent overfitting and improve generalization in deep learning are:
-1. **Early Stopping:** Ceases training when validation loss worsens, avoiding overfitting due to learning the noise in the data.
-2. **Data Augmentation:** Applies transformations to data, enhancing generalization by mimicking real-world input variability.
-3. **Batch Normalization:** Stabilizes training and acts as a regularizer by normalizing layer inputs, aiding in smoother optimization.
-
 ## Ensembling as a Form of Regularization
 Ensembling combines predictions from multiple independently trained models, effectively performing model averaging to reduce prediction variance. **Bagging** (bootstrap aggregating) is a specific ensembling technique where $k$ models are trained on different datasets, each constructed by sampling with replacement from the original training data.
 
