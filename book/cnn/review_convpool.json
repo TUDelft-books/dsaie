@@ -1,0 +1,272 @@
+[    
+    {
+        "question": "What is the primary purpose of a convolutional layer in a convolutional neural network (CNN)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To reduce the dimensions of the input image drastically.",
+                "correct": false,
+                "feedback": "Incorrect. The main purpose of a convolutional layer is not to reduce dimensions drastically, but to extract features."
+            },
+            {
+                "answer": "To extract features from the input image by applying filters.",
+                "correct": true,
+                "feedback": "Correct. Convolutional layers apply filters to the input to extract important features."
+            },
+            {
+                "answer": "To classify the input image into various categories.",
+                "correct": false,
+                "feedback": "Incorrect. Classification is typically done in the fully connected layers, not the convolutional layers."
+            },
+            {
+                "answer": "To add non-linearity to the network.",
+                "correct": false,
+                "feedback": "Incorrect. While adding non-linearity is important, it's not the primary purpose of a convolutional layer."
+            }
+        ]
+    },
+    {
+        "question": "In a CNN, how does a 'max pooling' layer work?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "By summing the up all the values in the pooling window.",
+                "correct": false,
+                "feedback": "Incorrect. Max pooling involves selecting the maximum value, not summing up values."
+            },
+            {
+                "answer": "By taking the average of all the values in the pooling window.",
+                "correct": false,
+                "feedback": "Incorrect. This describes average pooling, not max pooling."
+            },
+            {
+                "answer": "By selecting the maximum value from each section of the feature map.",
+                "correct": true,
+                "feedback": "Correct. Max pooling selects the maximum value from each section (pooling window) of the feature map."
+            },
+            {
+                "answer": "By multiplying the values in the pooling window elenment-wise with a filter, and then compute the max.",
+                "correct": false,
+                "feedback": "Incorrect. Multiplying values with a filter is a characteristic of convolutional layers, not max pooling layers."
+            }
+        ]
+    },
+    {
+        "question": "What of the following is true concerning increasing the kernel size in a CNN layer (i.e., from 3x3 to 11x11)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "It results in a reduction of the receptive field of the layer.",
+                "correct": false,
+                "feedback": "Incorrect. Larger kernel sizes increase, not decrease, the receptive field of the layer/network."
+            },    
+            {
+                "answer": "It decreases the computational load of the network.",
+                "correct": false,
+                "feedback": "Incorrect. Larger kernels can actually increase the computational load due to more parameters to learn."
+            },
+            {
+                "answer": "It reduces the dimensionality of the output feature map more aggressively.",
+                "correct": false,
+                "feedback": "Incorrect. Kernel size does not directly affect the dimensionality reduction of the output feature map; this is influenced by stride and pooling."
+            },
+            {
+                "answer": "They are less suited to detect edges in images.",
+                "correct": true,
+                "feedback": "Correct. Edge-like features are best detected with smaller kernel sizes in the early layers of the network."
+            }
+        ]
+    },
+    {
+        "question": "In CNNs, how do dilation rate and stride influence the receptive field and feature map size?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "A higher dilation rate increases the receptive field without reducing feature map size.",
+                "correct": true,
+                "feedback": "Correct. A higher dilation rate expands the receptive field without decreasing the size of the feature map."
+            },
+            {
+                "answer": "A larger stride leads to a more detailed feature map.",
+                "correct": false,
+                "feedback": "Incorrect. A larger stride typically reduces the resolution of the feature map, leading to less detail."
+            },
+            {
+                "answer": "Increasing stride and dilation rate always results in a better feature extraction.",
+                "correct": false,
+                "feedback": "Incorrect. The effectiveness of stride and dilation rate adjustments depends on the specific task and dataset."
+            },
+            {
+                "answer": "Both larger strides and higher dilation rates reduce the computational complexity.",
+                "correct": true,
+                "feedback": "Correct. Larger strides reduce the size of the output feature map, and higher dilation rates cover a larger receptive field without increasing the size of the kernel, both contributing to reduced computational complexity."
+            }
+        ]
+    },
+    {
+        "question": "We saw in class that 1D convolutional layers are a particular case of dense layers. What of the following is true?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "1D convolutional layers are dense layers but with fewer, repeated parameters.",
+                "correct": true,
+                "feedback": "Correct. 1D convolutional layers can be seen as a special case of dense layers with shared weights and fewer parameters."
+            },
+            {
+                "answer": "Dense layers can be used interchangeably with 1D convolutional layers without any impact on the model's performance.",
+                "correct": false,
+                "feedback": "Incorrect. While they are related, the two types of layers serve different purposes and are not interchangeable without impacting the model."
+            },
+            {
+                "answer": "While 1D convolutional layers and dense layers process data in a different way, their outputs is identical.",
+                "correct": false,
+                "feedback": "Incorrect. Both the way they process data and the output generated are different."
+            },
+            {
+                "answer": "1D convolutional layers, unlike dense layers, do not allow for weight sharing across different parts of the input.",
+                "correct": false,
+                "feedback": "Incorrect. In fact, 1D convolutional layers do allow for weight sharing, which is one of their key characteristics."
+            },
+            {
+                "answer": "Dense layers can be considered a generalized form of 1D convolutional layers, with global instead of local connections.",
+                "correct": true,
+                "feedback": "Correct. Dense layers can be seen as a more generalized form where each unit is connected to all units in the previous layer, unlike the local connectivity in convolutional layers."
+            }
+        ]
+    },
+    {
+        "question": "How do we usually make up for the lack of complexity of convolutional filters which consists of only a few parameters?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "We train more filters in parallel to generate more output channels.",
+                "correct": true,
+                "feedback": "Correct. Using multiple filters in parallel allows the network to learn a variety of features at once, increasing the complexity of the learned representation."
+            },
+            {
+                "answer": "We increase the size of the individual filters.",
+                "correct": false,
+                "feedback": "Incorrect. While increasing filter size can capture more abstract features, it does not directly compensate for the lack of complexity due to few parameters."
+            },
+            {
+                "answer": "We add more layers to the network.",
+                "correct": false,
+                "feedback": "Incorrect. Adding more layers increases the depth of the network, but the complexity is primarily increased by using multiple filters in parallel."
+            },
+            {
+                "answer": "We use more complex activation functions.",
+                "correct": false,
+                "feedback": "Incorrect. While activation functions add non-linearity, they do not compensate for the lack of complexity in convolutional filters."
+            },
+            {
+                "answer": "We decrease the stride of the convolutional layers.",
+                "correct": false,
+                "feedback": "Incorrect. Decreasing stride affects the size of the output feature map but does not increase the complexity of the filters."
+            }
+        ]
+    },
+    {
+        "question": "Consider a 1D convolutional layer. The layer has filters with a kernel size of 3, it receives input feature maps across 3 channels and it produces 5 output feature maps. How many learnable parameters are in this convolutional layer, including the bias term(s)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "45",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "50",
+                "correct": true,
+                "feedback": "Correct. 45 weights from 3x3x5 + 5 biases."
+            },
+            {
+                "answer": "46",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "35",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "In a 1D convolutional neural network (CNN) with 2 hidden layers and an input sequence length of 9, what is the minimum kernel size for the convolution filters in each hidden layer to ensure that the receptive field of the last hidden layer encompasses the entire input sequence? Assume the kernel size is the same for all layers, there is no padding, and the stride is 1.",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Incorrect. A kernel size of 3 in each of the 2 layers is insufficient to cover the entire input sequence of length 10."
+            },
+            {
+                "answer": "5",
+                "correct": true,
+                "feedback": "Correct. A kernel size of 5 in each of the 2 layers ensures that the last hidden layer's receptive field covers the entire input sequence."
+            },
+            {
+                "answer": "4",
+                "correct": false,
+                "feedback": "Incorrect. A kernel size of 4 in each layer is insufficient to cover the entire input sequence length."
+            },
+            {
+                "answer": "6",
+                "correct": false,
+                "feedback": "Incorrect. While a kernel size of 6 would cover the entire sequence, it is larger than necessary."
+            }
+        ]
+    },
+    {
+        "question": "Given an input feature map of size 7x7 and a kernel of size 3x3, how much padding should be added on each side of the input feature map to obtain a 'same' convolution, where the output feature map has the same spatial dimensions as the input? Assume the stride is 1.",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "1",
+                "correct": true,
+                "feedback": "Correct. Padding of 1 on each side maintains the same dimension of the output feature map as the input."
+            },
+            {
+                "answer": "2",
+                "correct": false,
+                "feedback": "Incorrect. Padding of 2 on each side would result in an output feature map larger than the input."
+            },
+            {
+                "answer": "0",
+                "correct": false,
+                "feedback": "Incorrect. No padding will reduce the dimensions of the output feature map."
+            },
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Incorrect. Padding of 3 is excessive for maintaining the same dimension."
+            }
+        ]
+    },
+    {
+        "question": "Consider a 2D convolutional layer with a filter size of 3x3, 16 output channels, and 8 input channels. How many parameters does this layer have, including the bias term for each output channel?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "1168",
+                "correct": true,
+                "feedback": "Correct. The total number of parameters is 3x3x8x16 (weights) + 16 (biases) = 1168."
+            },
+            {
+                "answer": "1152",
+                "correct": false,
+                "feedback": "Incorrect. This number represents only the weights, without considering the biases."
+            },
+            {
+                "answer": "144",
+                "correct": false,
+                "feedback": "Incorrect. This calculation does not account for the multiple input and output channels."
+            },
+            {
+                "answer": "1160",
+                "correct": false,
+                "feedback": "Incorrect. This number the weights and 8 biases (e.g., one for each number of input channels)."
+            }
+        ]
+    }      
+]

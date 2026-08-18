@@ -1,0 +1,80 @@
+[
+    {
+        "question": "What does the term 'inductive bias' refer to in machine learning?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The inherent built-in assumptions of a machine learning model.",
+                "correct": true,
+                "feedback": "Correct!"
+            },
+            {
+                "answer": "The tendency of a model to overfit to the training data.",
+                "correct": false,
+                "feedback": "Incorrect. Overfitting is a different concept, related to a model's performance on the training data versus new data."
+            },
+            {
+                "answer": "The process of selecting the most relevant features from a dataset.",
+                "correct": false,
+                "feedback": "Incorrect. Feature selection is part of data preprocessing, not inductive bias."
+            },
+            {
+                "answer": "The bias introduced in a dataset during the data collection process.",
+                "correct": false,
+                "feedback": "Incorrect. Data collection bias is different and relates to the manner in which data is collected."
+            }
+        ]
+    },
+    {
+        "question": "In the context of machine learning, what is the 'curse of dimensionality' primarily associated with?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The fact that to improve models' accuracy, we must increase their dimension.",
+                "correct": false,
+                "feedback": "Incorrect. Increasing dimensions does not necessarily improve model accuracy and often leads to overfitting."
+            },
+            {
+                "answer": "The phenomenon where adding more data to a dataset is the only way to improve model performance.",
+                "correct": false,
+                "feedback": "Incorrect. While more data can be beneficial, this statement does not capture the essence of the curse of dimensionality."
+            },
+            {
+                "answer": "The difficulty in training models effectively as the number of features increases.",
+                "correct": true,
+                "feedback": "Correct!"
+            },
+            {
+                "answer": "The need of dimensionality reduction algorithms to build models or facilitate data visualization.",
+                "correct": false,
+                "feedback": "Incorrect. While dimensionality reduction is a solution to the curse of dimensionality, the curse itself relates to the challenges posed by high dimensions."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following inductive biases is not commonly associated with deep learning methods?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Sequential bias",
+                "correct": false,
+                "feedback": "Incorrect. Sequential bias is a common inductive bias in models that deal with sequential data, like RNNs."
+            },
+            {
+                "answer": "Spatial bias",
+                "correct": false,
+                "feedback": "Incorrect. Spatial bias is prevalent in models like CNNs, which are designed for image data."
+            },
+            {
+                "answer": "Hierarchical bias",
+                "correct": false,
+                "feedback": "Incorrect. Hierarchical bias is often seen in deep learning methods, where models learn representations at multiple levels of abstraction."
+            },
+            {
+                "answer": "Frequency-agnostic bias",
+                "correct": true,
+                "feedback": "Correct. There is no well-established 'frequency-agnostic bias' in the context of deep learning inductive biases."
+            }
+        ]
+    }   
+]

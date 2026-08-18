@@ -1,0 +1,92 @@
+[
+    {
+        "question": "What of the following statements is true about the YOLO (You Only Look Once) object detection algorithm?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "YOLO processes an entire image in a single evaluation, predicting bounding boxes and class probabilities simultaneously.",
+                "correct": true,
+                "feedback": "Correct. YOLO is known for its single-shot detection capability, processing the whole image at once to predict both bounding boxes and class probabilities."
+            },
+            {
+                "answer": "YOLO uses an iterative sliding window approach to detect objects, sequentially scanning the image with various window sizes.",
+                "correct": false,
+                "feedback": "Incorrect. YOLO differs from the sliding window approach by processing the entire image in a single forward pass."
+            },
+            {
+                "answer": "YOLO algorithm requires pre-segmentation of the image to identify regions of interest before detection.",
+                "correct": false,
+                "feedback": "Incorrect. YOLO does not require pre-segmentation and instead directly predicts regions of interest."
+            },
+            {
+                "answer": "YOLO is an iterative detection system that refines bounding box positions over multiple evaluations of an image.",
+                "correct": false,
+                "feedback": "Incorrect. YOLO is designed to perform object detection in a single evaluation without iterative refinement."
+            },
+            {
+                "answer": "YOLO may benefit from pre-training on the ImageNet dataset to initialize its convolutional layers, leveraging the knowledge learned from a large-scale image classification task.",
+                "correct": true,
+                "feedback": "Correct. Pre-training on ImageNet can be beneficial for YOLO in some cases, while it is not a fundamental characteristic of the YOLO algorithm itself."
+            }
+            
+
+        ]
+    },
+    {
+        "question": "What is a key characteristic of semantic segmentation and encoder-decoder models in computer vision?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Semantic segmentation assigns a class label to each pixel in an image, providing pixel-level object understanding.",
+                "correct": true,
+                "feedback": "Correct. Semantic segmentation precisely labels each pixel with its corresponding object class, offering fine-grained object understanding."
+            },
+            {
+                "answer": "Encoder-decoder models consist of two parts: an encoder that extracts features from the input image and a decoder that generates a pixel-wise segmentation map.",
+                "correct": true,
+                "feedback": "Correct. Encoder-decoder models are composed of these two essential components for semantic segmentation."
+            },
+            {
+                "answer": "Semantic segmentation direclty predicts bounding boxes, which are more precise that those returned by object detection.",
+                "correct": false,
+                "feedback": "Incorrect. Semantic segmentation aims to label each pixel and does not directly predict bounding boxes."
+            },
+            {
+                "answer": "Encoder-decoder models do not involve any form of feature extraction; they directly classify objects in an image.",
+                "correct": false,
+                "feedback": "Incorrect. Encoder-decoder models include an encoder that extracts features from the input image, which is crucial for accurate segmentation."
+            },
+            {
+                "answer": "Encoder-decoder methods are primarily used for image classification, as they don't provide detailed information about boundaries.",
+                "correct": false,
+                "feedback": "Incorrect. Encoder-decoder methods in computer vision are mainly used for pixel-level object understanding, like semantic segmentation."
+            }            
+        ]
+    },
+    {
+        "question": "What distinguishes U-Net architecture from traditional encoder-decoder models in semantic segmentation tasks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "U-Net has skip connections that connect encoder and decoder layers to preserve high-resolution spatial information.",
+                "correct": true,
+                "feedback": "Correct. U-Net is known for its skip connections that maintain fine-grained spatial information throughout the network."
+            },
+            {
+                "answer": "Traditional encoder-decoder models do not use the same convolutional layers.",
+                "correct": false,
+                "feedback": "Incorrect. Traditional encoder-decoder may lack skip connections."
+            },
+            {
+                "answer": "U-Net uses max-pooling in the encoder and up-sampling in the decoder to resize feature maps.",
+                "correct": false,
+                "feedback": "Incorrect. While U-Net may use max-pooling and up-sampling, its key distinction is the presence of skip connections."
+            },
+            {
+                "answer": "Traditional encoder-decoder models do not perform semantic segmentation.",
+                "correct": false,
+                "feedback": "Incorrect. Traditional encoder-decoder models can be used for semantic segmentation, but U-Net is known for its specific architecture."
+            }
+        ]
+    } 
+]

@@ -1,0 +1,111 @@
+[
+    {
+        "question": "Which of the statements below is correct concerning the properties of translational invariance and equivariance with respect to pooling and convolution operations in neural networks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Convolution operations are translationally equivariant, meaning that if the input shifts, the output shifts in the same manner, while pooling operations contribute to translational invariance, making the network robust to small translations of the input.",
+                "correct": true,
+                "feedback": "Correct. Convolution layers are equivariant to translations, meaning they preserve the spatial shift of the input, while pooling helps the network to become invariant to small translations."
+            },
+            {
+                "answer": "Pooling operations are translationally equivariant, allowing them to detect features regardless of their position in the input space, while convolution operations help achieve translational invariance.",
+                "correct": false,
+                "feedback": "Incorrect. Pooling operations contribute to translational invariance, not equivariance, and it's the convolution operations that are equivariant."
+            },
+            {
+                "answer": "Both convolution and pooling operations are translationally invariant, ignoring any positional changes in the input.",
+                "correct": false,
+                "feedback": "Incorrect. Convolution operations are not translationally invariant; they are equivariant, meaning they respond to positional changes."
+            },
+            {
+                "answer": "Pooling operations provide translational invariance, ensuring that the exact location of a feature in the input does not affect the output, whereas convolutions provide a fixed response to a feature regardless of its position.",
+                "correct": true,
+                "feedback": "Correct. Pooling helps to achieve translational invariance by making the response of the network insensitive to small translations, whereas convolution operations respond equivariantly to the presence of features."
+            }
+        ]
+    },
+    {
+        "question": "What of the following statements is correct with respect to rotational equivariance/invariance of basic CNNs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Basic CNNs lack rotational equivariance because the convolution operation is only sensitive to the specific pattern it has learned during training, and rotating the input can change the pattern's appearance.",
+                "correct": true,
+                "feedback": "Correct. Basic CNNs are designed to detect patterns at specific orientations; when an input is rotated, the learned filters may not recognize the pattern, leading to a lack of rotational equivariance or invariance."
+            },
+            {
+                "answer": "CNNs are rotationally equivariant by design, as the convolution filters can detect rotated versions of the same pattern.",
+                "correct": false,
+                "feedback": "Incorrect. Standard convolutional filters are not inherently designed to detect rotated versions of patterns unless specifically trained or augmented to do so."
+            },
+            {
+                "answer": "While the representations learned by convolutional layers suffer from rotations, pooling layers still ensure rotational invariance, so the network can recognize objects regardless of their orientation.",
+                "correct": false,
+                "feedback": "Incorrect. While pooling layers provide some level of translational invariance, they do not confer rotational invariance to the network."
+            },
+            {
+                "answer": "Although convolutional and pooling layers do not ensure rotational equivariance/invariance properties, the fully connected layers at the end of CNNs provide rotational invariance.",
+                "correct": false,
+                "feedback": "Incorrect. Fully connected layers do not provide rotational invariance to the network; they are used for classification based on the features extracted by previous layers."
+            }
+        ]
+    },
+    {
+        "question": "Which of the below statements is true about using Data Augmentation in the training of deep learning models?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Data Augmentation can prevent overfitting by increasing the diversity of the training set, helping the model generalize better to unseen data.",
+                "correct": true,
+                "feedback": "Correct. By expanding the dataset with variations, data augmentation reduces overfitting and improves generalization."
+            },
+            {
+                "answer": "It simplifies the model by reducing the number of parameters needed to learn.",
+                "correct": false,
+                "feedback": "Incorrect. Data augmentation does not simplify models; rather, it diversifies the training data, which can actually require the model to learn more complex patterns."
+            },
+            {
+                "answer": "Augmentation improves the accuracy of the model on the exact replicas of the training data.",
+                "correct": false,
+                "feedback": "Incorrect. The goal of data augmentation is not to improve accuracy on replicas of the training data but to enhance generalization to new, unseen data."
+            },
+            {
+                "answer": "It increases the amount of training data, which can be particularly beneficial when the original dataset is large.",
+                "correct": true,
+                "feedback": "Incorrect. Data augmentation is especially useful for enlarging small datasets, which helps in training more robust models."
+            },
+            {
+                "answer": "Data Augmentation can make the model invariant or equivariant to certain transformations, improving its performance on varied data.",
+                "correct": true,
+                "feedback": "Correct. By introducing transformed versions of data, augmentation can teach the model to recognize invariances or equivariances related to these transformations."
+            }
+        ]
+    },
+    {
+        "question": "Which of the below statements is true about using Data Augmentation in the training of deep learning models?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Introducing augmented data can sometimes overshadow the representation of minority classes in a dataset, exacerbating class imbalance.",
+                "correct": true,
+                "feedback": "Correct. If data augmentation is not applied carefully across classes, it can worsen class imbalance issues."
+            },
+            {
+                "answer": "Excessive or inappropriate data augmentation can distort the underlying relationship between the image and its label, leading to incorrect learning by the model.",
+                "correct": true,
+                "feedback": "Correct. Overzealous or incorrectly applied data augmentation can alter images in ways that are not consistent with their labels, confusing the model."
+            },
+            {
+                "answer": "Data augmentation inevitably leads to shorter training times by providing the model with preprocessed images.",
+                "correct": false,
+                "feedback": "Incorrect. Data augmentation usually increases the size of the training set, which can lead to longer training times."
+            },
+            {
+                "answer": "Current automation techniques (like in PyTorch) force augmented data to represent real-world variations, ensuring the model learns only realistic and relevant features.",
+                "correct": false,
+                "feedback": "Incorrect. If data augmentation is not done carefully, it can introduce features that do not correspond to realistic variations, potentially leading to poor real-world performance."
+            }   
+        ]
+    }
+]

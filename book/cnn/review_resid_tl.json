@@ -1,0 +1,261 @@
+[
+    {
+        "question": "What is the 'shattered gradients' problem in the context of training deep neural networks, and how does it affect the learning process?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The shattered gradients problem refers to the situation where gradients become unstable, causing the network's weights to update in non-productive ways, which can lead to poor convergence during training.",
+                "correct": true,
+                "feedback": "Correct. Shattered gradients can destabilize learning by causing erratic weight updates."
+            },
+            {
+                "answer": "Shattered gradients occur when the activation functions are not differentiable at certain points, resulting in undefined gradients that halt the training process.",
+                "correct": false,
+                "feedback": "Incorrect. While non-differentiable points can pose problems, shattered gradients typically refer to the issue of vanishing or exploding gradients, not undefined gradients."
+            },
+            {
+                "answer": "Shattered gradients are a result of overfitting, where the gradients reflect noise in the training data rather than the underlying data distribution.",
+                "correct": false,
+                "feedback": "Incorrect. Shattered gradients are more related to the instability in the optimization process, not overfitting."
+            },
+            {
+                "answer": "The problem arises when there is a mismatch between the batch-normalized gradients and the actual gradients needed for the optimization, causing ineffective weight updates.",
+                "correct": false,
+                "feedback": "Incorrect. Shattered gradients refer to the issue with the gradients themselves becoming unstable, not a mismatch with batch normalization."
+            }
+        ]
+    },
+    {
+        "question": "What is the primary purpose of incorporating residual connections in deep neural network architectures, such as those seen in ResNet models?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Residual connections facilitate the training of deeper networks by alleviating gradient problems, allowing gradients to flow through the network more effectively.",
+                "correct": true,
+                "feedback": "Correct. Residual connections help in training deeper networks by enabling a direct path for gradients, thus reducing gradient issues."
+            },
+            {
+                "answer": "They primarily reduce the computational complexity of the network, allowing for faster training and inference.",
+                "correct": false,
+                "feedback": "Incorrect. While residual connections might have some impact on computational efficiency, their primary purpose is to facilitate training deeper models, not necessarily to reduce computational complexity."
+            },
+            {
+                "answer": "Residual connections are used to compress the model size by sharing weights between layers.",
+                "correct": false,
+                "feedback": "Incorrect. Residual connections do not involve weight sharing for model compression; they are designed to improve gradient flow in deep networks."
+            },
+            {
+                "answer": "Their main purpose is to automatically detect and skip irrelevant layers during training for more efficient learning.",
+                "correct": false,
+                "feedback": "Incorrect. While residual connections can enable the network to 'skip' layers, their main purpose is to preserve gradient flow, not to determine layer relevance."
+            },
+            {
+                "answer": "Residual connections are designed to replace traditional activation functions to increase non-linearity in the network.",
+                "correct": false,
+                "feedback": "Incorrect. Residual connections are not a replacement for activation functions; they are a structural feature to enhance gradient flow in deep networks."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following statements is true about residual blocks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Placing ReLU before linear transformations allows for the normalization of inputs, which stabilizes the learning process.",
+                "correct": false,
+                "feedback": "Incorrect. ReLU is not typically used for normalization; it is used to introduce non-linearity into the model."
+            },
+            {
+                "answer": "The ReLU activation before linear transformations helps to prevent unbounded increases in the activations, which can be beneficial for training stability.",
+                "correct": true,
+                "feedback": "Correct. By using a ReLU before linear layers, the network can prevent unbounded increases in activation values, which contributes to more stable training."
+            },
+            {
+                "answer": "Placing ReLU first is meant to reduce the computational cost by eliminating negative values before further processing.",
+                "correct": false,
+                "feedback": "Incorrect. While ReLU does set negative values to zero, the main purpose of its placement before linear layers is not to reduce computational cost but to manage activation magnitudes."
+            },
+            {
+                "answer": "ReLU is positioned before linear layers to ensure that all inputs to the network are non-negative, which is a requirement for certain types of data.",
+                "correct": false,
+                "feedback": "Incorrect. ReLU's role is not to enforce non-negative inputs for the entire network but to introduce non-linearity."
+            }
+        ]
+    },
+    {
+        "question": "What is the primary purpose of using 1x1 convolutions in convolutional neural networks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To change the number of channels in feature maps without changing their spatial dimensions.",
+                "correct": true,
+                "feedback": "Correct. 1x1 convolutions are often used to adjust the depth of feature maps while keeping spatial dimensions intact."
+            },
+            {
+                "answer": "To reduce the spatial dimensions of feature maps and preserve the depth.",
+                "correct": false,
+                "feedback": "Incorrect. 1x1 convolutions typically maintain spatial dimensions while altering depth."
+            },
+            {
+                "answer": "To increase both the depth and spatial dimensions of feature maps.",
+                "correct": false,
+                "feedback": "Incorrect. The primary purpose of 1x1 convolutions is to adjust depth while preserving spatial dimensions."
+            },
+            {
+                "answer": "To apply global average pooling to feature maps.",
+                "correct": false,
+                "feedback": "Incorrect. Global average pooling is a different operation and not the primary use of 1x1 convolutions."
+            }
+        ]
+    },    
+    {
+        "question": "How is Batch Normalization typically computed for a given mini-batch during training?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Batch Normalization involves normalizing each input feature to have a mean of zero and a standard deviation of one based on the statistics of the current mini-batch.",
+                "correct": true,
+                "feedback": "Correct. Batch Normalization normalizes the activations of a layer for each mini-batch to have a mean of zero and a standard deviation of one."
+            },
+            {
+                "answer": "It is computed by dividing each input feature by the maximum value of the feature in the mini-batch.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization involves normalizing based on the mean and variance of the features, not by the maximum value."
+            },
+            {
+                "answer": "Batch Normalization applies a fixed standardization based on the entire training set, not the mini-batch.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization uses the statistics (mean and variance) of the current mini-batch, not the entire training set."
+            },
+            {
+                "answer": "It involves scaling the input features by a factor determined at the beginning of training and fixed throughout.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization dynamically computes scaling factors based on the mini-batch statistics during training."
+            },
+            {
+                "answer": "Batch Normalization is the process of smoothing out the loss landscape by averaging the gradients over a mini-batch.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization normalizes features, not gradients, and it does not average gradients over a mini-batch."
+            }
+        ]
+    },
+    {
+        "question": "How does Batch Normalization help in preventing the exploding variance problem in residual blocks within deep neural networks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Batch Normalization standardizes the output of each layer, which helps to keep the variance in check and prevent the gradients from becoming too large during the training process.",
+                "correct": true,
+                "feedback": "Correct. By normalizing the layer outputs, Batch Normalization controls the scale of the activations and gradients, mitigating the risk of exploding variance."
+            },
+            {
+                "answer": "Batch Normalization increases the variance of activations deliberately to ensure that the gradients explode, which accelerates the training process.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization does not aim to increase variance or cause gradients to explode; it seeks to stabilize training by maintaining controlled activation scales."
+            },
+            {
+                "answer": "It adds a regularization effect by randomly dropping out nodes from the neural network, thus preventing exploding variance.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization's primary function is not to drop out nodes (which is dropout regularization) but to standardize the outputs of a network layer."
+            },
+            {
+                "answer": "Batch Normalization eliminates the need for residual connections by normalizing the inputs to each block, thus avoiding the problem entirely.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization does not eliminate the need for residual connections; it complements them by stabilizing the training of deep networks."
+            },
+            {
+                "answer": "The technique reduces variance by pooling the activations, similar to max pooling layers in convolutional networks.",
+                "correct": false,
+                "feedback": "Incorrect. Batch Normalization works by normalizing activations, not by pooling, which is a separate operation."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following statements is correct about the exploding variance problem of residual blocks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Exploding variance refers to the issue where the variance increases exponentially with depth, potentially leading to numerical instability.",
+                "correct": true,
+                "feedback": "Correct. The exploding variance problem occurs when the activations within deep residual blocks amplify, causing instability in the network's training process."
+            },
+            {
+                "answer": "Exploding variance in residual blocks is the problem where the variance of the weights, not the activations, becomes too large due to repeated residual connections.",
+                "correct": false,
+                "feedback": "Incorrect. Exploding variance typically refers to the activations rather than the weights within the network."
+            },
+            {
+                "answer": "The exploding variance problem happens when the output variance of a residual block exceeds the variance of the input, compromising the identity mapping.",
+                "correct": false,
+                "feedback": "Incorrect. While an increase in output variance over input variance could be a symptom, the problem refers to the exponential increase of activation variance with depth."
+            },
+            {
+                "answer": "Applying Batch Normalization mitigates the problem of exploding variance.",
+                "correct": true,
+                "feedback": "Correct. Batch Normalization is effective at addressing the exploding variance problem by normalizing the outputs of layers and thus keeping the forward pass activations within a stable range."
+            }
+        ]
+    },
+    {
+        "question": "What of the following statements is true about transfer learning?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Transfer learning involves taking a pre-trained model from one domain and retraining it on a new dataset from a different domain to leverage learned features.",
+                "correct": true,
+                "feedback": "Correct. Transfer learning leverages the knowledge a model has gained from one task to improve learning in another task."
+            },
+            {
+                "answer": "Transfer Learning involves the entire dataset from one domain to another to improve the model's performance.",
+                "correct": false,
+                "feedback": "Incorrect. Transfer learning focuses on transferring learned model features, not datasets."
+            },
+            {
+                "answer": "Fine-tuning all layers allows the model to adjust all the learned features for the new task, whereas fine-tuning only the classifier adjusts the final decision-making layer.",
+                "correct": true,
+                "feedback": "Correct. Fine-tuning all layers adapts the entire model to the new task, while fine-tuning only the classifier relies on the generic features learned previously."
+            },
+            {
+                "answer": "Transfer Learning involves transferring the model architecture but not the weights, starting training from scratch on a new task.",
+                "correct": false,
+                "feedback": "Incorrect. While transferring architectures is part of the process, the key aspect of transfer learning is leveraging the pre-trained weights."
+            },
+            {
+                "answer": "Only fine-tuning the classifier is recommended when the new task is very different from the original task the model was trained on.",
+                "correct": false,
+                "feedback": "Incorrect. When the new task is very different, it might be beneficial to fine-tune more layers or even retrain the model."
+            },
+            {
+                "answer": "Transfer learning is restricted to architectures solving the same type of computer vision tasks; for instance, a model pre-trained on an image classification dataset cannot be repurposed for object detection.",
+                "correct": false,
+                "feedback": "Incorrect. Transfer learning can be applied across different computer vision tasks. Models pre-trained on image classification datasets are often used as a starting point for object detection tasks."
+            }       
+        ]
+    },
+    {
+        "question": "In transfer learning, when transferring knowledge from task A to task B, under what circumstance is the transfer most likely to be successful?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Transfer is most successful when task A and task B are closely related, allowing for more relevant feature reuse.",
+                "correct": true,
+                "feedback": "Correct. The closer the tasks are, the more likely the features learned from one will be beneficial to the other."
+            },
+            {
+                "answer": "The transfer is most effective when task A and task B are completely unrelated, providing maximum diversity in the learned features.",
+                "correct": false,
+                "feedback": "Incorrect. Transfer learning typically works best when the tasks are related, as unrelated tasks may not benefit from the same features."
+            },
+            {
+                "answer": "The success of the transfer is independent of the relationship between tasks; it is more about the size of the datasets.",
+                "correct": false,
+                "feedback": "Incorrect. While dataset size matters, the relatedness of the tasks plays a crucial role in the success of transfer learning."
+            },
+            {
+                "answer": "Transfer is most successful when task A is more complex than task B, regardless of the domain.",
+                "correct": false,
+                "feedback": "Incorrect. The complexity of tasks does not inherently guarantee successful transfer; relevance and relatedness of the tasks are more important factors."
+            }
+        ]
+    }    
+]

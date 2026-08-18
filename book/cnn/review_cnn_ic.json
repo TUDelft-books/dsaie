@@ -1,0 +1,162 @@
+[
+    {
+        "question": "In the context of computer vision, how do image classification, object detection, and semantic segmentation fundamentally differ from each other?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Image classification assigns labels to the entire image, object detection identifies and locates objects within an image, and semantic segmentation classifies each pixel of the image into a class.",
+                "correct": true,
+                "feedback": "Correct. Image classification deals with categorizing images into classes, object detection finds objects and their boundaries, while semantic segmentation assigns a class to each pixel."
+            },
+            {
+                "answer": "Image classification and object detection are very similar same since they don't work on individual pixels, while semantic segmentation is different as it involves pixel-level classification.",
+                "correct": false,
+                "feedback": "Incorrect. Image classification and object detection are fundamentally different; the former labels the whole image, while the latter locates and labels objects within the image."
+            },
+            {
+                "answer": "Object detection identifies objects within an image, while image classification and semantic segmentation both assign a single label to the entire image.",
+                "correct": false,
+                "feedback": "Incorrect. Semantic segmentation does not assign a single label to the entire image; it classifies each pixel into different classes."
+            },
+            {
+                "answer": "Semantic segmentation and object detection both involve identifying objects, but only object detection classifies the entire image.",
+                "correct": false,
+                "feedback": "Incorrect. Semantic segmentation classifies each pixel, not the entire image."
+            }
+        ]
+    },
+    {
+        "question": "Consider the following scenarios: (1) Distinguishing between images of cats and dogs, (2) Identifying the type of vehicle in an image, where the options include car, truck, bike, and bus, and (3) Analyzing satellite images to simultaneously identify various features such as roads, buildings, and water bodies. How do these scenarios exemplify binary classification, multiclass classification, and multilabel classification, respectively?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Scenario 1 is binary classification, Scenario 2 is multiclass classification, and Scenario 3 is multilabel classification.",
+                "correct": true,
+                "feedback": "Correct. Scenario 1 involves two classes, so binary classification. Scenario 2 involves categorizing into one of several exclusive classes, hence multiclass. Scenario 3 allows for multiple labels per image simultaneously (this is different from the UC Merced Land Use Dataset we used)."
+            },
+            {
+                "answer": "Scenario 2 and Scenario 3 are both examples of multiclass classification, while Scenario 1 is an example of binary classification.",
+                "correct": false,
+                "feedback": "Incorrect. Scenario 2 is multiclass (multiple exclusive classes), and Scenario 3 is multilabel (multiple labels per image)."
+            },
+            {
+                "answer": "Scenario 2 and Scenario 3 are both examples of multilabel classification, while Scenario 1 is an example of binary classification.",
+                "correct": false,
+                "feedback": "Incorrect. Scenario 1 is binary (two classes), Scenario 2 is multiclass (multiple exclusive classes), and Scenario 3 is multilabel (multiple labels per image)."
+            },           {
+                "answer": "All three scenarios exemplify multilabel classification, as they involve labeling images with multiple features.",
+                "correct": false,
+                "feedback": "Incorrect. Only Scenario 3 involves labeling images with multiple features. Scenario 1 is binary, and Scenario 2 is multiclass."
+            }
+        ]
+    },
+    {
+        "question": "What is the main architectural difference between the AlexNet and VGG neural network models used for image classification?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The primary difference lies in the depth and size of the convolutional layers.",
+                "correct": true,
+                "feedback": "Correct. The key distinction between AlexNet and VGG is the depth and the size of convolutional filters, with VGG opting for deeper layers and smaller filter sizes."
+            },
+            {
+                "answer": "AlexNet uses more fully connected layers than VGG.",
+                "correct": false,
+                "feedback": "Incorrect. The main difference is not in the number of fully connected layers, but in the depth and size of the convolutional layers."
+            },
+            {
+                "answer": "VGG uses max pooling layers, while AlexNet does not.",
+                "correct": false,
+                "feedback": "Incorrect. Both architectures use max pooling layers; the difference lies in their convolutional layer configurations."
+            },
+            {
+                "answer": "AlexNet incorporates batch normalization, whereas VGG does not.",
+                "correct": false,
+                "feedback": "Incorrect. Batch normalization was not a feature in the original designs of either AlexNet or VGG. The main difference is in their convolutional layers."
+            }
+        ]
+    },
+    {
+        "question": "In a CNN, before passing the output of the convolutional layers to a classifier, a flattening operation is performed. What does this operation entail, and what do the resulting flattened features represent?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The flattening operation transforms the multi-dimensional output of the convolutional layers into a one-dimensional array, and the flattened features represent the high-level features extracted from the input image.",
+                "correct": true,
+                "feedback": "Correct. Flattening converts the multi-dimensional tensor into a 1D array, and the features are high-level abstractions of the input data, suitable for classification."
+            },
+            {
+                "answer": "Flattening operation adds an additional convolutional layer to enhance feature extraction, and the features represent the raw pixel values of the image.",
+                "correct": false,
+                "feedback": "Incorrect. Flattening does not add another convolutional layer, nor do the flattened features represent raw pixel values. They are higher-level abstractions."
+            },
+            {
+                "answer": "The flattening operation reduces the dimensionality of the features through a pooling process, and these features represent the most dominant aspects of the input image.",
+                "correct": false,
+                "feedback": "Incorrect. Flattening is not a pooling process. It simply converts the multi-dimensional tensor into a 1D array without altering the representational content."
+            },
+            {
+                "answer": "Flattening involves the compression of the image into a smaller size, and the features represent compressed image data.",
+                "correct": false,
+                "feedback": "Incorrect. Flattening does not compress or reduce the size of the image data. It rearranges the output of the convolutional layers into a 1D array."
+            }
+        ]
+    },
+    {
+        "question": "Given a confusion matrix for a binary classification task with the following values: True Positives (TP) = 40, False Positives (FP) = 10, True Negatives (TN) = 30, and False Negatives (FN) = 20, calculate the precision and recall. What are their respective values?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Precision = 0.80, Recall = 0.67",
+                "correct": true,
+                "feedback": "Correct. Precision is calculated as TP / (TP + FP) = 40 / (40 + 10) = 0.8, and Recall is TP / (TP + FN) = 40 / (40 + 20) = 0.67."
+            },
+            {
+                "answer": "Precision = 0.67, Recall = 0.57",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Precision = 0.70, Recall = 0.67",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Precision = 0.80, Recall = 0.57",
+                "correct": false,
+                "feedback": "Incorrect."
+            }
+        ]
+    },
+    {
+        "question": "Which of the statements below is correct concerning the evaluation of multiclass classification models with macro-averaged and weighted-average metrics?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Macro-averaged metrics calculate the average of the individual class metrics without considering class frequency.",
+                "correct": true,
+                "feedback": "Correct. Macro-averaging treats every class equally regardless of their size."
+            },
+            {
+                "answer": "Weighted-average metrics account for class distribution by assigning weights proportional to the class frequency.",
+                "correct": true,
+                "feedback": "Correct. Weighted-average metrics take class distribution into account."
+            },
+            {
+                "answer": "Macro-averaged metrics assign weights to classes based on their support, which is the number of instances in the class.",
+                "correct": false,
+                "feedback": "Incorrect. Macro-averaged metrics do not weight classes; they treat all classes equally."
+            },
+            {
+                "answer": "Weighted-average metrics treat all classes equally by computing a simple average of the performance metrics across all classes.",
+                "correct": false,
+                "feedback": "Incorrect. Weighted-average metrics do not treat all classes equally; they weight classes according to their frequency."
+            },
+            {
+                "answer": "Both macro-averaged and weighted-average metrics will yield the same conclusion if the the class distribution is imbalanced.",
+                "correct": false,
+                "feedback": "Incorrect. The two metrics can yield different results, especially when the class distribution is imbalanced."
+            }
+        ]
+    }    
+]
