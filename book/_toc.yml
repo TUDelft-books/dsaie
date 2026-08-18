@@ -116,6 +116,17 @@ parts:
       - file: pidl/exercises-clean/pinn
       #- file: pidl/exercises/pinn
       - file: pidl/review
+    - file: rnn/overview.md
+      sections:
+      - file: rnn/rnn
+      - file: rnn/exercises-clean/waterdemand_rnn_part_1
+      #- file: rnn/exercises/waterdemand_rnn_part_1
+      - file: rnn/exercises-clean/waterdemand_rnn_part_2
+      #- file: rnn/exercises/waterdemand_rnn_part_2
+      - file: rnn/lstm_gru
+      - file: rnn/exercises-clean/waterdemand_rnn_part_3
+      #- file: rnn/exercises/waterdemand_rnn_part_3
+      - file: rnn/review
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md

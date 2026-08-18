@@ -1,0 +1,163 @@
+[
+    {
+        "question": "Which of the statement below is correct concerning Recurrent Neural Networks (RNNs) in comparison with other architectures?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Since RNNs are designed with sequential inductive bias, they always outperform MLPs when predicting time series.",
+                "correct": false,
+                "feedback": "Incorrect. While RNNs are more efficient in processing time series due to their sequential inductive bias, for some cases, MLPs can still provide better predictions."
+            },
+            {
+                "answer": "RNNs and 1D CNNs implement the same type of sequential inductive bias.",
+                "correct": false,
+                "feedback": "Incorrect. RNNs process data sequentially, whereas 1D-CNNs use convolutional filters across the sequence."
+            },
+            {
+                "answer": "RNNs use shared parameters across different parts of the sequence, unlike 1D CNNs.",
+                "correct": false,
+                "feedback": "Incorrect. 1D CNNs also employ shared parameters."
+            },
+            {
+                "answer": "With respect to MLPs, RNNs use an additional weight matrix to handle time steps in sequential data.",
+                "correct": true,
+                "feedback": "Correct. This is a characteristic of RNNs."
+            }
+        ]
+    },
+    {
+        "question": "Why are MLPs more affected by the curse of dimensionality compared to RNNs in the context of processing sequences?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "MLPs face challenges with longer sequences due to the exponential increase in the dimensions of the input layer",
+                "correct": true,
+                "feedback": "Correct. MLPs suffer from the curse of dimensionality with longer sequences."
+            },
+            {
+                "answer": "The length of the sequence does not affect the performance of MLPs, only the number of input sequences to handle has an impact.",
+                "correct": false,
+                "feedback": "Incorrect. The length of the sequence greatly affects MLPs due to the curse of dimensionality."
+            },
+            {
+                "answer": "The length of the sequence does not affect the performance of MLPs or RNNs in any significant way.",
+                "correct": false,
+                "feedback": "Incorrect. The length of the sequence greatly affects MLPs due to the curse of dimensionality, whereas RNNs are less affected."
+            },
+            {
+                "answer": "RNNs suffer equally from the curse of dimensionality as MLPs, regardless of the sequence length.",
+                "correct": false,
+                "feedback": "Incorrect. RNNs are better equipped to handle longer sequences due to parameter reuse."
+            }
+        ]
+    },
+    {
+        "question": "What are the two main design patterns of RNNs, and how do they differ in terms of output?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The first RNN design produces one output at each time step, while the second design reads an entire sequence to produce a single output.",
+                "correct": true,
+                "feedback": "Correct. The first design is for time-step outputs, and the second summarizes the sequence into a single output."
+            },
+            {
+                "answer": "Both RNN designs produce a single output from an input sequence, but differ in the length of the input sequence.",
+                "correct": false,
+                "feedback": "Incorrect. The designs differ by output pattern, not input sequence length."
+            },
+            {
+                "answer": "The first RNN design associates each node to a time instance, while the second design uses all nodes to produce the final output.",
+                "correct": true,
+                "feedback": "Correct. The first design maps nodes to specific time instances, whereas the second aggregates across the sequence."
+            },
+            {
+                "answer": "The first design pattern is used for tasks like classification, and the second for tasks like feature extraction.",
+                "correct": false,
+                "feedback": "Incorrect. The distinction is based on the output sequence, not the type of task."
+            },
+            {
+                "answer": "Both designs measure loss across the entire sequence equally.",
+                "correct": false,
+                "feedback": "Incorrect. The first design measures loss at each time step, while the second measures loss at the last output."
+            }
+        ]
+    },
+    {
+        "question": "What is the primary function of the encoder and decoder components in an Encoder-Decoder RNN architecture?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The encoder maps input sequences to a fixed-length latent representation, while the decoder generates the target sequence from this encoded vector.",
+                "correct": true,
+                "feedback": "Correct. The encoder creates a context-rich representation, and the decoder produces the output sequence."
+            },
+            {
+                "answer": "The encoder generates the target sequence, and the decoder maps it back to the input sequence for validation.",
+                "correct": false,
+                "feedback": "Incorrect. The encoder processes the input sequence, and the decoder is responsible for generating the output."
+            },
+            {
+                "answer": "Both encoder and decoder work in parallel to process and generate sequences simultaneously.",
+                "correct": false,
+                "feedback": "Incorrect. The encoder first processes the input sequence, then the decoder uses its output to generate the target sequence."
+            },
+            {
+                "answer": "The encoder-decoder architecture is particularly useful when the input and output sequences have different lengths.",
+                "correct": true,
+                "feedback": "Correct. Encoder-decoders work well with this type of sequence-to-sequence modelling task."
+            }
+        ]
+    },
+    {
+        "question": "What are the key features of Bi-directional RNNs (Bi-RNNs) and in what situations are they most effective?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Bi-RNNs process data in both directions using two separate hidden layers, making them suitable for tasks where the entire input sequence is known beforehand.",
+                "correct": true,
+                "feedback": "Correct. Bi-RNNs are effective when the full sequence is available, as they can utilize future context."
+            },
+            {
+                "answer": "Bi-RNNs are less effective than standard RNNs since they require future data, which is rarely available.",
+                "correct": false,
+                "feedback": "Incorrect. While Bi-RNNs do require future data, they are more effective in suitable situations, not less."
+            },
+            {
+                "answer": "The dual hidden layers in Bi-RNNs reduce the context awareness compared to standard RNNs.",
+                "correct": false,
+                "feedback": "Incorrect. The two hidden layers in Bi-RNNs may actually enhance context awareness."
+            },
+            {
+                "answer": "Bi-RNNs are deeper than simple RNNs.",
+                "correct": false,
+                "feedback": "Incorrect. Bi-RNNs are not necessarily deeper; they process information in both forward and backward directions to enhance context awareness."
+            }
+        ]
+    },
+    {
+        "question": "What characterizes Deep RNNs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Deep RNNs are characterized by vertically stacked layers that form a hierarchical representation of temporal features.",
+                "correct": true,
+                "feedback": "Correct. Deep RNNs use stacked layers for temporal abstraction, and their depth is limited by computational demands."
+            },
+            {
+                "answer": "Deep RNNs usually maintain the sequence length across layers, unlike CNNs, which reduce dimensionality with downsampling.",
+                "correct": true,
+                "feedback": "Correct. Deep RNNs maintain sequence length, whereas CNNs often reduce it through pooling or strided convolution."
+            },
+            {
+                "answer": "Deep RNNs require less careful training compared to CNNs because they are not as deep.",
+                "correct": false,
+                "feedback": "Incorrect. The depth of RNNs also requires careful training to avoid issues like vanishing gradients."
+            },
+            {
+                "answer": "It is easier to train deeper RNNs than CNNs, but the hierarchical learning process does not benefit from additional depth.",
+                "correct": false,
+                "feedback": "Incorrect. While additional depth could benefit learning, computational intensity is a limiting factor for RNNs."
+            }
+        ]
+    }        
+]

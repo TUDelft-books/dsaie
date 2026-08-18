@@ -1,0 +1,214 @@
+[
+    {
+        "question": "What are the two main problems that gradients may encounter when training deep RNNs with Backpropagation Through Time (BPTT)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Gradients may become increasingly smaller, making the learning process very slow.",
+                "correct": true,
+                "feedback": "Correct. Vanishing gradients occur when gradients shrink exponentially, leading to negligible weight updates."
+            },
+            {
+                "answer": "Gradients may increase exponentially during backpropagation, leading to very large weight updates.",
+                "correct": true,
+                "feedback": "Correct. Exploding gradients result in disproportionately large changes in weights."
+            },
+            {
+                "answer": "The gradients remain unchanged, preventing the model from learning.",
+                "correct": false,
+                "feedback": "Incorrect. Unchanged gradients can be a different problem, but not as common as vanishing and exploding gradients."
+            },
+            {
+                "answer": "The gradients oscillate wildly, leading to unstable training.",
+                "correct": false,
+                "feedback": "Incorrect. While instability may occur, we described vanishing and exploding gradients as the main issues."
+            },
+            {
+                "answer": "Gradients disappear completely due to numerical precision issues.",
+                "correct": false,
+                "feedback": "Incorrect. While numerical precision can be an issue, vanishing gradients generally refer to gradients approaching zero for different reasons."
+            }
+        ]
+    },
+    {
+        "question": "What role does the additive gradient path in the cell state play in gated RNNs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "It allows gradients to be preserved across long time steps.",
+                "correct": true,
+                "feedback": "Correct. The additive path ensures gradients are preserved over long sequences."
+            },
+            {
+                "answer": "The gradient path resets the cell states at each time step to prevent gradient issues.",
+                "correct": false,
+                "feedback": "Incorrect. The additive gradient path does not reset cell states; it helps maintain information flow."
+            },
+            {
+                "answer": "It provides a mostly linear path through the network, reducing the effect of non-linear activations on gradient flow.",
+                "correct": true,
+                "feedback": "Correct. The additive gradient path reduces the impact of non-linearities on gradient decay."
+            },
+            {
+                "answer": "The additive gradient path amplifies gradients at each step to counter vanishing gradients.",
+                "correct": false,
+                "feedback": "Incorrect. It prevents decay but does not amplify gradients."
+            },
+            {
+                "answer": "It removes the need for gating mechanisms by introducing direct connections between non-adjacent cells.",
+                "correct": false,
+                "feedback": "Incorrect. The additive gradient path works alongside gates, not as a replacement."
+            }
+        ]
+    },
+    {
+        "question": "How do gated RNNs, such as LSTM and GRU models, help mitigate the vanishing gradient problem?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Gates regulate the flow of information, allowing the model to retain relevant information over long sequences.",
+                "correct": true,
+                "feedback": "Correct. Gating mechanisms help maintain a more constant error flow through time."
+            },
+            {
+                "answer": "Gates eliminate the need for backpropagation, thus avoiding the gradient issues entirely.",
+                "correct": false,
+                "feedback": "Incorrect. Backpropagation is still used; gates just help control the gradient flow."
+            },
+            {
+                "answer": "The linear feedback loop of gated RNNs ensures that the gradients are reset at each time step, preventing vanishing or exploding.",
+                "correct": false,
+                "feedback": "Incorrect. Gradients are not reset; they are regulated to avoid diminishing or exploding."
+            },
+            {
+                "answer": "Gates amplify the gradients at each step to counteract any potential decrease in their magnitude.",
+                "correct": false,
+                "feedback": "Incorrect. Gates control, rather than simply amplify, the gradients."
+            },
+            {
+                "answer": "Gating mechanisms automatically increase the depth of the network, thereby smoothing the gradients and solving related issues.",
+                "correct": false,
+                "feedback": "Incorrect. Increasing network depth without addressing gradient flow would not solve the problem."
+            }
+        ]
+    },
+    {
+        "question": "What does the gating mechanism in an LSTM achieve during the learning process?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "It dynamically updates the cell state by balancing between new information and the previous state.",
+                "correct": true,
+                "feedback": "Correct. The gates help balance the cell state with new and old information."
+            },
+            {
+                "answer": "Gating mechanisms compress data to reduce the dimensionality of the input sequence.",
+                "correct": false,
+                "feedback": "Incorrect. Gates regulate information flow, not compress data."
+            },
+            {
+                "answer": "The gates randomly drop information to prevent overfitting.",
+                "correct": false,
+                "feedback": "Incorrect. Gates are not random."
+            },
+            {
+                "answer": "Gates act to synchronize the timing of information flow across different parts of the network.",
+                "correct": false,
+                "feedback": "Incorrect. Synchronization is not the primary role of LSTM gates."
+            }
+        ]
+    },
+    {
+        "question": "What is the function of the forget gate in an LSTM cell?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "It determines which parts of the cell state should be retained or discarded from the previous time step.",
+                "correct": true,
+                "feedback": "Correct. The forget gate decides what information is no longer relevant to the cell state."
+            },
+            {
+                "answer": "The forget gate is responsible for adding new information to the cell state from the current input.",
+                "correct": false,
+                "feedback": "Incorrect. Adding new information is the job of the input gate, not the forget gate."
+            },
+            {
+                "answer": "It resets the entire cell state to zero at each time step.",
+                "correct": false,
+                "feedback": "Incorrect. The forget gate selectively removes information, rather than resetting the cell state."
+            },
+            {
+                "answer": "The forget gate controls the output of the cell, determining what is passed to the next layer.",
+                "correct": false,
+                "feedback": "Incorrect. That is the function of the output gate."
+            },
+            {
+                "answer": "It modulates the gradient flow during backpropagation to prevent exploding gradients.",
+                "correct": false,
+                "feedback": "Incorrect. While gates influence gradient flow, the forget gate's primary role is in state management."
+            }
+        ]
+    },
+    {
+        "question": "What are the main architectural differences between GRUs and LSTMs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "GRUs combine the forget and input gates into a single 'update gate', whereas LSTMs have separate gates for each function.",
+                "correct": true,
+                "feedback": "Correct. GRUs have an update gate that acts as both forget and input gate, unlike LSTMs."
+            },
+            {
+                "answer": "GRUs have an additional cell state for more complex temporal modeling, while LSTMs do not.",
+                "correct": false,
+                "feedback": "Incorrect. LSTMs have a cell state; GRUs do not use a separate cell state."
+            },
+            {
+                "answer": "LSTMs typically require more parameters than GRUs, making them more complex.",
+                "correct": true,
+                "feedback": "Correct. LSTMs have more gates and therefore more parameters than GRUs."
+            },
+            {
+                "answer": "GRUs are a special case of LSTMs with tied weights for efficiency.",
+                "correct": false,
+                "feedback": "Incorrect. GRUs are not a special case of LSTMs but a different gated RNN architecture."
+            },
+            {
+                "answer": "LSTMs perform significantly better than GRUs on all tasks due to their complexity.",
+                "correct": false,
+                "feedback": "Incorrect. Performance depends on the task and data; one is not universally better than the other."
+            }
+        ]
+    },
+    {
+        "question": "In what scenarios might GRUs be preferred over LSTMs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "GRUs might be preferred when the model needs to be less complex and easier to compute, due to fewer parameters.",
+                "correct": true,
+                "feedback": "Correct. GRUs have fewer parameters, which can make them more suitable for certain tasks."
+            },
+            {
+                "answer": "GRUs are preferred when the sequences are very long, as they are better at capturing long-term dependencies.",
+                "correct": false,
+                "feedback": "Incorrect. Both GRUs and LSTMs are designed to capture long-term dependencies, but GRUs are not specifically better for longer sequences."
+            },
+            {
+                "answer": "LSTMs are always preferred over GRUs due to their additional gates providing better control over the cell state.",
+                "correct": false,
+                "feedback": "Incorrect. The preference depends on the specific requirements of the task, not just the control over the cell state."
+            },
+            {
+                "answer": "GRUs should be preferred when the training dataset is small, as they can generalize better with fewer parameters.",
+                "correct": true,
+                "feedback": "Correct. With fewer parameters, GRUs may generalize better on smaller datasets."
+            },
+            {
+                "answer": "GRUs should be preferred for real-time applications where computational resources are limited.",
+                "correct": true,
+                "feedback": "Correct. The simpler structure of GRUs can offer advantages in real-time applications."
+            }
+        ]
+    }       
+]
