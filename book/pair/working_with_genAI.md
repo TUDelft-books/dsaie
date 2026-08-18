@@ -75,7 +75,7 @@ With CoT prompting, the model is guided to list each step to reach the final ans
 
 This is what I obtained **without** CoT prompting:
 
-![Without CoT](../figures/without_CoT.jpg)
+![Without CoT](../figures/without_CoT.JPG)
 
 ... and **with** CoT prompting:
 

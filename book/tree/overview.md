@@ -6,7 +6,7 @@ Tree-based methods offer a robust alternative to Deep Learning approaches for ma
 
 ## Recorded Lectures:
 - {doc}`decision_trees`
-- {doc}`ensenmble_methods`
+- {doc}`ensemble_methods`
     
 ## Exercises:
 - {doc}`exercises-clean/tree-based-model`
