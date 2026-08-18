@@ -1,0 +1,95 @@
+[
+    {
+        "question": "How is the physics inductive bias implemented in Physics-Informed Neural Networks (PINNs)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "By incorporating physical laws directly into the loss function used during the training process.",
+                "correct": true,
+                "feedback": "Correct. PINNs implement the physics inductive bias by embedding physical laws, typically in the form of differential equations, into the loss function."
+            },
+            {
+                "answer": "Through the use of specialized activation functions that mimic physical processes.",
+                "correct": false,
+                "feedback": "Incorrect. While activation functions are important, the key aspect of physics inductive bias in PINNs is the incorporation of physical laws into the loss function."
+            },
+            {
+                "answer": "By pre-training the network on data generated from physical simulations.",
+                "correct": false,
+                "feedback": "Incorrect. Pre-training on simulation data is not the primary method of implementing physics inductive bias in PINNs."
+            },
+            {
+                "answer": "Using a specific architecture that is designed based on the underlying physical system.",
+                "correct": false,
+                "feedback": "Incorrect. While architecture can be important, it's the embedding of physical laws into the loss function that primarily introduces physics inductive bias in PINNs."
+            },
+            {
+                "answer": "By adjusting the weights of the network to align with known physical constants.",
+                "correct": false,
+                "feedback": "Incorrect. The implementation of physics inductive bias in PINNs is not typically done through manual adjustments of weights to align with physical constants."
+            }
+        ]
+    },
+    {
+        "question": "What components are typically included in the loss function of Physics-Informed Neural Networks (PINNs) to ensure comprehensive learning?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The loss function in PINNs usually consists of data mismatch loss, physics-based loss, and specific losses for boundary and initial conditions.",
+                "correct": true,
+                "feedback": "Correct. PINNs typically include a combination of data mismatch loss, physics-based loss, and additional components for boundary and initial conditions to ensure the model accurately represents the physical system."
+            },
+            {
+                "answer": "A physics-based loss, an initial condition loss and a boundary condition loss.",
+                "correct": false,
+                "feedback": "Incorrect. Data mismatch loss is also typically included."
+            },
+            {
+                "answer": "Data mismatch loss and a combined loss for both boundary and initial conditions, excluding explicit physics-based loss to avoid overfitting.",
+                "correct": false,
+                "feedback": "Incorrect. While boundary and initial conditions are important, the explicit inclusion of a physics-based loss is a key characteristic of PINNs."
+            },
+            {
+                "answer": "Components that compare the network's predictions with both experimental data and simulation results from traditional computational methods.",
+                "correct": false,
+                "feedback": "Incorrect. While comparison with experimental data is common (data mismatch loss), direct comparison with traditional computational simulations is not a standard component of the loss in PINNs."
+            },
+            {
+                "answer": "Weights to adjust the importance of each component in the loss function.",
+                "correct": true,
+                "feedback": "Correct. Weights helps ensure that each component of the loss function contributes appropriately to the training process."
+            }
+        ]
+    },
+    {
+        "question": "What are some of the limitations or drawbacks of using PINNs?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The spectral bias of neural networks may lead to challenges in learning complex, high-frequency components in solutions.",
+                "correct": true,
+                "feedback": "Correct. Neural networks, including PINNs, often exhibit spectral bias, which can hinder their ability to capture high-frequency details in data."
+            },
+            {
+                "answer": "PINNs can be computationally inefficient, requiring extensive resources for training and inference.",
+                "correct": true,
+                "feedback": "Correct. The complexity of integrating physical laws into neural networks can lead to increased computational demands."
+            },
+            {
+                "answer": "The use of an incorrect or inappropriate physics-based inductive bias can lead to misleading results and poor model performance.",
+                "correct": true,
+                "feedback": "Correct. Choosing the wrong inductive bias in PINNs can significantly impact the accuracy and reliability of the model's predictions."
+            },
+            {
+                "answer": "PINNs are limited to linear physical systems and cannot model nonlinear dynamics effectively.",
+                "correct": false,
+                "feedback": "Incorrect. PINNs are capable of modeling both linear and nonlinear systems, depending on how they are constructed."
+            },
+            {
+                "answer": "By definition, they are striclty less accurate than traditional neural networks in scenarios where physical laws are not well understood.",
+                "correct": false,
+                "feedback": "Incorrect. While it's true that the effectiveness of PINNs is linked to the understanding of the physical laws, they are not inherently less accurate than traditional neural networks in such scenarios."
+            }
+        ]
+    }
+]

@@ -110,6 +110,11 @@ parts:
       - file: cnn/exercises-clean/FAT_application
       #- file: cnn/exercises/FAT_application
       - file: cnn/review
+    - file: pidl/overview.md
+      sections:
+      - file: pidl/pinn
+      - file: pidl/exercises-clean/pinn
+      #- file: pidl/exercises/pinn
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md
