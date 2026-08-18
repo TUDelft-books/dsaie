@@ -90,6 +90,26 @@ parts:
       - file: intro_deeplearning/introduction
       - file: intro_deeplearning/exercises-clean/curse_of_dimensionality
       #- file: intro_deeplearning/exercises/curse_of_dimensionality
+    - file: cnn/overview.md
+      sections:
+      - file: cnn/convolution_and_pooling
+      - file: cnn/exercises-clean/convolution_and_pooling
+      #- file: cnn/exercises/convolution_and_pooling
+      - file: cnn/cnn
+      - file: cnn/exercises-clean/classification_metrics
+      - file: cnn/exercises-clean/landuse_cnn_part_1
+      #- file: cnn/exercises/landuse_cnn_part_1
+      - file: cnn/inv_eq_augmentation
+      - file: cnn/exercises-clean/data_augmentation
+      - file: cnn/exercises-clean/landuse_cnn_part_2
+      #- file: cnn/exercises/landuse_cnn_part_2
+      - file: cnn/resnet
+      - file: cnn/exercises-clean/landuse_cnn_part_3
+      #- file: cnn/exercises/landuse_cnn_part_3
+      - file: cnn/cnn_beyond_ic
+      - file: cnn/exercises-clean/FAT_application
+      #- file: cnn/exercises/FAT_application
+      - file: cnn/review
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md
