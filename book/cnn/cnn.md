@@ -49,7 +49,7 @@ To introduce CNNs, we focus on **image classification**, where the goal is to id
 :class: tip
 
 It might look like the multiclass and multilabel classifications perform the same thing. However, the main difference between them is that multiclass classification assigns each instance to a **single**, exclusive category, while multilabel classification allows instances to be assigned to **multiple** categories. Figure {numref}`imag_classif` below illustrates classifications performed by each method.
-```{figure} ../../../images/imag_classif.svg
+```{figure} ../figures/imag_classif.svg
 :scale: 15%
 :name: imag_classif
 
