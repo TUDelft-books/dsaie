@@ -8,9 +8,9 @@ So far, much of the Machine Learning (ML) field has focused on the theory; MLOps
 
 ## Recorded Lectures
 
-- {doc}`lectures/Before_development`
-- {doc}`lectures/Development` 
-- {doc}`lectures/After_development`
+- {doc}`Before_development`
+- {doc}`Development` 
+- {doc}`After_development`
 
 ## Exercises
 
