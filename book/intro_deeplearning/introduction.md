@@ -39,7 +39,7 @@ Continuing, we can take 20% (or any amount) from the feature space to train our 
 
 When we have **2-dimensional data**, sampling 20% from each feature represents at most **4%** from the input space, and this is only achieved in the ideal case where:all sampled points have different $x_1$ and $x_1$ coordinates. In practice, random sampling typically results in even less coverage of the input space due to coordinate overlaps and non-uniform distribution of points.
 
-```{figure} ../figures/images/2d_cod.svg
+```{figure} ../figures/2d_cod.svg
 :scale: 15%
 :name: 2dcod
 
