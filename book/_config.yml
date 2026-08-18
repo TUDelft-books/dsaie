@@ -166,3 +166,4 @@ parse:
   myst_substitutions: {}                             # Default value (lines can be removed), sets no substitutions, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
   myst_dmath_double_inline: true                     # Parse inline `$$ ... $$`, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
   myst_enable_checkboxes: false                      # Default value (lines can be removed), disables checkboxes, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
+  myst_footnote_transition: false

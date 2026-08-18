@@ -135,10 +135,10 @@ There are three main gates in an LSTM: the *forget* gate, the *input* gate, and 
 
 | Gate | Role |
 |:-|:-|
-| ![Forget gate](../../../images/forget_gate_lstm.svg) | The **forget gate**  $f^{(t)}$ decides what information should be removed from the cell state. | 
-| ![Input gate](../../../images/input_gate_lstm.svg) | The **input gate** $i^{(t)}$ decides which values of the cell state to update, while a **tanh** layer creates a vector of new candidate values to add. |
-| ![Cell state update](../../../images/update_gate_lstm.svg) | The cell state $s^{(t)}$ (indicated with $C_t$ in the figure) is **updated** based on the outcomes of the two previous operations via a pointwise sum operation. Note that added values can be negative (they come from **tanh**). |
-| ![Output gate](../../../images/output_gate_lstm.svg) | The **output gate** $q^{(t)}$ (indicated with $o_t$ in the figure) decides what parts of the cell state will be shared externally by **determining the hidden state**. The cell state first passes through **tanh** for normalization between [-1, 1]. |
+| ![Forget gate](../figures/forget_gate_lstm.svg) | The **forget gate**  $f^{(t)}$ decides what information should be removed from the cell state. | 
+| ![Input gate](../figures/input_gate_lstm.svg) | The **input gate** $i^{(t)}$ decides which values of the cell state to update, while a **tanh** layer creates a vector of new candidate values to add. |
+| ![Cell state update](../figures/update_gate_lstm.svg) | The cell state $s^{(t)}$ (indicated with $C_t$ in the figure) is **updated** based on the outcomes of the two previous operations via a pointwise sum operation. Note that added values can be negative (they come from **tanh**). |
+| ![Output gate](../figures/output_gate_lstm.svg) | The **output gate** $q^{(t)}$ (indicated with $o_t$ in the figure) decides what parts of the cell state will be shared externally by **determining the hidden state**. The cell state first passes through **tanh** for normalization between [-1, 1]. |
 
 LSTM training tunes gate weights to manage data flow, for learning sequences effectively. Optimized gate weights enable more precise memory control. Gates learn to differentiate temporal scales, allowing LSTMs to capture both short and long-term dependencies. LSTMs have **~4 times the parameters** of RNNs because of gates.
 
