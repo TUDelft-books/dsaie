@@ -134,6 +134,12 @@ parts:
       - file: probdl/exercises-clean/waterdemand_rnn_part_4
       #- file: probdl/exercises/waterdemand_rnn_part_4
       - file: probdl/review
+    - file: llm/overview.md
+      sections:
+      - file: llm/NLP_Tokenization
+      - file: llm/NLP_Word_Embeddings
+      - file: llm/agent_introduction
+      - file: llm/agent_practical
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md
