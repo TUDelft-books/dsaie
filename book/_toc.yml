@@ -83,6 +83,13 @@ parts:
       - file: gen_continuous/exercises-clean/vae_microstructures
       #- file: gen_continuous/exercises/vae_microstructures
       - file: gen_continuous/review
+  - caption: Deep Learning
+    chapters:
+    - file: intro_deeplearning/overview.md
+      sections:
+      - file: intro_deeplearning/introduction
+      - file: intro_deeplearning/exercises-clean/curse_of_dimensionality
+      #- file: intro_deeplearning/exercises/curse_of_dimensionality
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md
