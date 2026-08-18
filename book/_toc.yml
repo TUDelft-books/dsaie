@@ -127,6 +127,13 @@ parts:
       - file: rnn/exercises-clean/waterdemand_rnn_part_3
       #- file: rnn/exercises/waterdemand_rnn_part_3
       - file: rnn/review
+    - file: probdl/overview.md
+      sections:
+      - file: probdl/dropout
+      - file: probdl/mcd
+      - file: probdl/exercises-clean/waterdemand_rnn_part_4
+      #- file: probdl/exercises/waterdemand_rnn_part_4
+      - file: probdl/review
   - caption: Optional Topics
     chapters:
     - file: pair/overview.md

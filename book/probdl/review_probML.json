@@ -1,0 +1,281 @@
+[
+    {
+        "question": "What are common ways to improve the generalization of Deep Learning methods?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Early Stopping: Ceases training when validation loss worsens, avoiding overfitting due to learning the noise in the data.",
+                "correct": true,
+                "feedback": "Correct. Early stopping is a form of regularization that helps prevent overfitting by ending training when the model begins to learn noise from the training data."
+            },
+            {
+                "answer": "Data Augmentation: Applies transformations to data, enhancing generalization by mimicking real-world input variability.",
+                "correct": true,
+                "feedback": "Correct. Data augmentation increases the diversity of the training set by applying various transformations, aiding in the model's ability to generalize better."
+            },
+            {
+                "answer": "Batch Normalization: Stabilizes training and acts as a regularizer by normalizing layer inputs, aiding in smoother optimization.",
+                "correct": true,
+                "feedback": "Correct. Batch normalization regularizes the model indirectly by stabilizing the learning process and has been shown to improve generalization in deep learning models."
+            },
+            {
+                "answer": "L1 Regularization: Incorporates a penalty equivalent to the absolute value of the weights, encouraging sparsity in the model.",
+                "correct": false,
+                "feedback": "Incorrect. While L1 regularization is a common technique, it is not as frequently effective in deep learning contexts, particularly with large models, as it tends to promote sparsity which may not be suitable for complex patterns in data."
+            },
+            {
+                "answer": "L2 Regularization: Applies a penalty based on the squared magnitude of the weights, discouraging large weights in the model.",
+                "correct": false,
+                "feedback": "Incorrect. L2 regularization, though widely used in traditional machine learning, can be less effective in deep learning for large models, as these models often require a complex interplay of large weight values for optimal performance."
+            }
+        ]
+    },
+    {
+        "question": "Why is ensembling considered a form of regularization?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "It combines models to reduce variance, smoothing out individual model errors.",
+                "correct": true,
+                "feedback": "Correct. Ensembling can reduce the variance part of the error by averaging out the biases of individual models, thus improving generalization."
+            },
+            {
+                "answer": "Ensembling increases the bias of the model to avoid overfitting.",
+                "correct": false,
+                "feedback": "Incorrect. Ensembling typically aims to reduce variance, not to increase bias. It helps in reducing overfitting without significantly increasing the model's bias."
+            },
+            {
+                "answer": "It diversifies the model errors, which can cancel each other out, leading to better overall performance.",
+                "correct": true,
+                "feedback": "Correct. Ensembling leverages the diversity of multiple models, and their uncorrelated errors can cancel out, which helps to regularize the model."
+            },
+            {
+                "answer": "Ensembling restricts the model capacity to simplify the hypothesis space.",
+                "correct": false,
+                "feedback": "Incorrect. Ensembling does not restrict model capacity; rather, it combines multiple models to improve prediction and reduce overfitting."
+            },
+            {
+                "answer": "It theoretically reduces mean squared error (MSE) when combining several models' predictions.",
+                "correct": true,
+                "feedback": "Correct. Theoretically, if the models' errors are uncorrelated, ensembling reduces the MSE of the predictions, which is a desirable regularization effect."
+            }
+        ]
+    },
+    {
+        "question": "How does dropout in neural networks resemble a form of ensembling?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Dropout randomly deactivates a subset of neurons, effectively creating a unique model at each training step.",
+                "correct": true,
+                "feedback": "Correct. Dropout can be seen as a form of ensembling since each iteration with a different set of neurons dropped out simulates training a different model."
+            },
+            {
+                "answer": "Dropout increases the learning rate of the network, similar to how ensemble methods combine learners.",
+                "correct": false,
+                "feedback": "Incorrect. Dropout does not inherently affect the learning rate; it works by reducing complex co-adaptations of neurons."
+            },
+            {
+                "answer": "Dropout refers to ensembling various networks after training to reduce variance.",
+                "correct": false,
+                "feedback": "Incorrect. Dropout is an internal mechanism during training, not a post-training ensembling method."
+            }
+        ]
+    },
+    {
+        "question": "What are some suggested typical dropout rates for neural networks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Between 0.2 and 0.5.",
+                "correct": true,
+                "feedback": "Correct. Dropout rates between 0.2 and 0.5 are common as they offer a balance between regularization and retaining network capacity."
+            },
+            {
+                "answer": "Between 0.1 and 0.2.",
+                "correct": false,
+                "feedback": "Incorrect. Dropout rates between 0.2 and 0.5 are common as they offer a balance between regularization and retaining network capacity."
+            },
+            {
+                "answer": "Between 0.0 and 0.25.",
+                "correct": false,
+                "feedback": "Incorrect. Dropout rates between 0.2 and 0.5 are common as they offer a balance between regularization and retaining network capacity."
+            },
+            {
+                "answer": "Between 0.5 and 0.8.",
+                "correct": false,
+                "feedback": "Incorrect. Dropout rates between 0.2 and 0.5 are common as they offer a balance between regularization and retaining network capacity."
+            }
+        ]
+    },
+    {
+        "question": "What is the weight scaling inference rule regarding the implementation of dropout?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Weights are multiplied by (1 - dropout rate) at test time to compensate for the reduced number of active neurons.",
+                "correct": true,
+                "feedback": "Correct. Weight scaling is used at test time to adjust for the neurons that were dropped during training."
+            },
+            {
+                "answer": "The weight scaling rule suggests multiplying the weights by a factor of 0.5 to correct predictions.",
+                "correct": false,
+                "feedback": "Incorrect. Weight scaling is proportional to the dropout rate used during training, not a fixed factor."
+            },
+            {
+                "answer": "During training, weights are scaled down to prevent neurons from becoming too dominant.",
+                "correct": false,
+                "feedback": "Incorrect. Its primary purpose is not to prevent dominant neurons but to adjust for the missing neurons during inference."
+            },
+            {
+                "answer": "At inference, weights are scaled by multiplying for the dropout rate to maintain the same expected output from neurons.",
+                "correct": false,
+                "feedback": "Incorrect. Weights are scaled by multuplying for (1 - dropout rate) during inference."}
+        ]
+    },
+    {
+        "question": "How does Monte Carlo Dropout function during inference for neural networks?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "The model is run multiple times with the same test input to create an ensemble for probabilistic forecasting.",
+                "correct": true,
+                "feedback": "Correct. Monte Carlo Dropout involves running the network multiple times during inference to generate a distribution of outputs, which can be used for probabilistic forecasting."
+            },
+            {
+                "answer": "A single forward pass is sufficient during inference as dropout is only active during training.",
+                "correct": false,
+                "feedback": "Incorrect. While traditionally dropout is only active during training, Monte Carlo Dropout requires multiple forward passes during inference."
+            },
+            {
+                "answer": "Higher dropout rates during inference can lead to a more diverse ensemble but may cause underfitting due to over regularization.",
+                "correct": true,
+                "feedback": "Correct. While higher dropout rates increase the diversity of the models in the ensemble, they can also lead to over regularization, which may result in underfitting."
+            },
+            {
+                "answer": "Dropout rate during inference is typically reduced to ensure the model's performance is maximized.",
+                "correct": false,
+                "feedback": "Incorrect. In Monte Carlo Dropout, the dropout rate is not set to zero during inference; it remains active to create an ensemble effect."
+            }
+        ]
+    },
+    {
+        "question": "How are prediction intervals constructed from an ensemble?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "By running the model multiple times with dropout during inference to get a spread of predictions.",
+                "correct": true,
+                "feedback": "Correct. This technique, often associated with Monte Carlo Dropout, can be used to construct prediction intervals by capturing the variance in the model's predictions."
+            },
+            {
+                "answer": "Using the maximum and minimum values from the training dataset as the bounds for future predictions.",
+                "correct": false,
+                "feedback": "Incorrect. Prediction intervals should account for the model's uncertainty rather than the range of training data."
+            },
+            {
+                "answer": "By choosing a desired confidence level and select the relative percentiles after sorting the predictions in ascending order.",
+                "correct": true,
+                "feedback": "Correct. These steps are necessary to build predictions intervals correctly."
+            },
+            {
+                "answer": "By setting a fixed percentage above and below the predicted value to cover the desired confidence interval.",
+                "correct": false,
+                "feedback": "Incorrect. Prediction intervals should be based on the model's predictive uncertainty, not on arbitrary fixed percentages."
+            }
+        ]
+    },
+    {
+        "question": "How do the characteristics of prediction intervals, such as coverage and width, indicate the model's reliability and informativeness?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "High coverage ensures that the prediction interval frequently contains the true value, which is indicative of a model's reliability.",
+                "correct": true,
+                "feedback": "Correct. High coverage suggests that the prediction interval is reliable, as it consistently captures the true value within its bounds."
+            },
+            {
+                "answer": "The width of the prediction interval reflects its informativeness; a narrower interval implies more precise predictions.",
+                "correct": true,
+                "feedback": "Correct. Narrow intervals provide more specific predictions, making the model's outputs more informative, though it must balance with maintaining sufficient coverage."
+            },
+            {
+                "answer": "The optimal prediction interval has 100% coverage, regardless of width.",
+                "correct": false,
+                "feedback": "Incorrect. While 100% coverage sounds ideal, in practice, it may lead to overly wide intervals that lack informativeness and practical utility."
+            },
+            {
+                "answer": "With high coverage we ensures that the prediction interval frequently contains the true value, indicating the model's informativeness.",
+                "correct": false,
+                "feedback": "Incorrect. High coverage suggests that the prediction interval is reliable, not informative."
+            },
+            {
+                "answer": "The width of the prediction interval reflects its reliability.",
+                "correct": false,
+                "feedback": "Incorrect. Narrow intervals are more informative, but they do not indicate reliability if coverage is not ensured."           
+            }
+        ]
+    },
+    {
+        "question": "Why is Spatial Dropout (Dropout2D) preferred over standard dropout in Convolutional Neural Networks (CNNs)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Spatial Dropout drops entire feature maps, preserving the spatial relationships within the remaining maps.",
+                "correct": true,
+                "feedback": "Correct. By dropping entire feature maps, Spatial Dropout maintains the spatial coherence of the data, which is crucial for CNNs."
+            },
+            {
+                "answer": "Spatial Dropout randomly zeroes individual units, similar to standard dropout.",
+                "correct": false,
+                "feedback": "Incorrect. Unlike standard dropout that zeroes individual units, Spatial Dropout drops entire feature maps to preserve spatial structure."
+            },
+            {
+                "answer": "Spatial Dropout increases the number of parameters in the network to enhance learning capacity.",
+                "correct": false,
+                "feedback": "Incorrect. Spatial Dropout does not increase the number of parameters; it modifies the dropout pattern to drop entire feature maps."
+            },
+            {
+                "answer": "Spatial Dropout is specifically designed to maintain the integrity of spatial patterns by avoiding the disruption caused by dropping individual units.",
+                "correct": true,
+                "feedback": "Correct. This design ensures that important spatial features are not lost, which is essential for the performance of CNNs."
+            },
+            {
+                "answer": "Spatial Dropout applies dropout only to the input layer of the CNN to prevent overfitting at the initial stage.",
+                "correct": false,
+                "feedback": "Incorrect. Spatial Dropout can be applied to multiple layers within the CNN, not just the input layer."
+            }
+        ]
+    },
+    {
+        "question": "Which of the following accurately describe the types of dropout applied in Recurrent Neural Networks (RNNs)?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Input Dropout randomly masks the input features at each time step to prevent the model from relying too heavily on specific inputs.",
+                "correct": true,
+                "feedback": "Correct. Input Dropout helps in regularizing the model by ensuring it doesn't depend excessively on particular input features."
+            },
+            {
+                "answer": "Hidden State Dropout randomly masks the hidden states from previous time steps to regularize temporal dependencies.",
+                "correct": true,
+                "feedback": "Correct. By masking hidden states, Hidden State Dropout prevents the network from becoming too reliant on past information, enhancing generalization."
+            },
+            {
+                "answer": "Recurrent Dropout applies dropout to the output layer of the RNN to control the final predictions.",
+                "correct": false,
+                "feedback": "Incorrect. Recurrent Dropout specifically refers to dropout applied within the recurrent connections, not the output layer."
+            },
+            {
+                "answer": "Temporal Dropout is another name for Input Dropout in RNNs.",
+                "correct": false,
+                "feedback": "Incorrect. Temporal Dropout is not a standard term for Input Dropout; the two are distinct concepts."
+            },
+            {
+                "answer": "Both Input Dropout and Hidden State Dropout are used to regularize different aspects of RNNs, ensuring robust temporal modeling.",
+                "correct": true,
+                "feedback": "Correct. Utilizing both types of dropout helps in effectively regularizing the RNN by targeting both inputs and hidden states."
+            }
+        ]
+    }
+]
