@@ -43,6 +43,14 @@ The pattern our eyes could already identify can also be clearly captured by mach
 
 One last question about the plot above: to which cluster should we assign the one student who got a 5.8? It is unlikely that the latent variable we learned helps explain their situation well (for instance, they might have found study material online independently; or they might have had the material but had a personal issue and could not study). Many clustering techniques only allow for a **hard** cluster assignment, which can be too reductionist.
 
+### Why do we need machine learning for such a simple task?
+
+Clustering a handful of observations by eye may seem easy in one or two dimensions. Try making the same two-cluster decision below as the number of dimensions grows. In four dimensions, each observation appears in all six pairwise views, so selecting it in one plot updates it everywhere.
+
+<iframe src="../_static/manual-clustering.html" title="Interactive manual clustering in one, two, and four dimensions" width="100%" height="590" frameborder="0" loading="lazy"></iframe>
+
+See how it gets progressively difficult as our ability to fully perceive all dimensions in the data stops working when going above 3D. 
+
 ## Dimensionality reduction
 
 Let us stay with the example of the grades. Imagine a teacher gives a written exam and a project and plots the grade distribution of the class:
