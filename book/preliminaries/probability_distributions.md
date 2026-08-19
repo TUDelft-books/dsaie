@@ -245,6 +245,10 @@ Read Section 2.1.1 to see how a Bayesian treatment can be given to the Bernoulli
 {bdg-danger}`bishop-prml`     
 ```
 
+You can try this out for a coin toss experiment modeled with a Bernoulli distribution by playing with the widget below. We start with no knowledge (zero coin tosses) and you can then toss a single coin. Notice how the MLE solution immediately overfits, which would make our Bernoulli model **always** predict the same side! On the other hand, see what happens if we first adopt a Beta prior for $\mu$ and update our knowledge more carefully using Bayes. Then see what happens when we have thousands of tosses in the dataset. Does MLE get more reliable as the dataset size increases?
+
+<iframe src="../_static/bernoulli-fitting.html" width="100%" height="540" frameborder="0" title="Interactive comparison of Bayesian and maximum likelihood Bernoulli fitting"></iframe>
+
 ```{admonition} Exam questions    
 :class: danger    
 In the exam you might be asked to derive simple relations from known probability distributions. All the necessary mathematical expressions will be given to you, so no need to memorize anything. You might also be asked conceptual questions about these distributions, such as which variable types they model or how their parameters are calibrated.
