@@ -60,7 +60,13 @@ We define a **decision boundary** as shown above: to the left of it we classify 
 - When we classify a point as $\mathcal{C}_1$, there is a chance we made a mistake. This chance is proportional to the combination of the dark and light green areas above;
 - When we classify a point as $\mathcal{C}_2$, there is a chance it was actually from the other class. This chance is represented by the dark blue area above.
 
-These areas can be put into a **confusion matrix** which you also see above. Naturally we want to minimize the sum of these areas. But look again at the figure above: the sum of the dark green and dark blue areas is always constant irrespective of where we put the decision boundary. But by moving the boundary we can actually get rid of the light green area. By doing that we arrive at:
+These areas can be put into a **confusion matrix** which you also see above. Naturally we want to minimize the sum of these areas. Play with the widget below to get a feeling for it:
+
+<iframe src="../_static/decision-boundary.html" width="100%" height="510" frameborder="0" loading="lazy" title="Interactive two-class decision boundary and confusion matrix"></iframe>
+
+See how moving the decision boundary around makes the areas in the decision matrix shrink or expand. Note how moving too much to the left or right is just not worth it: one of the areas on the diagonal shrink quite a bit while the other one barely increases. So it makes sense to put the boundary around the middle of the plot.
+
+But wait, look again at the figures above: the sum of the dark green and dark blue areas is always constant irrespective of where we put the decision boundary. But by moving the boundary we can actually get rid of the light green or light blue areas. By doing that we arrive at:
 
 ```{figure} ../figures/decisionboundaries2.svg
 :scale: 50%
