@@ -399,6 +399,17 @@ Click below to see three different radial basis function models fitted to the sa
 ````
 `````
 
+## More intuition about $\alpha$ and $\beta$
+
+The hyperparameters $\alpha$ and $\beta$ heavily govern the behavior of our Bayesian model. They have clear conceptual interpretations:
+
+- $\alpha$ governs the strength of the prior over $\mbf{w}$. It therefore regulates **how much we trust our intuition**
+- $\beta$ is the observation noise and governs the strength of the likelihood function. It therefore regulates **how much we trust our data**
+
+In the widget below we implement a polynomial basis model with five weights (up to the fourth degree plus a bias term) fitted on $N=10$ noisy data points. You can see both MLE and Bayesian fits and the marginal distributions of all five weights. You can play with the plot to see what happens when $\alpha$ and $\beta$ are adjusted, and also what happens when more data is added. A way to actually learn these hyperparameters directly from data is treated later in this chapter.
+
+<iframe src="../_static/bayesian-linear-models.html" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Interactive comparison of MLE, MAP and Bayesian polynomial regression"></iframe>
+
 ```{admonition} Exam questions    
 :class: danger    
 For the exam it is crucial that you understand how the Bayesian version of the regression problem arises and how it compares with MLE (and what you have seen in MUDE) and MAP solutions. You might also see formulation questions related to these concepts. All necessary mathematical expressions will be given in the exam, so there is no need to memorize them.
