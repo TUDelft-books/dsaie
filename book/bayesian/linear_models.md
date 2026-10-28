@@ -273,7 +273,7 @@ where $\Phi_{ij} = \phi_j(x_i)$ already appeared {doc}`in the MLE treatment<../f
 
 Now we have **two bags of models to draw from**, prior and posterior. In the widget below we observe five data points and use Bayes' theorem to move from prior to posterior. Grab models from both bags and see how they look like:
 
-<iframe src="../_static/prior-model-sampling.html?posterior=1" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Draw radial basis function models from the prior and posterior"></iframe>
+<iframe src="../_static/prior-model-sampling.html?posterior=1" style="width: 100%; height: 700px; border: 0;" loading="lazy" title="Draw radial basis function models from the prior and posterior"></iframe>
 
 ## Making new predictions
 
