@@ -164,6 +164,10 @@ A probabilistic graph for regression, now with hyperparameters.
 
 and we now also add the $\beta$ parameter from the observation model. Since they govern the shapes of our distributions but not the actual values of $\mathbf{w}$, we say $\alpha$ and $\beta$ are **hyperparameters**.
 
+With a prior in place, we can now **sample as many models as we want**. Each draw from $\mathbf{w}$ gives a complete model we can visualize. You can see this as a bag of models we can grab from. Try it out with the widget below:
+
+<iframe src="../_static/prior-model-sampling.html" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Draw radial basis function models from the Gaussian weight prior"></iframe>
+
 Our model is in principle ready to be used. But since the above prior is not very informative, we first need to observe some data to get a better idea of what the weights actually are.
 
 ## Observing some data
@@ -266,6 +270,10 @@ $$
 $$(postvar)
 
 where $\Phi_{ij} = \phi_j(x_i)$ already appeared {doc}`in the MLE treatment<../frequentist/linear_models>`.
+
+Now we have **two bags of models to draw from**, prior and posterior. In the widget below we observe five data points and use Bayes' theorem to move from prior to posterior. Grab models from both bags and see how they look like:
+
+<iframe src="../_static/prior-model-sampling.html?posterior=1" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Draw radial basis function models from the prior and posterior"></iframe>
 
 ## Making new predictions
 
@@ -408,7 +416,7 @@ The hyperparameters $\alpha$ and $\beta$ heavily govern the behavior of our Baye
 
 In the widget below we implement a polynomial basis model with five weights (up to the fourth degree plus a bias term) fitted on $N=10$ noisy data points. You can see both MLE and Bayesian fits and the marginal distributions of all five weights. You can play with the plot to see what happens when $\alpha$ and $\beta$ are adjusted, and also what happens when more data is added. A way to actually learn these hyperparameters directly from data is treated later in this chapter.
 
-<iframe src="../_static/bayesian-linear-models.html" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Interactive comparison of MLE, MAP and Bayesian polynomial regression"></iframe>
+<iframe src="../_static/bayesian-linear-models.html" style="width: 100%; height: 600px; border: 0;" loading="lazy" title="Interactive comparison of MLE, MAP and Bayesian polynomial regression"></iframe>
 
 ```{admonition} Exam questions    
 :class: danger    
