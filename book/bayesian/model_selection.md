@@ -73,7 +73,13 @@ p(\mathbf{t}\vert\mathbf{w},\beta)p(\mathbf{w}\vert\alpha)
 \,\mathrm{d}\mathbf{w}
 $$(bayesbasisfuncsevidence)
 
-where we omit $\mathbf{X}$ for simplicity. Note how this is exactly the denominator of Bayes' Theorem when we compute $p(\mathbf{w}\vert\mathbf{t})$. We can therefore use the same {ref}`standard expressions<bayes-stdexpressions>` from before and compute the evidence as:
+where we omit $\mathbf{X}$ for simplicity. Note how this is exactly the denominator of Bayes' Theorem when we compute $p(\mathbf{w}\vert\mathbf{t})$. Also look inside the integral: the marginal likelihood is basically an average of the conditional likelihood with respect to all possible values of the **prior** $p(\mathbf{w}\vert\alpha)$. Maximizing this expression is then conceptually maximizing the chance that our model produces the observations $\mathbf{t}$ for some random function from the prior. 
+
+To get more intuition on this, play with the widget below. Here are 50 random samples from the prior $p(\mathbf{w}\vert\alpha)$ and some observations. We can align them as best as we can by controlling $\alpha$ and the prior mean. Also take a look at the actual value of the marginal likelihood below the plot: does aligning our prior with our data increase that value?
+
+<iframe src="../_static/model-evidence.html" style="width: 100%; height: 680px; border: 0;" loading="lazy" title="Explore marginal likelihood with fifty prior RBF models and five observations"></iframe>
+
+Doing this by eye is easy only for very simple models like this. Now let us arrive at a function we can optimize automatically. We can use the same {ref}`standard expressions<bayes-stdexpressions>` from before and compute the evidence as:
 
 $$
 \ln p(\mathbf{t}\vert\alpha,\beta) = \displaystyle\frac{N}{2}\ln\beta
