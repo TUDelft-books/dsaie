@@ -162,11 +162,7 @@ MUDE content, other books
 
 ## Book Layout
 
-Use the sidebar on the left to navigate between sections. Use the links between related pages to your advantage, they provide a consistent thread between the different contents covered in the course and how they are related.
-
-For pages with interactive coding, a **rocket icon** (<i class="fa fa-rocket" aria-hidden="true"></i>) will appear on the top right. Hover it with your cursor and click on <span style="white-space: nowrap;">{guilabel}`Live Code`</span>. Wait a bit while the necessary packages load and the interactive content will then be available.
-
-Also keep an eye out for the following blocks:
+Use the sidebar on the left to navigate between sections. Use the links between related pages to your advantage, they provide a consistent thread between the different contents covered in the course and how they are related. Also keep an eye out for the following blocks:
 
 ```{admonition} Further Reading
 :class: tip
