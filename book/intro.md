@@ -120,7 +120,7 @@ Exam given in ANS on **week 9**.
 :::{grid-item-card} Group Project (50%)
 Group presentation of a complete ML solution of a practical engineering problem
 
-Formative presentation on **week 7**, final presentation on **week 10**
+Formative presentation on **week 4**, final presentation on **week 10**
 +++
 {bdg-secondary}`group-project`
 :::
@@ -192,14 +192,6 @@ At the end of every section of the book you will find a page with multiple-choic
 ***E-mail contact***
 ^^^
 Contact with the teaching team should always be done through the e-mail address <a href="mailto:CEGM2003@tudelft.nl">CEGM2003@tudelft.nl</a>.
-````
-
-````{card}
-***Discussion forum***
-^^^
-
-Use the Brightspace forum for discussions with your fellow students and with the teaching team. It will be periodically monitored for new topics.
-
 ````
 
 ````{card}
