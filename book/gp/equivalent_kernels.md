@@ -41,6 +41,12 @@ Samples from a basis function model obtained by sampling from the prior $p(\bw)$
 
 If we instead sampled from Eq. {eq}`kerneljointgaussy` we would get very similar curves. But how does one **sample a function**? That might feel a bit weird, but it is actually straightforward: each curve above is composed of 1000 $y$ values for different $x$. To get one of them we just need to compute the $1000\times 1000$ matrix $\mbf{K}$ and sample from the size-1000 version of Eq. {eq}`kerneljointgaussy`.
 
+This concept can be a bit tricky to understand, so play with the widget below to gain more intuition on what we are talking about:
+
+<iframe src="../_static/weight-function-sampling.html" style="width: 100%; height: 1100px; border: 0;" loading="lazy" title="Equivalent Gaussian prior samples from weight space and function space"></iframe>
+
+With the bags above you can sample both from $p(\mathbf{w})$ and $p(\mathbf{y})$, which after what we did here are **exactly equivalent** ways to sample functions. When sampling from $p(\mathbf{y})$ it is important to pick the number of $x$ locations you would like to sample. Be aware that even though our functions Radial Basis $\phi(x)$ are actually very smooth, sampling $p(\mathbf{y})$ with just two $x$ locations will make it look like a straight line, which can be deceiving. But this is exactly equivalent of first sampling $p(\mathbf{w})$, computing $y(x)$ in just those two locations, and linking the two points with a straight line.
+
 Each entry in $\mbf{K}$ relates two different values of $\bx$. We can write one of these entries as:
 
 $$
