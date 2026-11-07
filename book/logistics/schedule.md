@@ -135,7 +135,7 @@ You will find links to the slides used for each lecture.
 ---
 
 * Workshop 2 - Classification for integrity assessment of bridges:
-  1. {doc}`../classification/exercises-clean/application_classification`
+  1. {doc}`../classification/exercises-clean/classification`
 
 ```
 
@@ -152,7 +152,7 @@ You will find links to the slides used for each lecture.
 **Contents**
 
 * Lecture 4.1 - Introduction to Deep Learning ({download}`slides<https://surfdrive.surf.nl/s/3sBEZdsqdDrMP37/download>`):
-  1. {doc}`../cnn/introduction`
+  1. {doc}`../intro_deeplearning/introduction`
 ---
 
 * Lecture 4.2 - Convolution and Pooling ({download}`slides<https://surfdrive.surf.nl/files/index.php/s/GXjM4zRN6NNAx9K/download>`)
@@ -160,7 +160,7 @@ You will find links to the slides used for each lecture.
 ---
 
 * Exercise 4.1 - Curse of Dimensionality:
-  1. {doc}`../cnn/exercises-clean/curse_of_dimensionality`
+  1. {doc}`../intro_deeplearning/exercises-clean/curse_of_dimensionality`
 ---
 
 * Exercise 4.2 - Convolution and Pooling
@@ -178,12 +178,12 @@ You will find links to the slides used for each lecture.
 
 * Lecture 4.4 - Data Augmentation & Transfer Learning ({download}`slides<https://surfdrive.surf.nl/files/index.php/s/TezGspzRCY68Woa/download>`):
   1. {doc}`../cnn/inv_eq_augmentation`
-  2. {doc}`../cnn/transfer_learning` 
+  2. {doc}`../cnn/resnet` 
 ---
 
 * Exercise 4.4 - CNNs for Land Use Identification (Part 2 & 3)
-  1. {doc}`../cnn/exercises-clean/data_augmentation` **[OPTIONAL]**
-  2. {doc}`../cnn/exercises-clean/landuse_cnn_part_2` **[OPTIONAL]**
+  1. {doc}`../cnn/exercises-clean/data_augmentation` 
+  2. {doc}`../cnn/exercises-clean/landuse_cnn_part_2` 
   3. {doc}`../cnn/exercises-clean/landuse_cnn_part_3`
 ---
 
@@ -205,29 +205,29 @@ You will find links to the slides used for each lecture.
 **Contents**
 
 * Lecture 5.1 - Discrete latent variables ({download}`slides<https://surfdrive.surf.nl/s/3XzY3JDHmj4Y73J>`):
-  1. {doc}`../clustering/unsupervised_learning`
-  2. {doc}`../clustering/kmeans`
-  3. {doc}`../clustering/gaussian_mixtures`
+  1. {doc}`../gen_discrete/unsupervised_learning`
+  2. {doc}`../gen_discrete/kmeans`
+  3. {doc}`../gen_discrete/gaussian_mixtures`
 
 ---
 
 * Exercise 5.1:
-  1. {doc}`../clustering/exercises-clean/kmeans_versus_gaussmix`
+  1. {doc}`../gen_discrete/exercises-clean/kmeans_versus_gaussmix`
 
 ---
 
 * Lecture 5.2 - Continuous latent variables I ({download}`slides<https://surfdrive.surf.nl/s/KLYAc4erGAHSHa6>`):
-  1. {doc}`../generative/lectures/ppca`
+  1. {doc}`../gen_continuous/lectures/ppca`
 
 ---
 
 * Lecture 5.3 - Continuous Generative Learning II ({download}`slides<https://surfdrive.surf.nl/s/DreTegCy7TAG2TQ>`):
-  1. {doc}`../generative/vae`
+  1. {doc}`../gen_continuous/vae`
 
 ---
 
 * Exercise session 4.3:
-  1. {doc}`../generative/exercises-clean/vae_microstructures`
+  1. {doc}`../gen_continuous/exercises-clean/vae_microstructures`
 
 ```
 
@@ -307,8 +307,8 @@ You will find links to the slides used for each lecture.
 * Lecture 8.1 - NLP and Large Language Models (1/3){download}`slides<https://surfdrive.surf.nl/files/index.php/s/GHC6ZMtaQxGzwxD/download>`):
 ---
 * Exercise 8.1 - NLP Basics: Embeddings & Tokenizers
-  1. {doc}`../nlp_llm/exercises-clean/NLP_Tokenization`
-  2. {doc}`../nlp_llm/exercises-clean/NLP_Word_Embeddings`
+  1. {doc}`../llm/exercises-clean/NLP_Tokenization`
+  2. {doc}`../llm/exercises-clean/NLP_Word_Embeddings`
 ---
 
 * Lecture 8.2 - NLP, Attention, Transformers and Large Language Models (2/3){download}`slides<https://surfdrive.surf.nl/files/index.php/s/cyY4RAecr4pKQp3/download>`):
@@ -318,8 +318,8 @@ You will find links to the slides used for each lecture.
 ---
 
 * Lecture 8.4 - Agentic AI:
-  1. {doc}`../nlp_llm/agent_introduction`
-  2. {doc}`../nlp_llm/agent_practical`
+  1. {doc}`../llm/agent_introduction`
+  2. {doc}`../llm/agent_practical`
 ---
 
 * Exercise 8.2 - Coding and building with agents
