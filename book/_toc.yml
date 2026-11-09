@@ -46,17 +46,6 @@ parts:
       - file: bayesian/model_selection
       - file: bayesian/exercises-clean/bayesnn
       #- file: bayesian/exercises/bayesnn
-    - file: classification/overview.md
-      sections:
-      - file: classification/decision_theory
-      - file: classification/discriminant_models
-      - file: classification/logistic_regression
-      - file: classification/exercises-clean/logistic
-      #- file: classification/exercises/logistic
-      - file: classification/neural_nets
-      - file: classification/exercises-clean/application
-      #- file: classification/exercises/application
-      - file: classification/review
     - file: gp/overview.md
       sections:
       - file: gp/equivalent_kernels
@@ -68,6 +57,17 @@ parts:
       - file: gp/exercises-clean/gpr
       #- file: gp/exercises/gpr
       - file: gp/bayesopt
+    - file: classification/overview.md
+      sections:
+      - file: classification/decision_theory
+      - file: classification/discriminant_models
+      - file: classification/logistic_regression
+      - file: classification/exercises-clean/logistic
+      #- file: classification/exercises/logistic
+      - file: classification/neural_nets
+      - file: classification/exercises-clean/application
+      #- file: classification/exercises/application
+      - file: classification/review
     - file: gen_discrete/overview.md
       sections:
       - file: gen_discrete/unsupervised_learning
