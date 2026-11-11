@@ -62,9 +62,9 @@ Is it possible to obtain a more general expression valid for any graph? You can 
 {bdg-danger}`bishop-prml`     
 ```
 
-Want to try this for other graphs? Use the widget below to write down joint distributions for randomly-generated graphs:
+Want to try this for other graphs? Use the widget below:
 
-<iframe src="../_static/graph-factorization.html" style="width: 100%; height: 650px; border: 0;" loading="lazy" title="Practice factorizing the joint distribution of a random Bayesian network"></iframe>
+<iframe src="../_static/graph-factorization.html" style="width: 100%; height: 600px; border: 0;" loading="lazy" title="Practice factorizing the joint distribution of a random Bayesian network"></iframe>
 
 (sec-ancestralsampling)=
 ## Generative models, ancestral sampling
