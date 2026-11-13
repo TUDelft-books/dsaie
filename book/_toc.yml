@@ -18,9 +18,9 @@ parts:
     - file: coding/pytorch.md
       sections:
       - file: coding/exercises-clean/intro
-      #- file: coding/exercises/intro
+      - file: coding/exercises/intro
       - file: coding/exercises-clean/application
-      #- file: coding/exercises/application
+      - file: coding/exercises/application
   - caption: Probabilistic Machine Learning
     chapters:
     - file: preliminaries/overview.md
