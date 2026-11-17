@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="802" viewBox="0 0 480 802" role="img" aria-labelledby="title desc">
+  <title id="title">Physics-informed training with predictions and their derivatives</title>
+  <desc id="desc">A neural network takes inputs such as position and time and predicts physical quantities, for example displacement, water depth, or velocity. Automatic differentiation computes spatial and time derivatives of these predictions; the derivatives are not independently learned outputs. Predicted quantities and their derivatives are used as needed to evaluate governing physical laws and form a physics residual loss, to assess boundary and initial conditions and form a condition loss, and to compare with optional observations and form a data loss. Direct predictions remain available alongside their derivatives. The loss terms are combined in a weighted training objective. Optimization uses this objective to update the network parameters. This diagram illustrates the loss-based approach to physics-informed learning.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#0076c2"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#6f1d77"/>
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#ec6842"/>
+    </marker>
+  </defs>
+  <rect width="480" height="802" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#243447" text-anchor="middle">
+    <!-- Network and physical predictions. -->
+    <text x="263" y="27" font-size="22" fill="#0076c2">Inputs: e.g. position and time</text>
+    <path d="M 263 38 V 55" fill="none" stroke="#0076c2" stroke-width="2" marker-end="url(#arrow-blue)"/>
+    <rect x="84" y="60" width="358" height="62" rx="7" fill="#f1f8fc" stroke="#0076c2" stroke-width="2"/>
+    <text x="263" y="86" font-size="23" font-weight="700">Neural network</text>
+    <text x="263" y="111" font-size="21">Trainable parameters</text>
+    <path d="M 263 127 V 144" fill="none" stroke="#0076c2" stroke-width="2" marker-end="url(#arrow-blue)"/>
+    <rect x="84" y="149" width="358" height="89" rx="7" fill="#faf5fb" stroke="#6f1d77" stroke-width="2"/>
+    <text x="263" y="175" font-size="22" font-weight="700">Physical predictions</text>
+    <text x="263" y="201" font-size="21">e.g. displacement,</text>
+    <text x="263" y="226" font-size="21">water depth or velocity</text>
+
+    <!-- Predictions bypass differentiation so values remain available to all losses. -->
+    <g fill="none" stroke="#6f1d77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 263 243 V 258 H 64 V 638"/>
+      <path d="M 263 258 V 277" marker-end="url(#arrow-purple)"/>
+      <path d="M 64 450 H 79" marker-end="url(#arrow-purple)"/>
+      <path d="M 64 544 H 79" marker-end="url(#arrow-purple)"/>
+      <path d="M 64 638 H 79" marker-end="url(#arrow-purple)"/>
+    </g>
+
+    <!-- Derivatives are computed from the same network predictions. -->
+    <rect x="84" y="282" width="358" height="88" rx="7" fill="#f1f8fc" stroke="#0076c2" stroke-width="2"/>
+    <text x="263" y="309" font-size="22" font-weight="700">Automatic differentiation</text>
+    <text x="263" y="335" font-size="21">Computes spatial and time</text>
+    <text x="263" y="360" font-size="21">derivatives of the predictions</text>
+    <path d="M 263 375 V 382 H 64" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="64" cy="382" r="3" fill="#6f1d77"/>
+
+    <!-- Each check uses predicted values and/or derivatives, as appropriate. -->
+    <text x="263" y="408" font-size="20">Use values / derivatives as needed:</text>
+    <rect x="84" y="418" width="358" height="64" rx="7" fill="#fff8f5" stroke="#ec6842" stroke-width="2"/>
+    <text x="263" y="443" font-size="22" font-weight="700">Governing physical laws</text>
+    <text x="263" y="469" font-size="21">Residuals → physics loss</text>
+    <rect x="84" y="512" width="358" height="64" rx="7" fill="#fff8f5" stroke="#ec6842" stroke-width="2"/>
+    <text x="263" y="537" font-size="21" font-weight="700">Boundary / initial conditions</text>
+    <text x="263" y="563" font-size="21">Mismatch → condition loss</text>
+    <rect x="84" y="606" width="358" height="64" rx="7" fill="#fff8f5" stroke="#ec6842" stroke-width="2"/>
+    <text x="263" y="631" font-size="22" font-weight="700">Observations (optional)</text>
+    <text x="263" y="657" font-size="21">Mismatch → data loss</text>
+
+    <!-- All loss terms contribute to the weighted objective. -->
+    <g fill="none" stroke="#ec6842" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 447 450 H 464 V 693 H 263 V 708" marker-end="url(#arrow-orange)"/>
+      <path d="M 447 544 H 464"/>
+      <path d="M 447 638 H 464"/>
+    </g>
+    <rect x="84" y="713" width="358" height="72" rx="7" fill="#fff8f5" stroke="#ec6842" stroke-width="2"/>
+    <text x="263" y="743" font-size="22" font-weight="700">Weighted training objective</text>
+    <text x="263" y="770" font-size="21">Combine the loss terms</text>
+
+    <!-- Optimization feeds back to the trainable network. -->
+    <path d="M 79 749 H 38 V 91 H 79" fill="none" stroke="#ec6842" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-orange)"/>
+    <text x="25" y="429" font-size="21" fill="#b3492c" transform="rotate(-90 25 429)">Optimization updates parameters</text>
+  </g>
+</svg>
