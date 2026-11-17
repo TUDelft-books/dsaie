@@ -114,3 +114,5 @@ _build/
 
 # poetry files
 pyproject.toml
+
+/specs/

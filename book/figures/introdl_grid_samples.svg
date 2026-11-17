@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="840" viewBox="0 0 480 840" role="img" aria-labelledby="title desc">
+  <title id="title">More features create more grid cells at the same resolution</title>
+  <desc id="desc">Each feature is divided into five equal intervals. The same five training samples are shown in one, two and three dimensions, giving 5, 25 and 125 grid cells. The 3D grid is displayed as five layers, one for each interval of the third feature; each layer has a 5 by 5 grid over the first two features. Five cells contain a sample in each view, leaving 0, 20 and 120 empty cells. The cell count is 5 to the power d, reaching 9,765,625 for ten features. Dots mark individual observations within cells.</desc>
+  <rect width="480" height="840" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#243447">
+<text x="240" y="29" font-size="23" fill="#243447" text-anchor="middle" font-weight="700" >5 intervals per feature (m = 5)</text>
+<circle cx="106" cy="63" r="5" fill="#ec6842"/>
+<text x="121" y="70" font-size="20" fill="#243447" text-anchor="start" >Same 5 training samples</text>
+<g id="one-feature">
+<text x="24" y="113" font-size="23" fill="#243447" text-anchor="start" font-weight="700" >1 feature</text>
+<text x="456" y="113" font-size="23" fill="#6f1d77" text-anchor="end" font-weight="700" >5<tspan baseline-shift="super" font-size="16.56">1</tspan> = 5 cells</text>
+<path d="M 40 155 H 440" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 40 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 120 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 200 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 280 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 360 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<path d="M 440 145 V 165" fill="none" stroke="#0076c2" stroke-width="2" stroke-linecap="round"/>
+<circle data-sample="0" cx="84.00" cy="155.00" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="1" cx="168.00" cy="155.00" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="2" cx="252.00" cy="155.00" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="3" cx="312.00" cy="155.00" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="4" cx="408.00" cy="155.00" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<text x="40" y="187" font-size="18" fill="#243447" text-anchor="middle" >0</text>
+<text x="440" y="187" font-size="18" fill="#243447" text-anchor="middle" >1</text>
+<text x="240" y="188" font-size="21" fill="#243447" text-anchor="middle" ><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="15.12">1</tspan></text>
+</g>
+<path d="M 24 213 H 456" fill="none" stroke="#d9e0e6" stroke-width="1" stroke-linecap="round"/>
+<g id="two-features">
+<text x="24" y="247" font-size="23" fill="#243447" text-anchor="start" font-weight="700" >2 features</text>
+<text x="456" y="247" font-size="23" fill="#6f1d77" text-anchor="end" font-weight="700" >5<tspan baseline-shift="super" font-size="16.56">2</tspan> = 25 cells</text>
+<rect x="58" y="281" width="160" height="160" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 90 281 V 441 M 58 313 H 218" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 122 281 V 441 M 58 345 H 218" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 154 281 V 441 M 58 377 H 218" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 186 281 V 441 M 58 409 H 218" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="0" cx="75.60" cy="324.20" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="1" cx="109.20" cy="420.20" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="2" cx="142.80" cy="351.40" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="3" cx="166.80" cy="295.40" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<circle data-sample="4" cx="205.20" cy="386.60" r="6" fill="#ec6842" stroke="white" stroke-width="1"/>
+<text x="138" y="475" font-size="21" fill="#243447" text-anchor="middle" ><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="15.12">1</tspan></text>
+<text x="28" y="367" font-size="21" fill="#243447" text-anchor="middle" ><tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="15.12">2</tspan></text>
+<text x="282" y="332" font-size="21" fill="#243447" text-anchor="start" >5 cells with</text>
+<text x="282" y="360" font-size="21" fill="#243447" text-anchor="start" >a sample</text>
+<text x="282" y="412" font-size="21" fill="#6f1d77" text-anchor="start" >20 empty cells</text>
+</g>
+<path d="M 24 505 H 456" fill="none" stroke="#d9e0e6" stroke-width="1" stroke-linecap="round"/>
+<g id="three-features">
+<text x="24" y="538" font-size="23" fill="#243447" text-anchor="start" font-weight="700" >3 features</text>
+<text x="456" y="538" font-size="23" fill="#6f1d77" text-anchor="end" font-weight="700" >5<tspan baseline-shift="super" font-size="16.56">3</tspan> = 125 cells</text>
+<text x="240" y="573" font-size="20" fill="#243447" text-anchor="middle" >One 3D grid · five layers along <tspan font-style="italic">x</tspan><tspan baseline-shift="sub" font-size="14.4">3</tspan></text>
+<g id="layer-1" data-x3-interval="0,0.2">
+<text x="56" y="606" font-size="18" fill="#243447" text-anchor="middle" >0–0.2</text>
+<rect x="16" y="620" width="80" height="80" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 32 620 V 700 M 16 636 H 96" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 48 620 V 700 M 16 652 H 96" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 64 620 V 700 M 16 668 H 96" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 80 620 V 700 M 16 684 H 96" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="2" cx="58.40" cy="655.20" r="4" fill="#ec6842" stroke="white" stroke-width="1"/>
+</g>
+<g id="layer-2" data-x3-interval="0.2,0.4">
+<text x="148" y="606" font-size="18" fill="#243447" text-anchor="middle" >0.2–0.4</text>
+<rect x="108" y="620" width="80" height="80" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 124 620 V 700 M 108 636 H 188" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 140 620 V 700 M 108 652 H 188" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 156 620 V 700 M 108 668 H 188" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 172 620 V 700 M 108 684 H 188" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="4" cx="181.60" cy="672.80" r="4" fill="#ec6842" stroke="white" stroke-width="1"/>
+</g>
+<g id="layer-3" data-x3-interval="0.4,0.6">
+<text x="240" y="606" font-size="18" fill="#243447" text-anchor="middle" >0.4–0.6</text>
+<rect x="200" y="620" width="80" height="80" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 216 620 V 700 M 200 636 H 280" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 232 620 V 700 M 200 652 H 280" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 248 620 V 700 M 200 668 H 280" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 264 620 V 700 M 200 684 H 280" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="0" cx="208.80" cy="641.60" r="4" fill="#ec6842" stroke="white" stroke-width="1"/>
+</g>
+<g id="layer-4" data-x3-interval="0.6,0.8">
+<text x="332" y="606" font-size="18" fill="#243447" text-anchor="middle" >0.6–0.8</text>
+<rect x="292" y="620" width="80" height="80" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 308 620 V 700 M 292 636 H 372" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 324 620 V 700 M 292 652 H 372" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 340 620 V 700 M 292 668 H 372" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 356 620 V 700 M 292 684 H 372" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="3" cx="346.40" cy="627.20" r="4" fill="#ec6842" stroke="white" stroke-width="1"/>
+</g>
+<g id="layer-5" data-x3-interval="0.8,1">
+<text x="424" y="606" font-size="18" fill="#243447" text-anchor="middle" >0.8–1</text>
+<rect x="384" y="620" width="80" height="80" fill="white" stroke="#0076c2" stroke-width="2"/>
+<path d="M 400 620 V 700 M 384 636 H 464" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 416 620 V 700 M 384 652 H 464" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 432 620 V 700 M 384 668 H 464" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M 448 620 V 700 M 384 684 H 464" fill="none" stroke="#0076c2" stroke-width="1.5" stroke-linecap="round"/>
+<circle data-sample="1" cx="409.60" cy="689.60" r="4" fill="#ec6842" stroke="white" stroke-width="1"/>
+</g>
+<text x="240" y="738" font-size="20" fill="#243447" text-anchor="middle" >5 cells with a sample · 120 empty cells</text>
+</g>
+<path d="M 24 758 H 456" fill="none" stroke="#d9e0e6" stroke-width="1" stroke-linecap="round"/>
+<text x="240" y="790" font-size="22" fill="#243447" text-anchor="middle" font-weight="700" >Grid cells at fixed resolution: 5<tspan baseline-shift="super" font-size="15.84">d</tspan></text>
+<text x="240" y="823" font-size="22" fill="#6f1d77" text-anchor="middle" >10 features → 9,765,625 cells</text>
+  </g>
+</svg>

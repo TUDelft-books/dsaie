@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="661" viewBox="0 0 480 661" role="img" aria-labelledby="title desc">
+  <title id="title">Convolutional LSTM cells unrolled through time</title>
+  <desc id="desc">Spatial input grids X_(t-1), X_t and X_(t+1) enter three ConvLSTM cells with shared parameters. Each cell uses convolutional gates for input and hidden-state transformations. Separate grid-valued hidden states H and cell states C flow from one timestep to the next.</desc>
+  <defs>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#0076c2"/></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#6f1d77"/></marker>
+<marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#ec6842"/></marker>
+<marker id="arrow-neutral" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#243447"/></marker>
+</defs><rect width="480" height="661" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#243447">
+<text x="240" y="28" font-size="22" fill="#243447" text-anchor="middle" font-weight="700" >Shared parameters across time</text>
+<text x="62" y="70" font-size="24" fill="#0076c2" text-anchor="middle" ><tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="17.28">t−1</tspan></text>
+<rect x="34" y="93" width="56" height="56" fill="white"/>
+<rect x="48.0" y="93.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="107.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="121.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="76.0" y="135.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<path d="M 34.0 93 V 149 M 34 93.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 48.0 93 V 149 M 34 107.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 62.0 93 V 149 M 34 121.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 93 V 149 M 34 135.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 90.0 93 V 149 M 34 149.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 100 121 H 169" fill="none" stroke="#0076c2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="176" y="83" width="278" height="88" rx="7" fill="#f1f8fc" stroke="#0076c2" stroke-width="2"/>
+<text x="315" y="116" font-size="24" fill="#243447" text-anchor="middle" font-weight="700" >ConvLSTM</text>
+<text x="315" y="147" font-size="21" fill="#243447" text-anchor="middle" >Convolutional gates</text>
+<path d="M 248 175 V 268" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="236" y="201" width="24" height="24" fill="white"/>
+<rect x="244.0" y="201.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="244.0" y="209.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="252.0" y="217.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 236.0 201 V 225 M 236 201.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 244.0 201 V 225 M 236 209.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 252.0 201 V 225 M 236 217.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 260.0 201 V 225 M 236 225.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="268" y="220" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="15.84">t−1</tspan></text>
+<path d="M 385 175 V 268" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="373" y="201" width="24" height="24" fill="white"/>
+<rect x="381.0" y="201.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="381.0" y="209.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="389.0" y="217.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 373.0 201 V 225 M 373 201.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 381.0 201 V 225 M 373 209.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 389.0 201 V 225 M 373 217.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 397.0 201 V 225 M 373 225.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="405" y="220" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="15.84">t−1</tspan></text>
+<text x="62" y="260" font-size="24" fill="#0076c2" text-anchor="middle" ><tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="17.28">t</tspan></text>
+<rect x="34" y="283" width="56" height="56" fill="white"/>
+<rect x="48.0" y="297.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="297.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="311.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="76.0" y="325.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<path d="M 34.0 283 V 339 M 34 283.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 48.0 283 V 339 M 34 297.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 62.0 283 V 339 M 34 311.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 283 V 339 M 34 325.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 90.0 283 V 339 M 34 339.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 100 311 H 169" fill="none" stroke="#0076c2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="176" y="273" width="278" height="88" rx="7" fill="#f1f8fc" stroke="#0076c2" stroke-width="2"/>
+<text x="315" y="306" font-size="24" fill="#243447" text-anchor="middle" font-weight="700" >ConvLSTM</text>
+<text x="315" y="337" font-size="21" fill="#243447" text-anchor="middle" >Convolutional gates</text>
+<path d="M 248 365 V 458" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="236" y="391" width="24" height="24" fill="white"/>
+<rect x="244.0" y="391.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="244.0" y="399.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="252.0" y="407.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 236.0 391 V 415 M 236 391.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 244.0 391 V 415 M 236 399.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 252.0 391 V 415 M 236 407.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 260.0 391 V 415 M 236 415.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="268" y="410" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="15.84">t</tspan></text>
+<path d="M 385 365 V 458" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="373" y="391" width="24" height="24" fill="white"/>
+<rect x="381.0" y="391.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="381.0" y="399.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="389.0" y="407.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 373.0 391 V 415 M 373 391.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 381.0 391 V 415 M 373 399.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 389.0 391 V 415 M 373 407.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 397.0 391 V 415 M 373 415.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="405" y="410" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="15.84">t</tspan></text>
+<text x="62" y="450" font-size="24" fill="#0076c2" text-anchor="middle" ><tspan font-style="italic">X</tspan><tspan baseline-shift="sub" font-size="17.28">t+1</tspan></text>
+<rect x="34" y="473" width="56" height="56" fill="white"/>
+<rect x="48.0" y="501.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="487.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="62.0" y="501.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<rect x="76.0" y="515.0" width="14.0" height="14.0" fill="#0076c2" fill-opacity="0.2"/>
+<path d="M 34.0 473 V 529 M 34 473.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 48.0 473 V 529 M 34 487.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 62.0 473 V 529 M 34 501.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 76.0 473 V 529 M 34 515.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 90.0 473 V 529 M 34 529.0 H 90" fill="none" stroke="#0076c2" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 100 501 H 169" fill="none" stroke="#0076c2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="176" y="463" width="278" height="88" rx="7" fill="#f1f8fc" stroke="#0076c2" stroke-width="2"/>
+<text x="315" y="496" font-size="24" fill="#243447" text-anchor="middle" font-weight="700" >ConvLSTM</text>
+<text x="315" y="527" font-size="21" fill="#243447" text-anchor="middle" >Convolutional gates</text>
+<path d="M 248 555 V 615" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="236" y="565" width="24" height="24" fill="white"/>
+<rect x="244.0" y="565.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="244.0" y="573.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="252.0" y="581.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 236.0 565 V 589 M 236 565.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 244.0 565 V 589 M 236 573.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 252.0 565 V 589 M 236 581.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 260.0 565 V 589 M 236 589.0 H 260" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="268" y="584" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">H</tspan><tspan baseline-shift="sub" font-size="15.84">t+1</tspan></text>
+<path d="M 385 555 V 615" fill="none" stroke="#6f1d77" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-purple)"/>
+<rect x="373" y="565" width="24" height="24" fill="white"/>
+<rect x="381.0" y="565.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="381.0" y="573.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<rect x="389.0" y="581.0" width="8.0" height="8.0" fill="#6f1d77" fill-opacity="0.2"/>
+<path d="M 373.0 565 V 589 M 373 565.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 381.0 565 V 589 M 373 573.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 389.0 565 V 589 M 373 581.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 397.0 565 V 589 M 373 589.0 H 397" fill="none" stroke="#6f1d77" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="405" y="584" font-size="22" fill="#6f1d77" text-anchor="start" ><tspan font-style="italic">C</tspan><tspan baseline-shift="sub" font-size="15.84">t+1</tspan></text>
+<text x="240" y="648" font-size="21" fill="#243447" text-anchor="middle" >H: hidden state     C: cell state</text>
+</g>
+</svg>
