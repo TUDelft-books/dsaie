@@ -86,7 +86,7 @@ $$
 - \frac{N}{2}\ln(2\pi)
 -\frac{\beta}{2}\sum_{n=1}^{N}\left[t_n-\mathbf{m}_N^\mathrm{T}\boldsymbol{\phi}(\mathbf{x}_n)\right]^2
 {\color{red}
-+ \frac{M}{2}\ln\alpha -\frac{\alpha}{2}\mathbf{m}_N^\mathrm{T}\mathbf{m}_N - \frac{1}{2}\ln\vert\mathbf{S}_N\vert
++ \frac{M}{2}\ln\alpha -\frac{\alpha}{2}\mathbf{m}_N^\mathrm{T}\mathbf{m}_N - \frac{1}{2}\ln\vert\mathbf{S}_N^{-1}\vert
 }
 $$(bayesbasisfuncslogmarginal)
 
