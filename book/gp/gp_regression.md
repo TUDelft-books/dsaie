@@ -90,7 +90,7 @@ In the next page we will go through this last point, namely how to determine sui
 
 Play with the interactive plot below to get some more intuition on GPs. You start with the prior and can sample anywhere to see how the posterior looks like. The GP prior/posterior is also being sampled on the fly so you can see how the samples look like:
 
-<iframe src="../_static/gp-regression-interactive.html" style="width: 100%; height: 560px; border: 0;" loading="lazy"></iframe>
+<iframe src="../_static/gp-regression-interactive.html" style="width: 100%; height: 600px; border: 0;" loading="lazy"></iframe>
 
 ```{admonition} Exam questions    
 :class: danger    
