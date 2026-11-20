@@ -90,7 +90,7 @@ It's a technique used to **increase the spatial dimensions of feature maps**, en
 
 ```{figure} ../figures/copyrighted/upsampling.svg
 :scale: 40%
-:name: upsampling
+:name: segmentation_upsampling
 
 Upsampling techniques: a) duplicate each input four times, b) max unpooling and c) bilinear interpolation. Adapted from Prince, S.J., 2023. Understanding Deep Learning. MIT PRESS.
 ```

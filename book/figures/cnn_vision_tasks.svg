@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="660" height="390" viewBox="0 0 660 390" role="img" aria-labelledby="title desc">
+  <title id="title">Four computer vision tasks on the same street scene</title>
+  <desc id="desc">The image label says car present. Detection places a box labelled car around each of two cars. The semantic mask labels every pixel as car, road or background, giving both cars the same fill. The instance view overlays a blue mask on car 1 and an orange mask on car 2. The road and background remain visible around them.</desc>
+
+  <defs>
+    <!-- The same silhouettes and transforms also form the two segmentation masks. -->
+    <path id="body" d="M1 18Q1 15 5 14L13 12 20 2Q22 0 26 0H51Q55 0 59 3L72 13 89 16Q94 17 95 22L96 28Q96 30 93 30H4Q0 30 0 27Z"/>
+    <g id="silhouette">
+      <use xlink:href="#body"/>
+      <circle cx="19" cy="28" r="8"/>
+      <circle cx="77" cy="28" r="8"/>
+    </g>
+    <g id="car">
+      <use xlink:href="#body" stroke="#364e5e" stroke-width="1.3"/>
+      <g fill="#e5f3f6" stroke="#364e5e" stroke-width="1">
+        <path d="M17 12 23 4H36V12Z"/>
+        <path d="M40 4H51Q53 4 57 7L64 12H40Z"/>
+      </g>
+      <path d="M38 14V23M42 16h5" fill="none" stroke="#364e5e" stroke-width="1"/>
+      <rect x="87" y="19" width="7" height="3" rx="1" fill="#fff4cb"/>
+      <g fill="#354754">
+        <circle cx="19" cy="28" r="8"/><circle cx="77" cy="28" r="8"/>
+      </g>
+      <g fill="#c7d3d9">
+        <circle cx="19" cy="28" r="3.4"/><circle cx="77" cy="28" r="3.4"/>
+      </g>
+    </g>
+    <g id="windows" fill="#f7fafb">
+      <rect width="5" height="6"/><rect x="10" width="5" height="6"/>
+      <rect y="12" width="5" height="6"/><rect x="10" y="12" width="5" height="6"/>
+    </g>
+    <g id="street">
+      <rect width="310" height="120" fill="#e9f3f7"/>
+      <path d="M0 48V34H23V24H52V42H71V29H91V46H112V15H142V27H164V38H187V20H213V45H232V32H259V13H291V34H310V60H0Z"
+            fill="#c5d7df"/>
+      <use xlink:href="#windows" x="29" y="29"/><use xlink:href="#windows" x="119" y="22"/>
+      <use xlink:href="#windows" x="193" y="27"/><use xlink:href="#windows" x="267" y="20"/>
+      <path d="M0 55H310V60H0Z" fill="#91abb9"/>
+      <rect y="60" width="310" height="60" fill="#afb8bf"/>
+      <path d="M0 91H310" stroke="#f6f5ed" stroke-dasharray="28 19" stroke-width="3"/>
+      <use xlink:href="#car" transform="translate(27 49) scale(.92)" fill="#8db9ba"/>
+      <use xlink:href="#car" transform="translate(282 67) scale(-1.16 1.16)" fill="#e1a37c"/>
+    </g>
+    <g id="left-mask"><use xlink:href="#silhouette" transform="translate(27 49) scale(.92)"/></g>
+    <g id="right-mask"><use xlink:href="#silhouette" transform="translate(282 67) scale(-1.16 1.16)"/></g>
+    <rect id="frame" width="310" height="120" fill="none" stroke="#83939d" stroke-width="1"/>
+  </defs>
+
+  <rect width="660" height="390" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#183544">
+    <g font-size="21" font-weight="bold">
+      <text x="8" y="24">Image classification</text>
+      <text x="342" y="24">Object detection</text>
+      <text x="8" y="222">Semantic segmentation</text>
+      <text x="342" y="222">Instance segmentation</text>
+    </g>
+
+    <g transform="translate(8 35)">
+      <use xlink:href="#street"/>
+      <use xlink:href="#frame"/>
+    </g>
+    <text x="8" y="182" font-size="18">Image label<tspan dx="11" font-weight="bold">Car present</tspan></text>
+
+    <g transform="translate(342 35)">
+      <use xlink:href="#street"/>
+      <g stroke="#005c92" stroke-width="2.4" fill="none">
+        <rect x="25" y="47" width="92" height="37"/>
+        <rect x="168" y="65" width="116" height="46"/>
+      </g>
+      <g fill="#005c92">
+        <rect x="24" y="27" width="37" height="21"/>
+        <rect x="167" y="45" width="37" height="21"/>
+      </g>
+      <g fill="#fff" font-size="17" font-weight="bold">
+        <text x="29" y="43">car</text>
+        <text x="172" y="61">car</text>
+      </g>
+      <use xlink:href="#frame"/>
+    </g>
+    <text x="342" y="182" font-size="18">One box per car</text>
+
+    <g transform="translate(8 233)">
+      <rect width="310" height="120" fill="#f1e5d0"/>
+      <rect y="60" width="310" height="60" fill="#adb8c4"/>
+      <use xlink:href="#left-mask" fill="#0076c2"/>
+      <use xlink:href="#right-mask" fill="#0076c2"/>
+      <use xlink:href="#frame"/>
+    </g>
+    <g transform="translate(342 233)">
+      <use xlink:href="#street"/>
+      <use xlink:href="#left-mask" fill="#0076c2"/>
+      <use xlink:href="#right-mask" fill="#e36e2f"/>
+      <g text-anchor="middle" font-size="16" font-weight="bold">
+        <text x="70" y="72" fill="#fff">1</text>
+        <text x="226" y="95" fill="#35200f">2</text>
+      </g>
+      <use xlink:href="#frame"/>
+    </g>
+
+    <g font-size="18">
+      <rect x="8" y="367" width="15" height="15" fill="#0076c2"/><text x="31" y="380">Car</text>
+      <rect x="91" y="367" width="15" height="15" fill="#adb8c4"/><text x="114" y="380">Road</text>
+      <rect x="181" y="367" width="15" height="15" fill="#f1e5d0"/><text x="204" y="380">Background</text>
+      <rect x="342" y="367" width="15" height="15" fill="#0076c2"/><text x="365" y="380">Car 1</text>
+      <rect x="457" y="367" width="15" height="15" fill="#e36e2f"/><text x="480" y="380">Car 2</text>
+    </g>
+  </g>
+</svg>

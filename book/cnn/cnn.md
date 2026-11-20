@@ -1,119 +1,150 @@
 # Convolutional Neural Networks (CNNs)
 
-In this lecture, we explore how **Convolutional Neural Networks (CNNs)** are constructed by stacking convolutional and pooling layers to automatically extract features from images. We'll use **image classification** (IC) as our computer vision task, as it provides an ideal introduction to understanding how CNNs work.
+To classify an image as a cat or a dog, a model needs features that help distinguish the two. In the [preceding lecture](convolution_and_pooling.md), we saw how a convolutional layer learns local filters and produces feature maps. In this lecture, we'll stack these layers with nonlinear activations to build **Convolutional Neural Networks (CNNs)** for **image classification** (IC).
 
-We'll examine how modern CNN architectures for IC typically consist of two main components: an automatic feature extractor that learns hierarchical representations, followed by a classifier tailored to the specific classification task. As we delve deeper into these networks, we'll observe how features transform from simple edge detectors in early layers to more complex, abstract patterns in deeper layers.
-
-We will discuss landmark architectures that shaped the field, starting with **AlexNet**, which sparked the *deep learning revolution*, and **VGG**, which demonstrated the power of deeper architectures. We'll also discuss the crucial role of **ImageNet**, the extensive dataset that served as a catalyst for these breakthroughs in computer vision, providing a standardized benchmark for evaluating model performance.
-
+We'll examine two main components: a feature extractor that learns representations from images, followed by a classification head that maps those features to class scores. Many CNNs use pooling or strided convolutions to reduce the spatial resolution along the way. We'll follow how features change with depth, then discuss **ImageNet** and landmark architectures such as **AlexNet**, **VGG** and **ResNet**.
 
 **Resources**
 
-[Slides](https://surfdrive.surf.nl/files/index.php/s/YM965vSFvnM2vsX)
-
-Chapter 10.5 {bdg-warning}`prince-udl`
+- [Slides](https://surfdrive.surf.nl/files/index.php/s/YM965vSFvnM2vsX)
+- Simon J. D. Prince, *Understanding Deep Learning* (MIT Press, 2023), section 10.5. [Book website](https://udlbook.github.io/udlbook/)
 
 ## Computer Vision
 
 Computer Vision (CV) is a field of AI focused on enabling machines to interpret and understand visual data from the world. CV encompasses several key tasks:
 
-* **Image Classification**: Determines what category an image belongs to (e.g., "this sewer image shows a crack").
-* **Object Detection**: Locates and identifies multiple objects in an image using bounding boxes (e.g., "there's a car at coordinates x,y with width w and height h").
+* **Image Classification**: Assigns labels to the image as a whole (e.g., "this image contains a cat").
+* **Object Detection**: Locates and identifies individual objects using bounding boxes (e.g., "there's a car at this position, with this width and height").
 * **Semantic Segmentation**: Labels each pixel in the image according to which class it belongs to (e.g., "these pixels are road, these are sidewalk").
 * **Instance Segmentation**: Identifies and segments individual instances of objects (e.g., "these pixels belong to person #1, these to person #2").
 
+{numref}`cnn_vision_tasks` shows what each task predicts for the same street scene.
+
+```{figure} ../figures/cnn_vision_tasks.svg
+:name: cnn_vision_tasks
+:alt: Four views of two cars show a single label for the image, one bounding box around each car, a shared class label for all car pixels, and a separate mask for each car.
+
+Classification reports that the image contains a car. Detection draws a box around each car. Semantic segmentation assigns every pixel to car, road or background. The instance view overlays a separate mask for each car on the street scene.
+```
 
 ```{admonition} CV beyond camera images
 :class: tip
-It's important to note that computer vision applications in our fields extend beyond traditional camera-based imagery. For instance, radar reflectivity maps in rainfall nowcasting, satellite-derived flood extent maps, or even gridded model outputs can all be treated as "images" where each pixel represents a measurement or prediction. Indeed, we can apply Deep Learning-based CV techniques to any variable that can be represented on a regular grid, from soil moisture maps to stresses in concrete.
+Computer vision methods can also process data beyond camera images. Radar reflectivity maps, satellite-derived flood extent maps and gridded model outputs can all be treated as images in which each pixel represents a measurement or prediction. CNNs can learn spatial patterns in these regular grids, with the inputs and outputs chosen to suit the prediction task.
 ```
 
 ## Image Classification
 
-To introduce CNNs, we focus on **image classification**, where the goal is to identify categories in images. There are multiple types of image classification, depending on the complexity of the task:
+To introduce CNNs, we focus on **image classification**, where the goal is to predict labels for a whole image. The output layer depends on which combinations of labels the task allows:
 
 1. **Binary Image Classification**
-   * Classifies images into two categories (e.g., defective vs non-defective sewer pipe, land vs water in aerial images).
-   * **How it works?** The model learns to distinguish between the two classes by extracting relevant features, using a single sigmoid activation in the output layer to produce a probability score for class membership.
+   * Assigns each image to one of two categories (e.g., land vs water in aerial images).
+   * A single sigmoid output estimates the probability of one designated class, such as water. We compare it with a threshold, often 0.5, to choose between the two classes.
 
 2. **Multiclass Image Classification**
-   * Assigns each image to exactly one category from multiple possible classes (e.g., crack/root/deposit in sewer pipes, or forest/urban/agricultural in aerial images).
-   * **How it works?** The model learns to map extracted features to a single class using a softmax activation in the output layer, which produces a probability distribution over all possible classes.
+   * Assigns each image to exactly one of several mutually exclusive categories (e.g., forest, urban or agricultural land).
+   * A softmax output converts one score per class into probabilities that sum to one. We select the class with the largest probability.
 
 3. **Multilabel Image Classification**
-   * Identifies multiple categories that can be present simultaneously (e.g., multiple defect types in a sewer pipe, or the presence of buildings/roads/water bodies in aerial images).
-   * **How it works?** The model uses multiple sigmoid activations in the output layer (one for each possible class) to independently predict the presence/absence of each category based on learned features.
+   * Identifies categories that can be present simultaneously (e.g., buildings, roads and water bodies in an aerial image).
+   * One sigmoid output per label estimates its probability of being present. Applying a threshold to each output allows zero, one or several labels to be selected. These probabilities do not need to sum to one, and the labels can share features learned by the network.
 
+These activations convert the network's raw scores, called **logits**, into probabilities. During training, some loss functions accept logits and perform the required conversion internally. For example, the land-use exercise uses PyTorch's `CrossEntropyLoss` directly on the logits for multiclass classification.
 
 ```{admonition} Multiclass vs. Multilabel
 :class: tip
 
-It might look like the multiclass and multilabel classifications perform the same thing. However, the main difference between them is that multiclass classification assigns each instance to a **single**, exclusive category, while multilabel classification allows instances to be assigned to **multiple** categories. Figure {numref}`imag_classif` below illustrates classifications performed by each method.
+The same image can receive different labels depending on the task definition. Multiclass classification requires a **single**, exclusive category, while multilabel classification allows **multiple** categories. {numref}`imag_classif` illustrates the three output rules for the same inspection image.
+```
+
 ```{figure} ../figures/imag_classif.svg
 :scale: 15%
 :name: imag_classif
+:alt: One inspection image receives a binary condition label, one multiclass defect label, or several multilabel defect labels. Selected labels are bold and red.
 
-Outputs of different image classification methods. Class(es) bolded in <span style="color:red; font-weight:bold"> red</span> represent the classification output. Image from [SewerML dataset](https://vap.aau.dk/sewer-ml/).
-``````
+Outputs of different image classification methods. Selected labels are shown in **bold** and red. Image from the [Sewer-ML dataset](https://vap.aau.dk/sewer-ml/).
+```
 
-Early computer vision algorithms relied on manually extracting features from images, such as edges, corners, textures, or shapes, followed by training a simple classifier (e.g., a fully-connected network with a softmax activation) on these hand-crafted features. The performance of these systems heavily depended on domain expertise to design relevant and effective features appropriate for a specific task.
+### Learning features
 
-In contrast, CNNs revolutionize this approach by enabling **automatic feature extraction**. Due to their spatial and hierarchical inductive biases, CNNs learn complex features directly from raw image data, starting from low-level patterns (e.g., edges) to high-level, task-specific details (e.g., cracks, root intrusions, or urban buildings). These features are then fed into a classification head, typically using fully-connected layers with task-specific activation functions (e.g., softmax or sigmoid).
+How do we obtain the features that a classifier needs? Traditional computer vision systems often use **hand-crafted features**, such as measurements of edges, textures or shapes. A person designs the calculations, software applies them to each image, and a classifier is trained on the resulting measurements. The feature calculations remain fixed while the classifier is fitted, so their usefulness depends on the designer's choices.
 
-This automatic end-to-end learning process forms the foundation for modern computer vision systems and facilitates the extension of CV methods to data beyond conventional camera imagery, such as radar maps for rainfall nowcasting, gridded spatial flood extent maps, or other variables organized on a regular grid. A comparison of traditional CV systems and CNN-based systems is shown in {numref}`old_vs_new_cv`.
+A CNN enables **automatic feature extraction** by learning the filter weights along with the classification head. During end-to-end training, the classification loss measures the error against the image labels. Backpropagation computes gradients for both components, and the optimizer updates their parameters. We still choose the architecture and output labels, but do not have to specify the feature calculations in advance. {numref}`old_vs_new_cv` compares these two approaches.
 
 ```{figure} ../figures/old_vs_new_cv.svg
 :name: old_vs_new_cv
-:scale: 20%
-Architecture of the traditional CV (top) compared to that of a CNN (bottom).
+:width: 100%
+:alt: A shared input image feeds two routes to class scores. Hand-crafted measurements stay fixed while their classifier is trained. In the CNN route, the feature extractor and classification head are trained together.
+
+Hand-crafted and learned features for image classification. In the left route, a designer chooses fixed measurements and training fits the classifier. In the CNN route, training adjusts both the filters that produce feature maps and the classification head using the same classification loss.
 ```
 
-To better understand how CNNs work, let's visualize the feature maps produced at different depths of the network. Figure {numref}`deep_maps` shows the activation patterns of different convolutional layers when processing an image of a cat. These feature maps are obtained by passing the input image through a trained CNN and extracting the outputs of specific convolutional layers. The visualization includes activation maps for only a subset of the filters in each layer, as the network typically has many filters at each level.
+The local filters and shared weights introduced in the preceding lecture give CNNs a **spatial inductive bias**: nearby pixels are processed together, and the same pattern can be detected at different positions. Stacking layers with nonlinear activations gives a **hierarchical inductive bias**. Later filters combine responses across channels and, as their receptive fields grow, can use patterns spread over larger parts of the image.
 
-In the early layers (block1), the feature maps still resemble the input image, as they detect low-level features like edges and basic textures. As we move deeper into the network (block2-3), the features become more abstract, capturing more complex patterns and shapes. In the deeper layers (block4-5), the feature maps are highly abstract and specialized for the classification task, though they are no longer visually interpretable to humans.
+To see this process, pass an image of a cat through a trained CNN and inspect its intermediate activations ({numref}`deep_maps`). Each tile shows one feature map, or output channel, for that same input. The rows show selected layers at increasing depths; only a subset of the channels is displayed.
 
-Note that while the feature maps get progressively smaller through the network (due to pooling operations), they are shown at the same scale in the visualization for easier comparison. These final feature maps are ultimately flattened into a vector and fed into fully connected layers for the final classification decision.
+In the early layers (block1), many maps still resemble the image because they respond to local edges and textures. Deeper layers combine these responses into more complex patterns. Some channels may respond to object parts, but an individual channel need not have a simple meaning such as an eye or an ear. Deep maps are often harder to interpret by inspection.
 
-This hierarchical feature extraction is what makes CNNs so powerful - they automatically learn to detect increasingly complex and task-relevant features, from simple edges to complex object parts, without requiring manual feature engineering.
+Pooling reduces the spatial resolution between blocks in the illustrated network. The maps are enlarged to comparable display sizes, so larger coloured cells in deeper rows correspond to a coarser grid. After feature extraction, the classification head uses the final maps to make an image-level prediction.
 
 ```{figure} ../figures/feature_maps_deep.png
 :name: deep_maps
 :scale: 40%
-Feature maps in Deep CNNs. Image credits: https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2.
+:alt: Selected feature maps for a cat image at increasing depths. Early maps preserve fine edges and textures; deeper maps show coarser activation patterns, enlarged for comparison.
+
+Feature maps at different depths of a trained CNN. Each row shows selected channels for the same cat image. Source: [Arden Dertat, Applied Deep Learning — Convolutional Neural Networks](https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2/).
+```
+
+### From feature maps to class scores
+
+The CNN in {numref}`cnn_flatten_classifier` **flattens** its final feature maps into a vector and passes it to a fully connected layer. This layer combines the activations into class scores, which are converted to probabilities using the output rule for the task.
+
+```{figure} ../figures/cnn_flatten_classifier.svg
+:name: cnn_flatten_classifier
+:alt: A grayscale image passes through convolution, ReLU and max pooling to give eight four-by-four feature maps. Flattening places their 128 activations in one vector. A fully connected layer produces three class scores.
+
+Pooling reduces each of the eight maps to four rows and four columns. Flattening arranges their 128 values in a vector for the dense (fully connected) layer.
 ```
 
 ```{admonition} Meaning of the "flattened" features
 :class: tip
-The flattened features produced by the final convolutional layers of a CNN represent highly abstract and task-specific information summarized from the input image. In the case of a generic classification task (i.e., ImageNet dataset below), these features might encode high-level representations such as the presence of fur patterns, eye shapes, or ear structures that distinguish a cat from a dog. For land-use detection from aerial images (i.e., the US Merced Dataset of the exercise), flattened features could represent abstract spatial patterns, such as grid-like textures of urban areas, irregular patterns of forests, or uniform patches of farmland. These condensed and meaningful representations are then used in the fully connected layers to make the final classification decision. Such adaptability enables CNNs to perform well across vastly different image classification tasks.
-``````
 
-### ImageNet 
+Suppose the final tensor has shape $4\times4\times8$ in the channels-last convention: eight feature maps, each with four rows and four columns. Flattening rearranges all $4\times4\times8=128$ activations into a vector of length 128. It does not average or discard any values. Each entry still corresponds to one channel at one spatial location; the preceding layers have learned what that response represents.
 
-**ImageNet** is a highly influential image database that has played a pivotal role in advancing computer vision over the last decade. It contains approximately 1.2 million labeled training images, 100,000 test images, and spans 1,000 diverse classes, ranging from animals and objects to scenes and everyday items. The ImageNet dataset is particularly challenging because of its high variability in scale, pose, lighting conditions, backgrounds, and object positions, making it a benchmark for assessing the robustness of image classification models.
+For example, features useful for distinguishing a cat from a dog may respond to fur textures or combinations of shapes. In the land-use exercise, they may respond to patterns of buildings, vegetation or fields. The fully connected layers learn how to combine these responses for the chosen labels.
+```
 
-The introduction of the **ImageNet Large-Scale Visual Recognition Challenge (ILSVRC)** in 2010 accelerated progress in image classification by providing a standardized framework for researchers to compare models. Several landmark models emerged from this challenge, which have significantly shaped the field of computer vision by driving advancements in architectures, feature extraction, and model scalability.
+Other CNNs use **global average pooling** before a final classification layer. This averages each feature map across its spatial positions. In the same example, it produces eight values rather than 128: one mean response per channel. This reduces the number of inputs to the classifier but removes information about where within a map the responses occurred.
 
-Below, several key models derived from ImageNet that have had a transformative impact on image classification tasks and deep learning/computer vision as a whole.
+### ImageNet
+
+To compare image classifiers, researchers need a shared set of images and labels. **ImageNet** is a large labelled image database; the widely used 1,000-class benchmark is a subset used in the **ImageNet Large-Scale Visual Recognition Challenge (ILSVRC)**. Its 2012 classification task has about 1.28 million training images, 50,000 validation images and 100,000 test images, covering object categories such as animals and everyday items. Images vary in scale, pose, lighting, background and object position {cite:p}`cnn-russakovsky2015imagenet`.
+
+ILSVRC began in 2010 and provided a common benchmark for comparing models. Several influential architectures emerged from this challenge, showing how changes in feature extraction and network design could improve classification performance.
 
 #### AlexNet
-**AlexNet** (2012) was one of the first models to demonstrate the power of deep learning on the ImageNet challenge, achieving a breakthrough performance. It introduced key innovations such as ReLU activations, dropout regularization to reduce overfitting, and the use of GPUs for training, enabling deeper and more complex networks. 
-> *Paper*: Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems 25 (2012).
-
+**AlexNet** won the 2012 ImageNet classification challenge by a large margin and helped establish deep CNNs as a practical approach to computer vision. It combined five convolutional layers with three fully connected layers, using ReLU activations, dropout regularization and GPU training. Its success helped popularize this combination of techniques {cite:p}`cnn-krizhevsky2012imagenet`.
 
 #### VGG
-The **VGGNet** (2014) family of models showed that stacking small 3×3 convolutional filters in a deep architecture could effectively capture complex patterns in the data. By increasing model depth, VGG achieved state-of-the-art performance while maintaining a relatively simple architecture. Its demonstration of the power of depth further popularized the design of deeper networks for robust feature extraction.
-> *Paper*: Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
+The **VGGNet** family, developed for ILSVRC 2014 and published in 2015, used repeated $3\times3$ convolutions with nonlinear activations between them. Stacking these small filters lets later outputs depend on a larger region of the input while adding successive nonlinear transformations. VGG showed that increasing depth within this design could improve classification, though adding layers does not guarantee better performance for every network {cite:p}`cnn-simonyan2015very`.
 
 #### ResNet
-The **Residual Network (ResNet)** (2015) introduced the concept of residual connections, which allowed networks to go significantly deeper by alleviating the vanishing gradient problem. These skip connections enabled the training of models with hundreds of layers, pushing performance to new heights and embedding ResNet as a milestone in model scalability.
-> *Paper*: He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+**Residual Networks (ResNets)** use shortcut connections that add a block's input to the output of its convolutional layers. These layers can then learn a change to the input, called a residual, instead of having to learn the entire mapping. This design made much deeper networks easier to optimize. ResNet-based models won ILSVRC 2015, and the paper was published in 2016 {cite:p}`cnn-he2016deep`. We'll study these connections in the [residual networks lecture](resnet.md).
 
-#### Current State-of-the-Art
-More recently, **transformer-based architectures**, such as Vision Transformers (ViTs), have redefined state-of-the-art performance on ImageNet benchmarks. These models utilize self-attention mechanisms to identify and exploit meaningful relationships across the entire image, often outperforming traditional CNN-based models, especially when scaled with large datasets and computational resources. ViTs and hybrid transformer-CNN approaches represent an exciting frontier for computer vision.
+(current-state-of-the-art)=
+#### Vision Transformers
+
+CNNs are not the only way to learn image features. A **Vision Transformer (ViT)** divides an image into patches, maps each patch to a vector and uses self-attention to combine information across patches. This offers a different approach to modelling relationships across an image from the local filters of a CNN {cite:p}`cnn-dosovitskiy2021image`.
 
 ```{admonition} Exam questions    
 :class: danger    
-Understanding how CNNs process images hierarchically is fundamental to computer vision applications. For the exam, you should be able to explain how features evolve from low-level to high-level representations as we move deeper in the network, and how this relates to the spatial and hierarchical inductive biases built into CNNs. You should also understand what flattened features represent and their role in classification. You won't need to memorize specific architectures, but should grasp these key principles and their implications for image understanding tasks.
+For the exam, you should be able to explain how local filters with shared weights and successive layers let a CNN learn increasingly complex features. Relate this process to spatial and hierarchical inductive biases, explain the difference between hand-crafted and learned features, and describe how a classification head uses the final feature maps. You should understand what flattening does and how the output rule depends on the classification task. You won't need to memorize specific architectures.
 +++    
 {bdg-primary}`written-exam`    
+```
+
+## References
+
+```{bibliography}
+:filter: docname in docnames
+:keyprefix: cnn-
 ```

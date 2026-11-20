@@ -1,0 +1,46 @@
+<svg aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" width="640" height="280" viewBox="0 0 640 280" role="img">
+  <title id="title">Peak scores with valid windows</title>
+  <desc id="desc">The creek readings are 40, 40, 60, 40, 40 and 40 cm. The filter subtracts the two neighbours from twice the centre reading. Four complete windows give scores of minus 20, 40, minus 20 and 0 cm at readings 2 through 5.</desc>
+  <rect width="640" height="280" fill="#fff" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="21" y="28" font-size="21" fill="#16324a" font-weight="700" text-anchor="start">Peak scores with valid windows</text>
+    <text x="617" y="28" font-size="16" fill="#40566a" font-weight="400" text-anchor="end">Weights (−1, 2, −1)</text>
+    <text x="22" y="55" font-size="17" fill="#16324a" font-weight="400" text-anchor="start">Creek readings (cm)   40, 40, 60, 40, 40, 40</text>
+    <line x1="20" y1="69" x2="620" y2="69" stroke="#ccd5dd" stroke-width="1" />
+    <rect x="20" y="77" width="600" height="30" fill="#e8eef2" rx="3" />
+    <text x="75" y="97" font-size="15" fill="#16324a" font-weight="700" text-anchor="middle">Reading no.</text>
+    <text x="190" y="97" font-size="15" fill="#16324a" font-weight="700" text-anchor="middle">Earlier</text>
+    <text x="315" y="97" font-size="15" fill="#16324a" font-weight="700" text-anchor="middle">Centre</text>
+    <text x="440" y="97" font-size="15" fill="#16324a" font-weight="700" text-anchor="middle">Later</text>
+    <text x="555" y="97" font-size="15" fill="#16324a" font-weight="700" text-anchor="middle">Peak score (cm)</text>
+    <rect x="20" y="108" width="600" height="31" fill="#fff" />
+    <line x1="20" y1="139" x2="620" y2="139" stroke="#dee5eb" stroke-width="1" />
+    <text x="75" y="130" font-size="16" fill="#16324a" font-weight="400" text-anchor="middle">2</text>
+    <text x="190" y="130" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₁ = 40</text>
+    <text x="315" y="130" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₂ = 40</text>
+    <text x="440" y="130" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₃ = 60</text>
+    <text x="555" y="130" font-size="18" fill="#6f1d77" font-weight="700" text-anchor="middle">−20</text>
+    <rect x="20" y="140" width="600" height="31" fill="#f5f7f9" />
+    <line x1="20" y1="171" x2="620" y2="171" stroke="#dee5eb" stroke-width="1" />
+    <text x="75" y="162" font-size="16" fill="#16324a" font-weight="400" text-anchor="middle">3</text>
+    <text x="190" y="162" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₂ = 40</text>
+    <text x="315" y="162" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₃ = 60</text>
+    <text x="440" y="162" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₄ = 40</text>
+    <text x="555" y="162" font-size="18" fill="#6f1d77" font-weight="700" text-anchor="middle">40</text>
+    <rect x="20" y="172" width="600" height="31" fill="#fff" />
+    <line x1="20" y1="203" x2="620" y2="203" stroke="#dee5eb" stroke-width="1" />
+    <text x="75" y="194" font-size="16" fill="#16324a" font-weight="400" text-anchor="middle">4</text>
+    <text x="190" y="194" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₃ = 60</text>
+    <text x="315" y="194" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₄ = 40</text>
+    <text x="440" y="194" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₅ = 40</text>
+    <text x="555" y="194" font-size="18" fill="#6f1d77" font-weight="700" text-anchor="middle">−20</text>
+    <rect x="20" y="204" width="600" height="31" fill="#f5f7f9" />
+    <line x1="20" y1="235" x2="620" y2="235" stroke="#dee5eb" stroke-width="1" />
+    <text x="75" y="226" font-size="16" fill="#16324a" font-weight="400" text-anchor="middle">5</text>
+    <text x="190" y="226" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₄ = 40</text>
+    <text x="315" y="226" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₅ = 40</text>
+    <text x="440" y="226" font-size="17" fill="#16324a" font-weight="400" text-anchor="middle">x₆ = 40</text>
+    <text x="555" y="226" font-size="18" fill="#6f1d77" font-weight="700" text-anchor="middle">0</text>
+    <text x="22" y="267" font-size="15" fill="#40566a" font-weight="400" text-anchor="start">At reading 2, −40 + 2 × 40 − 60 = −20 cm.</text>
+  </g>
+</svg>

@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="296" viewBox="0 0 680 296" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif" fill="#16324a">
+  <title id="title">A mean filter at the edge of a rainfall raster</title>
+  <desc id="desc">A single zero border surrounds a four-by-four rainfall raster. The three-by-three window centred on the bottom-right reading of nine contains rows 4, 6, 0; 5, 9, 0; and 0, 0, 0. The uniform mean is 24 divided by 9, approximately 2.67 millimetres.</desc>
+  <rect x="0" y="0" width="680" height="296" fill="#ffffff" />
+  <text x="22" y="26" font-size="19" text-anchor="start" fill="#16324a" font-weight="bold">Rainfall raster (mm)</text>
+  <text x="306" y="26" font-size="19" text-anchor="start" fill="#16324a" font-weight="bold">Window at the bottom-right cell</text>
+  <g id="padded-raster">
+    <rect x="26" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="96" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="131" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="166" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="201" y="46" width="35" height="35" fill="#eef0f2" />
+    <rect x="26" y="81" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="81" width="35" height="35" fill="#f8fbfd" />
+    <rect x="96" y="81" width="35" height="35" fill="#eff6fb" />
+    <rect x="131" y="81" width="35" height="35" fill="#e6f2f9" />
+    <rect x="166" y="81" width="35" height="35" fill="#eff6fb" />
+    <rect x="201" y="81" width="35" height="35" fill="#eef0f2" />
+    <rect x="26" y="116" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="116" width="35" height="35" fill="#f8fbfd" />
+    <rect x="96" y="116" width="35" height="35" fill="#f8fbfd" />
+    <rect x="131" y="116" width="35" height="35" fill="#ddedf7" />
+    <rect x="166" y="116" width="35" height="35" fill="#e6f2f9" />
+    <rect x="201" y="116" width="35" height="35" fill="#eef0f2" />
+    <rect x="26" y="151" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="151" width="35" height="35" fill="#cbe4f3" />
+    <rect x="96" y="151" width="35" height="35" fill="#e6f2f9" />
+    <rect x="131" y="151" width="35" height="35" fill="#d4e9f5" />
+    <rect x="166" y="151" width="35" height="35" fill="#c2e0f1" />
+    <rect x="201" y="151" width="35" height="35" fill="#eef0f2" />
+    <rect x="26" y="186" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="186" width="35" height="35" fill="#eff6fb" />
+    <rect x="96" y="186" width="35" height="35" fill="#d4e9f5" />
+    <rect x="131" y="186" width="35" height="35" fill="#cbe4f3" />
+    <rect x="166" y="186" width="35" height="35" fill="#a7d2eb" />
+    <rect x="201" y="186" width="35" height="35" fill="#eef0f2" />
+    <rect x="26" y="221" width="35" height="35" fill="#eef0f2" />
+    <rect x="61" y="221" width="35" height="35" fill="#eef0f2" />
+    <rect x="96" y="221" width="35" height="35" fill="#eef0f2" />
+    <rect x="131" y="221" width="35" height="35" fill="#eef0f2" />
+    <rect x="166" y="221" width="35" height="35" fill="#eef0f2" />
+    <rect x="201" y="221" width="35" height="35" fill="#eef0f2" />
+    <line x1="61" y1="46" x2="61" y2="256" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="96" y1="46" x2="96" y2="256" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="131" y1="46" x2="131" y2="256" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="166" y1="46" x2="166" y2="256" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="201" y1="46" x2="201" y2="256" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="26" y1="81" x2="236" y2="81" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="26" y1="116" x2="236" y2="116" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="26" y1="151" x2="236" y2="151" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="26" y1="186" x2="236" y2="186" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="26" y1="221" x2="236" y2="221" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="26" y="46" width="210" height="210" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="61" y="81" width="140" height="140" fill="none" stroke="#16324a" stroke-width="2" />
+    <text x="43.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="113.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="148.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="183.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="218.5" y="69.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="43.5" y="104.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="104.5" font-size="17" text-anchor="middle" fill="#16324a">0</text>
+    <text x="113.5" y="104.5" font-size="17" text-anchor="middle" fill="#16324a">1</text>
+    <text x="148.5" y="104.5" font-size="17" text-anchor="middle" fill="#16324a">2</text>
+    <text x="183.5" y="104.5" font-size="17" text-anchor="middle" fill="#16324a">1</text>
+    <text x="218.5" y="104.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="43.5" y="139.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="139.5" font-size="17" text-anchor="middle" fill="#16324a">0</text>
+    <text x="113.5" y="139.5" font-size="17" text-anchor="middle" fill="#16324a">0</text>
+    <text x="148.5" y="139.5" font-size="17" text-anchor="middle" fill="#16324a">3</text>
+    <text x="183.5" y="139.5" font-size="17" text-anchor="middle" fill="#16324a">2</text>
+    <text x="218.5" y="139.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="43.5" y="174.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="174.5" font-size="17" text-anchor="middle" fill="#16324a">5</text>
+    <text x="113.5" y="174.5" font-size="17" text-anchor="middle" fill="#16324a">2</text>
+    <text x="148.5" y="174.5" font-size="17" text-anchor="middle" fill="#16324a">4</text>
+    <text x="183.5" y="174.5" font-size="17" text-anchor="middle" fill="#16324a">6</text>
+    <text x="218.5" y="174.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="43.5" y="209.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="209.5" font-size="17" text-anchor="middle" fill="#16324a">1</text>
+    <text x="113.5" y="209.5" font-size="17" text-anchor="middle" fill="#16324a">4</text>
+    <text x="148.5" y="209.5" font-size="17" text-anchor="middle" fill="#16324a">5</text>
+    <text x="183.5" y="209.5" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">9</text>
+    <text x="218.5" y="209.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="43.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="78.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="113.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="148.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="183.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <text x="218.5" y="244.5" font-size="17" text-anchor="middle" fill="#496171">0</text>
+    <rect x="131" y="151" width="105" height="105" fill="none" stroke="#903d25" stroke-width="3" stroke-dasharray="8 3" />
+  </g>
+  <rect x="26" y="271" width="17" height="15" fill="#eef0f2" stroke="#b8c8d2" stroke-width="1" />
+  <text x="52" y="284" font-size="15" text-anchor="start" fill="#496171">One-cell zero border</text>
+  <g id="corner-window">
+    <rect x="310" y="47" width="39" height="39" fill="#d4e9f5" />
+    <rect x="349" y="47" width="39" height="39" fill="#c2e0f1" />
+    <rect x="388" y="47" width="39" height="39" fill="#eef0f2" />
+    <rect x="310" y="86" width="39" height="39" fill="#cbe4f3" />
+    <rect x="349" y="86" width="39" height="39" fill="#a7d2eb" />
+    <rect x="388" y="86" width="39" height="39" fill="#eef0f2" />
+    <rect x="310" y="125" width="39" height="39" fill="#eef0f2" />
+    <rect x="349" y="125" width="39" height="39" fill="#eef0f2" />
+    <rect x="388" y="125" width="39" height="39" fill="#eef0f2" />
+    <line x1="349" y1="47" x2="349" y2="164" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="388" y1="47" x2="388" y2="164" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="310" y1="86" x2="427" y2="86" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="310" y1="125" x2="427" y2="125" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="310" y="47" width="117" height="117" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="329.5" y="72.5" font-size="18" text-anchor="middle" fill="#16324a">4</text>
+    <text x="368.5" y="72.5" font-size="18" text-anchor="middle" fill="#16324a">6</text>
+    <text x="407.5" y="72.5" font-size="18" text-anchor="middle" fill="#496171">0</text>
+    <text x="329.5" y="111.5" font-size="18" text-anchor="middle" fill="#16324a">5</text>
+    <text x="368.5" y="111.5" font-size="18" text-anchor="middle" fill="#16324a" font-weight="bold">9</text>
+    <text x="407.5" y="111.5" font-size="18" text-anchor="middle" fill="#496171">0</text>
+    <text x="329.5" y="150.5" font-size="18" text-anchor="middle" fill="#496171">0</text>
+    <text x="368.5" y="150.5" font-size="18" text-anchor="middle" fill="#496171">0</text>
+    <text x="407.5" y="150.5" font-size="18" text-anchor="middle" fill="#496171">0</text>
+    <rect x="310" y="47" width="117" height="117" fill="none" stroke="#903d25" stroke-width="2.5" stroke-dasharray="8 3" />
+  </g>
+  <text x="455" y="94" font-size="18" text-anchor="start" fill="#16324a" font-weight="bold">3 × 3 mean filter</text>
+  <text x="455" y="121" font-size="15" text-anchor="start" fill="#496171">Weight at every cell = 1/9</text>
+  <line x1="306" y1="185" x2="656" y2="185" stroke="#b8c8d2" stroke-width="1" />
+  <text x="306" y="216" font-size="15" text-anchor="start" fill="#6f1d77" font-weight="bold">Corner output</text>
+  <text x="306" y="247" font-size="21" text-anchor="start" fill="#16324a" font-weight="bold">(4 + 6 + 5 + 9) / 9 = 8/3</text>
+  <text x="306" y="275" font-size="18" text-anchor="start" fill="#496171">≈ 2.67 mm</text>
+</svg>

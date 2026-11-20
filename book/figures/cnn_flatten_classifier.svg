@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="183" viewBox="0 0 650 183"
+     role="img" aria-labelledby="title desc">
+  <title id="title">A convolutional classifier with a flattening layer</title>
+  <desc id="desc">Read the network from left to right. An 8 by 8 grayscale image is convolved
+    and passed through ReLU to give eight 8 by 8 maps. Max pooling reduces the eight maps
+    to 4 by 4. Flattening reshapes the 128 activations into a vector and a fully connected
+    layer maps the vector to three class scores.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="7" refX="7" refY="3.5"
+            viewBox="0 0 8 7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 8 3.5 0 7 2 3.5Z" fill="#414958"/>
+    </marker>
+  </defs>
+  <rect width="650" height="183" fill="white"/>
+
+  <!-- Width and height of a map lie in the oblique plane. Channels stack to the right. -->
+  <g stroke-linejoin="round" stroke-width="1.1">
+    <g transform="translate(28 36)">
+      <g transform="matrix(.64 -.32 0 1 0 0)">
+        <rect width="73" height="73" fill="#eeefef" stroke="#475359"/>
+        <path d="M9 18h47v9H18v36H9Z" fill="#727e82"/>
+      </g>
+    </g>
+
+    <!-- Convolutional feature volume with a narrow activation band. -->
+    <g transform="translate(148 36)" stroke="#856235">
+      <path d="M0 0 47 -23.5 82 -23.5 35 0Z" fill="#fff0c9"/>
+      <path d="M0 0H35V73H0Z" fill="#edce88"/>
+      <path d="M35 0 82 -23.5V49.5L35 73Z" fill="#fff0c9"/>
+      <path d="M9 0 56 -23.5M18 0 65 -23.5M27 0 74 -23.5M9 0v73M18 0v73M27 0v73"
+            fill="none" stroke="#bc9656" stroke-width=".8"/>
+      <path d="M28 0 75 -23.5H82L35 0Z" fill="#ecc078"/>
+      <path d="M28 0h7v73h-7Z" fill="#dfaa5a"/>
+    </g>
+
+    <!-- Pooling halves both spatial axes and preserves the channel count. -->
+    <g transform="translate(307 48.5)" stroke="#995d4d">
+      <path d="M0 0 23.5 -11.75 58.5 -11.75 35 0Z" fill="#f8d8cc"/>
+      <path d="M0 0h35v36.5H0Z" fill="#e8ad9a"/>
+      <path d="M35 0 58.5 -11.75v36.5L35 36.5Z" fill="#f2c4b4"/>
+      <path d="M9 0 32.5 -11.75M18 0 41.5 -11.75M27 0 50.5 -11.75M9 0v36.5M18 0v36.5M27 0v36.5"
+            fill="none" stroke="#c08473" stroke-width=".8"/>
+    </g>
+
+    <g transform="translate(458 10)" stroke="#655080">
+      <path d="M0 3 7 0h10l-7 3Z" fill="#eee6f7"/>
+      <path d="M0 3h10v96H0Z" fill="#ddd0ea"/>
+      <path d="M10 3 17 0v96l-7 3Z" fill="#c5b1d7"/>
+      <path d="M0 11h10m-10 8h10m-10 64h10m-10 8h10" fill="none" stroke="#927ba6" stroke-width=".85"/>
+      <g fill="#655080" stroke="none"><circle cx="5" cy="46" r="1"/><circle cx="5" cy="51" r="1"/><circle cx="5" cy="56" r="1"/></g>
+    </g>
+    <g transform="translate(576 42)" stroke="#326c83">
+      <path d="M0 3 7 0h18l-7 3Z" fill="#d5eaf1"/>
+      <path d="M0 3h18v36H0Z" fill="#b4d9e6"/>
+      <path d="M18 3 25 0v36l-7 3Z" fill="#86b7c8"/>
+      <path d="M0 15h18l7 -3M0 27h18l7 -3" fill="none"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#414958" stroke-width="1.5" marker-end="url(#arrow)">
+    <path d="M83 61h56"/><path d="M238 61h60"/><path d="M374 61h75"/><path d="M484 61h83"/>
+  </g>
+  <g text-anchor="middle" font-family="Latin Modern Roman, Georgia, 'Times New Roman', serif" fill="#223241">
+    <g font-size="20">
+      <text x="51" y="139">Input</text><text x="189" y="139">Conv + ReLU</text>
+      <text x="336" y="139">Max pool</text><text x="467" y="139">Flatten</text>
+      <text x="589" y="139">Dense</text>
+    </g>
+    <g font-size="18" fill="#475565">
+      <text x="51" y="165">8 × 8 × 1</text><text x="189" y="165">8 × 8 × 8</text>
+      <text x="336" y="165">4 × 4 × 8</text><text x="467" y="165">128</text>
+      <text x="589" y="165">3 scores</text>
+    </g>
+  </g>
+</svg>

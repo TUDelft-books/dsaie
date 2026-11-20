@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="382" viewBox="0 0 680 382" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif" fill="#16324a">
+  <title id="title">One 2D filter combines three input channels at one spatial position</title>
+  <desc id="desc">At one position, each input channel supplies a three-by-three patch. The circled dot means that each patch value is multiplied by the weight in the matching cell. After each equals sign, a three-by-three grid shows all nine products. Summing the products in channels 1, 2 and 3 gives 5, 1 and 3 respectively. Adding these subtotals and the bias of minus 2 gives an output of 7.</desc>
+  <rect x="0" y="0" width="680" height="382" fill="#ffffff" />
+  <text x="61" y="27" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">Channel</text>
+  <text x="156" y="27" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">3 × 3 patch</text>
+  <text x="291" y="27" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">3 × 3 weights</text>
+  <text x="442" y="27" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">Pointwise products</text>
+  <text x="603" y="27" font-size="17" text-anchor="middle" fill="#16324a" font-weight="bold">Channel sum</text>
+  <line x1="20" y1="39" x2="660" y2="39" stroke="#16324a" stroke-width="1" />
+  <g id="channel-1">
+    <text x="61" y="88" font-size="18" text-anchor="middle" fill="#16324a" font-weight="bold">1</text>
+    <rect x="123" y="47" width="22" height="22" fill="#f8fbfd" />
+    <rect x="145" y="47" width="22" height="22" fill="#e4f1f8" />
+    <rect x="167" y="47" width="22" height="22" fill="#e4f1f8" />
+    <rect x="123" y="69" width="22" height="22" fill="#e4f1f8" />
+    <rect x="145" y="69" width="22" height="22" fill="#d0e6f4" />
+    <rect x="167" y="69" width="22" height="22" fill="#bbdcf0" />
+    <rect x="123" y="91" width="22" height="22" fill="#f8fbfd" />
+    <rect x="145" y="91" width="22" height="22" fill="#d0e6f4" />
+    <rect x="167" y="91" width="22" height="22" fill="#d0e6f4" />
+    <line x1="145" y1="47" x2="145" y2="113" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="167" y1="47" x2="167" y2="113" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="69" x2="189" y2="69" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="91" x2="189" y2="91" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="123" y="47" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="134.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="156.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="178.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="134.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="156.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="178.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">3</text>
+    <text x="134.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="156.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="178.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <rect x="258" y="47" width="22" height="22" fill="#f3edf4" />
+    <rect x="280" y="47" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="47" width="22" height="22" fill="#f3edf4" />
+    <rect x="258" y="69" width="22" height="22" fill="#f3edf4" />
+    <rect x="280" y="69" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="69" width="22" height="22" fill="#f3edf4" />
+    <rect x="258" y="91" width="22" height="22" fill="#f3edf4" />
+    <rect x="280" y="91" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="91" width="22" height="22" fill="#f3edf4" />
+    <line x1="280" y1="47" x2="280" y2="113" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="302" y1="47" x2="302" y2="113" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="69" x2="324" y2="69" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="91" x2="324" y2="91" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="258" y="47" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="269.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">−1</text>
+    <text x="291.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="63.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="269.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">−1</text>
+    <text x="291.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="85.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="269.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">−1</text>
+    <text x="291.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="107.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="223" y="88" font-size="23" text-anchor="middle" fill="#496171">⊙</text>
+    <text x="367" y="88" font-size="23" text-anchor="middle" fill="#496171">=</text>
+    <g transform="translate(409 47)" font-size="15" text-anchor="middle">
+      <rect width="66" height="66" fill="#f5f7f8" stroke="#b8c8d2" />
+      <path d="M22 0v66 M44 0v66 M0 22h66 M0 44h66" fill="none" stroke="#b8c8d2" />
+      <text x="11" y="16">0</text>
+      <text x="33" y="16">0</text>
+      <text x="55" y="16">1</text>
+      <text x="11" y="38">−1</text>
+      <text x="33" y="38">0</text>
+      <text x="55" y="38">3</text>
+      <text x="11" y="60">0</text>
+      <text x="33" y="60">0</text>
+      <text x="55" y="60">2</text>
+    </g>
+    <text x="603" y="87" font-size="21" text-anchor="middle" fill="#6f1d77" font-weight="bold">5</text>
+    <line x1="20" y1="120" x2="660" y2="120" stroke="#b8c8d2" stroke-width="1" />
+  </g>
+  <g id="channel-2">
+    <text x="61" y="169" font-size="18" text-anchor="middle" fill="#16324a" font-weight="bold">2</text>
+    <rect x="123" y="128" width="22" height="22" fill="#e4f1f8" />
+    <rect x="145" y="128" width="22" height="22" fill="#d0e6f4" />
+    <rect x="167" y="128" width="22" height="22" fill="#d0e6f4" />
+    <rect x="123" y="150" width="22" height="22" fill="#d0e6f4" />
+    <rect x="145" y="150" width="22" height="22" fill="#d0e6f4" />
+    <rect x="167" y="150" width="22" height="22" fill="#e4f1f8" />
+    <rect x="123" y="172" width="22" height="22" fill="#d0e6f4" />
+    <rect x="145" y="172" width="22" height="22" fill="#bbdcf0" />
+    <rect x="167" y="172" width="22" height="22" fill="#d0e6f4" />
+    <line x1="145" y1="128" x2="145" y2="194" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="167" y1="128" x2="167" y2="194" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="150" x2="189" y2="150" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="172" x2="189" y2="172" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="123" y="128" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="134.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="156.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="178.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="134.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="156.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="178.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="134.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="156.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">3</text>
+    <text x="178.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <rect x="258" y="128" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="128" width="22" height="22" fill="#f3edf4" />
+    <rect x="302" y="128" width="22" height="22" fill="#fbf9fb" />
+    <rect x="258" y="150" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="150" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="150" width="22" height="22" fill="#fbf9fb" />
+    <rect x="258" y="172" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="172" width="22" height="22" fill="#f3edf4" />
+    <rect x="302" y="172" width="22" height="22" fill="#fbf9fb" />
+    <line x1="280" y1="128" x2="280" y2="194" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="302" y1="128" x2="302" y2="194" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="150" x2="324" y2="150" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="172" x2="324" y2="172" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="258" y="128" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="269.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">−1</text>
+    <text x="313.0" y="144.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="269.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="166.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="269.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="313.0" y="188.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="223" y="169" font-size="23" text-anchor="middle" fill="#496171">⊙</text>
+    <text x="367" y="169" font-size="23" text-anchor="middle" fill="#496171">=</text>
+    <g transform="translate(409 128)" font-size="15" text-anchor="middle">
+      <rect width="66" height="66" fill="#f5f7f8" stroke="#b8c8d2" />
+      <path d="M22 0v66 M44 0v66 M0 22h66 M0 44h66" fill="none" stroke="#b8c8d2" />
+      <text x="11" y="16">0</text>
+      <text x="33" y="16">−2</text>
+      <text x="55" y="16">0</text>
+      <text x="11" y="38">0</text>
+      <text x="33" y="38">0</text>
+      <text x="55" y="38">0</text>
+      <text x="11" y="60">0</text>
+      <text x="33" y="60">3</text>
+      <text x="55" y="60">0</text>
+    </g>
+    <text x="603" y="168" font-size="21" text-anchor="middle" fill="#6f1d77" font-weight="bold">1</text>
+    <line x1="20" y1="201" x2="660" y2="201" stroke="#b8c8d2" stroke-width="1" />
+  </g>
+  <g id="channel-3">
+    <text x="61" y="250" font-size="18" text-anchor="middle" fill="#16324a" font-weight="bold">3</text>
+    <rect x="123" y="209" width="22" height="22" fill="#e4f1f8" />
+    <rect x="145" y="209" width="22" height="22" fill="#d0e6f4" />
+    <rect x="167" y="209" width="22" height="22" fill="#e4f1f8" />
+    <rect x="123" y="231" width="22" height="22" fill="#d0e6f4" />
+    <rect x="145" y="231" width="22" height="22" fill="#bbdcf0" />
+    <rect x="167" y="231" width="22" height="22" fill="#d0e6f4" />
+    <rect x="123" y="253" width="22" height="22" fill="#f8fbfd" />
+    <rect x="145" y="253" width="22" height="22" fill="#e4f1f8" />
+    <rect x="167" y="253" width="22" height="22" fill="#f8fbfd" />
+    <line x1="145" y1="209" x2="145" y2="275" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="167" y1="209" x2="167" y2="275" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="231" x2="189" y2="231" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="123" y1="253" x2="189" y2="253" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="123" y="209" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="134.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="156.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="178.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="134.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="156.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">3</text>
+    <text x="178.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">2</text>
+    <text x="134.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="156.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="178.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <rect x="258" y="209" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="209" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="209" width="22" height="22" fill="#fbf9fb" />
+    <rect x="258" y="231" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="231" width="22" height="22" fill="#f3edf4" />
+    <rect x="302" y="231" width="22" height="22" fill="#fbf9fb" />
+    <rect x="258" y="253" width="22" height="22" fill="#fbf9fb" />
+    <rect x="280" y="253" width="22" height="22" fill="#fbf9fb" />
+    <rect x="302" y="253" width="22" height="22" fill="#fbf9fb" />
+    <line x1="280" y1="209" x2="280" y2="275" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="302" y1="209" x2="302" y2="275" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="231" x2="324" y2="231" stroke="#b8c8d2" stroke-width="1" />
+    <line x1="258" y1="253" x2="324" y2="253" stroke="#b8c8d2" stroke-width="1" />
+    <rect x="258" y="209" width="66" height="66" fill="none" stroke="#b8c8d2" stroke-width="1" />
+    <text x="269.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="225.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="269.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">1</text>
+    <text x="313.0" y="247.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="269.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="291.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="313.0" y="269.1" font-size="15" text-anchor="middle" fill="#16324a">0</text>
+    <text x="223" y="250" font-size="23" text-anchor="middle" fill="#496171">⊙</text>
+    <text x="367" y="250" font-size="23" text-anchor="middle" fill="#496171">=</text>
+    <g transform="translate(409 209)" font-size="15" text-anchor="middle">
+      <rect width="66" height="66" fill="#f5f7f8" stroke="#b8c8d2" />
+      <path d="M22 0v66 M44 0v66 M0 22h66 M0 44h66" fill="none" stroke="#b8c8d2" />
+      <text x="11" y="16">0</text>
+      <text x="33" y="16">0</text>
+      <text x="55" y="16">0</text>
+      <text x="11" y="38">0</text>
+      <text x="33" y="38">3</text>
+      <text x="55" y="38">0</text>
+      <text x="11" y="60">0</text>
+      <text x="33" y="60">0</text>
+      <text x="55" y="60">0</text>
+    </g>
+    <text x="603" y="249" font-size="21" text-anchor="middle" fill="#6f1d77" font-weight="bold">3</text>
+  </g>
+  <text x="22" y="305" font-size="16" fill="#496171">⊙ means multiply the entries in matching cells.</text>
+  <rect x="20" y="319" width="640" height="48" fill="#f3edf4" rx="6" />
+  <text x="35" y="349" font-size="17" text-anchor="start" fill="#6f1d77" font-weight="bold">Output value with bias −2</text>
+  <text x="640" y="350" font-size="21" text-anchor="end" fill="#16324a" font-weight="bold">5 + 1 + 3 − 2 = 7</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="415" viewBox="0 0 680 415" role="img" aria-labelledby="title desc">
+  <title id="title">Sliding one filter over two input channels</title>
+  <desc id="desc">Features A (2, 1, 3, 2) and B (2, 5, 3, 7) are the two input channels, indexed by positions 1 to 4. Rows (1, 1, 0) and (0, 0, 1) form one filter. At centre 2, channel A contributes 2 + 1 and channel B contributes 3, for an output of 6. At centre 3, channel A contributes 1 + 3 and channel B contributes 7, for an output of 11. With unit stride and dilation, zero bias and no padding, these are the two complete windows.</desc>
+  <rect width="680" height="415" fill="white"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="20" y="32" font-size="20" font-weight="700" text-anchor="start" fill="#16324a">Two input channels</text>
+    <text x="414" y="32" font-size="20" font-weight="700" text-anchor="start" fill="#16324a">One 2 × 3 filter</text>
+    <path d="M20 44H660" stroke="#cbd6dd"/>
+    <text x="20" y="70" font-size="15" font-weight="400" text-anchor="start" fill="#40566a">Position</text>
+    <text x="414" y="70" font-size="15" font-weight="400" text-anchor="start" fill="#40566a">Offset</text>
+    <text x="168" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">1</text>
+    <text x="225" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">2</text>
+    <text x="282" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">3</text>
+    <text x="339" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">4</text>
+    <text x="505" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">−1</text>
+    <text x="562" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">0</text>
+    <text x="619" y="70" font-size="16" font-weight="400" text-anchor="middle" fill="#40566a">+1</text>
+    <rect x="139" y="80" width="229" height="36" fill="#f5eff6"/>
+    <rect x="476" y="80" width="172" height="36" fill="#f5eff6"/>
+    <rect x="21" y="93" width="9" height="9" fill="white" stroke="#6f1d77" stroke-width="2"/>
+    <text x="39" y="104" font-size="16" font-weight="700" text-anchor="start" fill="#16324a">Feature A</text>
+    <text x="168" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">2</text>
+    <text x="225" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">1</text>
+    <text x="282" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">3</text>
+    <text x="339" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">2</text>
+    <text x="505" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">1</text>
+    <text x="562" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">1</text>
+    <text x="619" y="105" font-size="19" font-weight="700" text-anchor="middle" fill="#6f1d77">0</text>
+    <rect x="139" y="117" width="229" height="36" fill="#e9f3f9"/>
+    <rect x="476" y="117" width="172" height="36" fill="#e9f3f9"/>
+    <circle cx="25.5" cy="134.5" r="5" fill="white" stroke="#0076c2" stroke-width="2"/>
+    <text x="39" y="141" font-size="16" font-weight="700" text-anchor="start" fill="#16324a">Feature B</text>
+    <text x="168" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">2</text>
+    <text x="225" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">5</text>
+    <text x="282" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">3</text>
+    <text x="339" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">7</text>
+    <text x="505" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">0</text>
+    <text x="562" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">0</text>
+    <text x="619" y="142" font-size="19" font-weight="700" text-anchor="middle" fill="#0076c2">1</text>
+    <path d="M196.5 80V153" stroke="white"/>
+    <path d="M253.5 80V153" stroke="white"/>
+    <path d="M310.5 80V153" stroke="white"/>
+    <path d="M533.5 80V153" stroke="white"/>
+    <path d="M590.5 80V153" stroke="white"/>
+    <path d="M480 80h-6v73h6m164-73h6v73h-6" fill="none" stroke="#16324a" stroke-width="1.6"/>
+    <text x="20" y="183" font-size="19" font-weight="700" fill="#16324a">Two complete windows</text>
+    <text x="659" y="183" font-size="15" text-anchor="end" fill="#40566a">No padding · stride 1 · dilation 1 · zero bias</text>
+
+    <rect x="20" y="196" width="314" height="164" rx="5" fill="#f4f7f9"/>
+    <rect x="346" y="196" width="314" height="164" rx="5" fill="#f4f7f9"/>
+    <g fill="#16324a" font-size="17" font-weight="700">
+      <text x="37" y="220">Centre 2</text>
+      <text x="363" y="220">Centre 3</text>
+    </g>
+    <g stroke="#90a3b0" fill="white">
+      <rect x="135" y="204" width="176" height="25" rx="3"/>
+      <rect x="461" y="204" width="176" height="25" rx="3"/>
+    </g>
+    <g stroke="#40566a" stroke-width="1.6" fill="#dce8ef">
+      <rect x="135" y="204" width="132" height="25" rx="3"/>
+      <rect x="505" y="204" width="132" height="25" rx="3"/>
+    </g>
+    <g fill="#40566a">
+      <rect x="179" y="204" width="44" height="25"/>
+      <rect x="549" y="204" width="44" height="25"/>
+    </g>
+    <g text-anchor="middle" font-size="16" fill="#16324a">
+      <text x="157" y="222">1</text><text x="201" y="222" fill="white" font-weight="700">2</text>
+      <text x="245" y="222">3</text><text x="289" y="222" fill="#596d7b">4</text>
+      <text x="483" y="222" fill="#596d7b">1</text><text x="527" y="222">2</text>
+      <text x="571" y="222" fill="white" font-weight="700">3</text><text x="615" y="222">4</text>
+    </g>
+
+    <g font-size="16">
+      <g fill="#6f1d77">
+        <text x="37" y="261" font-weight="700">A</text><text x="124" y="261">1×2 + 1×1 + 0×3 = 3</text>
+        <text x="363" y="261" font-weight="700">A</text><text x="450" y="261">1×1 + 1×3 + 0×2 = 4</text>
+      </g>
+      <g fill="#0069a7">
+        <text x="37" y="291" font-weight="700">B</text><text x="124" y="291">0×2 + 0×5 + 1×3 = 3</text>
+        <text x="363" y="291" font-weight="700">B</text><text x="450" y="291">0×5 + 0×3 + 1×7 = 7</text>
+      </g>
+    </g>
+    <path d="M37 308H317 M363 308H643" stroke="#cbd6dd"/>
+    <g fill="#16324a" font-weight="700" font-size="18">
+      <text x="37" y="339">Output</text><text x="124" y="339">3 + 3 = 6</text>
+      <text x="363" y="339">Output</text><text x="450" y="339">4 + 7 = 11</text>
+    </g>
+    <path d="M20 373H660" stroke="#cbd6dd"/>
+    <text x="20" y="400" font-size="19" font-weight="700" fill="#16324a">One 1D output map</text>
+    <text x="658" y="400" font-size="23" font-weight="700" text-anchor="end" fill="#16324a">(6, 11)</text>
+  </g>
+</svg>
